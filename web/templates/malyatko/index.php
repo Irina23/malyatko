@@ -25,7 +25,8 @@ if ($menu->getActive() == $menu->getDefault()) {
             <h2><a href="/">Черкаський обласний спеціалізований Будинок дитини</a></h2>
                 <jdoc:include type="modules" name="mainmenu" />
         </div><!-- header -->
-        <div id="content" class="<?php if($_SERVER['REQUEST_URI'] == '/'){echo 'home';}?>">
+        <div id="content" class="<?php if($_SERVER['REQUEST_URI'] == '/'){echo 'home';}
+        if($_SERVER['REQUEST_URI'] == '/index.php/contacts'){echo 'contacts';}?>">
                 <jdoc:include type="component" />
         </div><!-- content -->
         <jdoc:include type="modules" name="user1" />

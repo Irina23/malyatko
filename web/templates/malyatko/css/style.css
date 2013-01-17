@@ -125,11 +125,11 @@ body {
     overflow:hidden;
     padding:28px 0 40px;
 }
-/*#content > div {
-    overflow:hidden;
-}*/
+
 .djslider-loader{float: right;}
+
  .home {width:650px;float: left;}
+
 #content h2 {
     font-family: "Trebuchet MS";
     font-weight:normal;
@@ -139,6 +139,22 @@ body {
     margin: 0 0 27px;
     border-bottom:1px solid #a7c3cf;
 }
+
+
+dl dt.map {
+    width:381px;
+}
+
+ dl dd.map {
+    height:300px;
+    float:left;
+    padding:17px 17px 17px 16px;
+    background:url("../images/map.png")no-repeat;
+}
+dl dd {
+    padding:0 0 30px;
+}
+
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
