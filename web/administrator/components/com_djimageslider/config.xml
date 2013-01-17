@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+	<fieldset name="component"
+		label="COM_DJIMAGESLIDER_CONFIG_GLOBAL_SETTINGS_LABEL"
+		description="COM_DJIMAGESLIDER_CONFIG_GLOBAL_SETTINGS_DESC">
+		
+ 	</fieldset>
+ 	
+</config>
