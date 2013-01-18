@@ -139,7 +139,7 @@ class plgContentAdmirorGallery extends JPlugin {
             } else {
                 $row->text .= '<div style="display:block; font-size:10px; overflow:hidden; height:1px; padding-top:1px;">';
             }
-         }//if (preg_match_all("#{AdmirorGallery}(.*?){/AdmirorGallery}#s", $row->text, $matches, PREG_PATTERN_ORDER)>0)
+       }//if (preg_match_all("#{AdmirorGallery}(.*?){/AdmirorGallery}#s", $row->text, $matches, PREG_PATTERN_ORDER)>0)
     }
 
 //onPrepareContent(&$row, &$params, $limitstart)

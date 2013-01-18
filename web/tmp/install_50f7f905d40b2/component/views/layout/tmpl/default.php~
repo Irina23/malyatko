@@ -1,0 +1,71 @@
+<?php
+ 
+// No direct access
+defined('_JEXEC') or die('Restricted access');
+
+$ag_inlineParams='';
+$ag_inlineParams.=' template="'.$this->template.'"';
+$ag_inlineParams.=' thumbWidth="'.$this->thumbWidth.'"';
+$ag_inlineParams.=' thumbHeight="'.$this->thumbHeight.'"';
+$ag_inlineParams.=' thumbAutoSize="'.$this->thumbAutoSize.'"';
+$ag_inlineParams.=' arrange="'.$this->arrange.'"';
+$ag_inlineParams.=' newImageTag="'.$this->newImageTag.'"';
+$ag_inlineParams.=' newImageDays="'.$this->newImageDays.'"';
+$ag_inlineParams.=' frameWidth="'.$this->frameWidth.'"';
+$ag_inlineParams.=' frameHeight="'.$this->frameHeight.'"';
+$ag_inlineParams.=' showSignature="'.$this->showSignature.'"';
+$ag_inlineParams.=' plainTextCaptions="'.$this->plainTextCaptions.'"';
+$ag_inlineParams.=' popupEngine="'.$this->popupEngine.'"';
+$ag_inlineParams.=' backgroundColor="'.$this->backgroundColor.'"';
+$ag_inlineParams.=' foregroundColor="'.$this->foregroundColor.'"';
+$ag_inlineParams.=' highliteColor="'.$this->highliteColor.'"';
+
+// Albums Support
+$ag_inlineParams.=' albumUse="'.$this->albumUse.'"';
+// Paginations Support
+$ag_inlineParams.=' paginUse="'.$this->paginUse.'"';
+$ag_inlineParams.=' paginImagesPerGallery="'.$this->paginImagesPerGallery.'"';
+
+JPluginHelper::importPlugin( 'content','AdmirorGallery' );
+
+global $mainframe, $context;
+
+$article = new JObject();
+$article->text = '{AG '.$ag_inlineParams.' }'.$this->galleryName.'{/AG}';
+$article->id = 0;
+$limitstart = 0;
+$dispatcher =& JDispatcher::getInstance();
+$results = $dispatcher->trigger('onPrepareContent', array ( &$article, & $params, $limitstart));
+echo $article->text;
+
+?>
+
+
+<?php
+//adding mootols
+JHTML::_('behavior.mootools');
+//adding modal css
+$document =& JFactory::getDocument();
+$document->addStyleSheet('/media/system/css/modal.css');
+
+//creating modal
+$link = JRoute::_('index.php?Itemid=190&option=com_facileforms&tmpl=component');
+$rel="{handler: 'iframe', size: {x: 500, y: 400}}";
+?>
+<div class="fixedform"><a class="modal-button" href="<?php echo $link ?>" rel="<?php echo $rel ?>"><img src="/templates/mp/pcs/sugestia.png" width="26" height="120" border="0" alt="Twoja sugestia" /></a></div>
+
+//adding modal js
+<script type="text/javascript" src="/media/system/js/modal.js"></script>
+<script type="text/javascript">
+      window.addEvent('domready', function() {
+
+         SqueezeBox.initialize({});
+
+         $$('a.modal-button').each(function(el) {
+            el.addEvent('click', function(e) {
+               new Event(e).stop();
+               SqueezeBox.fromElement(el);
+            });
+         });
+      });
+</script>

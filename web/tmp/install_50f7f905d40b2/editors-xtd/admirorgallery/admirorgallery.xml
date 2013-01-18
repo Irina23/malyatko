@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<install version="1.5" type="plugin" group="editors-xtd">
+
+     <files />
+
+     <params>
+
+	  <param type="spacer" default="BASIC SETTINGS" />
+
+	       <param name="thumbWidth" type="text" default="200" size="4" label="THUMBNAIL WIDTH" description="THUMBNAIL WIDTH DESC" />
+
+	       <param name="thumbHeight" type="text" default="120" size="4" label="THUMBNAIL HEIGHT" description="THUMBNAIL HEIGHT DESC" />
+
+	       <param name="thumbAutoSize" type="radio" default="none" label="THUMBNAIL AUTO SIZE" description="THUMBNAIL AUTO SIZE DESC">
+		    <option value="width">WIDTH</option>
+		    <option value="height">HEIGHT</option>
+		    <option value="none">NONE</option>
+	       </param>	
+	       
+	       <param name="template" type="folderlist" default="classic" label="GALLERY TEMPLATE" description="GALLERY TEMPLATE DESC" directory="plugins/content/AdmirorGallery/templates" exclude="" stripext="" hide_none="true" hide_default="true" />
+
+	       <param name="popupEngine" type="folderlist" default="slimbox" label="POPUP ENGINE" description="POPUP ENGINE DESC" directory="plugins/content/AdmirorGallery/popups" exclude="" stripext="" hide_none="true" hide_default="true" />
+
+	       <param name="arrange" type="radio" default="priority" label="ARRANGE IMAGES BY" description="ARRANGE IMAGES BY DESC">
+		    <option value="priority">PRIORITY</option>
+		    <option value="date">DATE</option>
+		    <option value="name">NAME</option>
+	       </param>
+
+
+	  <param name="@spacer" type="spacer" default="" label="" description="" />
+	  <param type="spacer" default="GALLERY COLORS" />
+	  
+	       <param name="backgroundColor" type="text" default="ffffff" size="6" label="GALLERY BACKGROUND COLOR" description="GALLERY BACKGROUND COLOR DESC" />
+
+	       <param name="foregroundColor" type="text" default="808080" size="6" label="GALLERY FOREGROUND COLOR" description="GALLERY FOREGROUND COLOR DESC" />
+	       
+	       <param name="highliteColor" type="text" default="fea804" size="6" label="GALLERY HIGHLITE COLOR" description="GALLERY HIGHLITE COLOR DESC" />
+
+
+	  <param name="@spacer" type="spacer" default="" label="" description="" />
+	  <param type="spacer" default="GALLERY FRAME SIZE" />	
+
+	       <param name="frame_width" type="text" default="500" size="5" label="GALLERY FRAME WIDTH" description="GALLERY FRAME WIDTH DESC" />
+	       <param name="frame_height" type="text" default="300" size="5" label="GALLERY FRAME HEIGHT" description="GALLERY FRAME HEIGHT DESC" />
+
+	       <param name="@spacer" type="spacer" default="" label="" description="" />
+	       <param type="spacer" default="NEW IMAGES SETTINGS" />
+	       
+	       <param name="newImageTag" type="radio" default="1" label="MARK NEW IMAGES" description="MARK NEW IMAGES DESC">
+		    <option value="1">YES</option>
+		    <option value="0">NO</option>
+	       </param>		
+	       
+	       <param name="newImageTag_days" type="text" default="7" size="5" label="NEW IMAGE DAYS LIMIT" description="NEW IMAGE DAYS LIMIT DESC" />
+
+
+	  <param name="@spacer" type="spacer" default="" label="" description="" />
+	  <param type="spacer" default="PAGINATION SETTINGS" />	
+	       
+	       <param name="paginUse" type="radio" default="1" label="USE PAGINATION" description="USE PAGINATION DESC" >
+		    <option value="1">YES</option>
+		    <option value="0">NO</option>
+	       </param>
+	       <param name="paginImagesPerGallery" type="text" default="10" size="6" label="IMAGES PER GALLERY" description="IMAGES PER GALLERY DESC" />
+
+
+	  <param name="@spacer" type="spacer" default="" label="" description="" />
+	  <param type="spacer" default="ALBUMS SETTINGS" />	
+	       
+	       <param name="albumUse" type="radio" default="1" label="USE ALBUMS" description="USE ALBUMS DESC" >
+		    <option value="1">YES</option>
+		    <option value="0">NO</option>
+	       </param>
+	       
+
+	  <param name="@spacer" type="spacer" default="" label="" description="" />
+	  <param type="spacer" default="ADDITIONAL SETTINGS" />	
+	       
+	       <param name="showSignature" type="radio" default="1" label="SHOW SIGNATURE" description="SHOW SIGNATURE DESC" >
+		    <option value="1">YES</option>
+		    <option value="0">NO</option>
+	       </param>
+	       
+	       <param name="plainTextCaptions" type="radio" default="1" label="USE PLAIN TEXT CAPTIONS" description="USE PLAIN TEXT CAPTIONS DESC" >
+		    <option value="1">YES</option>
+		    <option value="0">NO</option>
+	       </param>
+		    
+     </params>
+
+</install>

@@ -25,17 +25,17 @@ if ($menu->getActive() == $menu->getDefault()) {
             <h2><a href="/">Черкаський обласний спеціалізований Будинок дитини</a></h2>
                 <jdoc:include type="modules" name="mainmenu" />
         </div><!-- header -->
-        <div id="content" class="<?php if($_SERVER['REQUEST_URI'] == '/'){echo 'home';}
+        <div id="<?php if($_SERVER['REQUEST_URI'] <> '/index.php/photogallery'){echo 'content';}?>" class="<?php if($_SERVER['REQUEST_URI'] == '/'){echo 'home';}
         if($_SERVER['REQUEST_URI'] == '/index.php/contacts'){echo 'contacts';}?>">
                 <jdoc:include type="component" />
         </div><!-- content -->
         <jdoc:include type="modules" name="user1" />
-        <ul id="footer">
-            <li>
-                    text
-            </li>
-            <li>© Copyright 2013</li>
-        </ul>
+        <div id="footer">
+            <ul>
+                <li>text</li>
+                <li class="right">© Copyright 2013</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>

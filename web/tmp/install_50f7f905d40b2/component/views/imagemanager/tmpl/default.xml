@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="IMAGEMANAGER">
+		<message>
+			<![CDATA[IMAGEMANAGER DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>IMAGEMANAGER</name>
+		<description>IMAGEMANAGER DESC</description>
+		
+		<params addPath="/components/com_admirorgallery/elements">
+		
+		    <param name="galleryName" type="galleryName" default="" label="Enter gallery name" description="" size="20" />
+		      		
+		</params>
+	</state>
+</metadata>

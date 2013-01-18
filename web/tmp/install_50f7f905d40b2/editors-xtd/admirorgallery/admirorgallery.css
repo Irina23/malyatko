@@ -1,0 +1,28 @@
+.button2-left {
+    background: url("j_button2_left.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    margin-left: 5px;
+}
+
+.button2-left a, .button2-left span {
+    padding: 0 24px 0 6px;
+}
+
+.button2-left a, .button2-right a, .button2-left span, .button2-right span {
+    color: #333333;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 11px;
+    height: 22px;
+    line-height: 22px;
+    text-decoration: none;
+}
+
+.button2-left, .button2-right, .button2-left div, .button2-right div {
+    float: left;
+}
+
+.button2-left .admirorgallery {
+    background: url("j_button2_admirorgallery.png") no-repeat scroll 100% 0 transparent;
+}
