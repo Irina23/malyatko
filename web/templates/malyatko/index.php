@@ -28,6 +28,7 @@ if ($menu->getActive() == $menu->getDefault()) {
         <div id="<?php if($_SERVER['REQUEST_URI'] <> '/index.php/photogallery'){echo 'content';}?>" class="<?php if($_SERVER['REQUEST_URI'] == '/'){echo 'home';}
         if($_SERVER['REQUEST_URI'] == '/index.php/contacts'){echo 'contacts';}?>">
                 <jdoc:include type="component" />
+                <jdoc:include type="modules" name="personnelmenu" />
         </div><!-- content -->
         <jdoc:include type="modules" name="user1" />
         <div id="footer">

@@ -26,8 +26,7 @@
 	<positions>
                  <position>head</position>
                  <position>mainmenu</position>
-                 <position>social</position>
-                 <position>home</position>
+                 <position>personnelmenu</position>
                  <position>user1</position>
                  <position>user2</position>
                  <position>user3</position>
