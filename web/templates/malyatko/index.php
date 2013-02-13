@@ -26,7 +26,8 @@ if ($menu->getActive() == $menu->getDefault()) {
                 <jdoc:include type="modules" name="mainmenu" />
         </div><!-- header -->
         <div id="<?php if($_SERVER['REQUEST_URI'] <> '/index.php/photogallery'){echo 'content';}?>" class="<?php if($_SERVER['REQUEST_URI'] == '/'){echo 'home';}
-        if($_SERVER['REQUEST_URI'] == '/index.php/contacts'){echo 'contacts';}?>">
+        if($_SERVER['REQUEST_URI'] == '/index.php/contacts'){echo 'contacts';}
+        if($_SERVER['REQUEST_URI'] == '/index.php/about'){echo 'about';}?>">
                 <jdoc:include type="component" />
                 <jdoc:include type="modules" name="personnelmenu" />
         </div><!-- content -->
