@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/module-install.dtd">
+  <extension type="module" version="1.6.0" client="site" method="upgrade">
+  <name>Easy Joomla PayPal Payment / Donations Module</name>
+  <author>DART Creations</author>
+  <licence>GNU/GPL</licence>
+  <creationDate>April 2012</creationDate>
+  <authorEmail>spam-me@dart-creations.com</authorEmail>
+  <authorUrl>http://www.dart-creations.com</authorUrl>
+  <version>2.5.0</version>
+  <description><![CDATA[ 
+			<p>Thank you for installing Easy Joomla PayPal Payment / Donations Module. This module is a customizable module to enable Paypal Donations or Payments on your Joomla website. The following features are available: <ul>
+			    <li>Allows you to use whether to display a Paypal Image or your own text
+     <li>Customizable Paypal email
+    <li>Paypal Name of Organization to send money to
+    <li>User selectable Currency for Payment
+    <li>Choose whether to enable timed payments, and choose the frequency of the timed payment (Daily, Weekly, Monthly, Annually)
+    <li>Fixed value or user entered monetary value, with smallest amount of payment possible
+    <li>Choice of default currency
+    <li>Choice of text for Submit button e.g. Donate, Buy Now etc.
+    <li>Return address (URL) when payment is complete
+    <li>Cancel address (URL) in case payment is cancelled.
+    <li>CSS aware for customizable style of module</ul>
+<br /> Visit <a href="http://www.dart-creations.com">http://www.dart-creations.com</a> for details.
+			</p>
+	]]></description>
+  <files>
+    <filename module="mod_paypal">mod_paypal.php</filename>
+    <filename module="mod_paypal">index.html</filename>
+  </files>
+ <config>
+    <fields name="params">
+       <fieldset name="basic">
+         <field name="payment_type" type="radio" default="1" label="Payment Type" description="Choose between the PayPal payment types.">
+			<option value="1">Donate</option>
+			<option value="2">Buy Now</option>
+			<option value="3">Add to Cart</option>
+			<option value="4">Subscribe</option>
+		</field>
+    <field name="logo_on" type="radio" default="2" label="Logo or Text?" description="Do you want visitors to view a logo/image in the module?.">
+			<option value="0">Logo</option>
+			<option value="1">Text</option>
+			<option value="2">None</option>
+		</field>
+  <field name="logo" type="text" default="http://www.paypal.com/en_US/i/btn/x-click-but04.gif" size="40" label="Logo URL or Text" 
+     description="URL of the logo you want viewed or HTML of some text." />
+	 
+  <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+  <field name="paypal_email" type="text" default="dattard@gmail.com" label="PayPal Email" 
+     description="Your PayPal Email Address." />
+  <field name="paypal_org" type="text" default="Donation" label="PayPal Organisation - Item Name" 
+     description="Your PayPal Organisation or Donation Name." />
+  <field name="paypalcur_on" type="radio" default="0" label="Currency On/Off" description="Turn on or off the Paypal Currency selection.">
+			<option value="0">On</option>
+			<option value="1">Off</option>
+		</field>
+  
+  <field name="paypalval_on" type="radio" default="0" label="Value Textbox On/Off" description="Turn on or off the Paypal Input Box.">
+			<option value="0">On</option>
+			<option value="1">Off</option>
+		</field>
+   <field name="paypalcur_val" type="list" default="USD" label="Default Currency" description="If Currency Selection Turned off.">
+     <option value='CAD'>CAD</option>
+<option value='USD'>USD</option>
+<option value='GBP'>GBP</option>
+<option value='AUD'>AUD</option>
+<option value='JPY'>JPY</option>
+<option value='EUR'>EUR</option>
+<option value='CHF'>CHF</option>
+<option value='CZK'>CZK</option>
+<option value='DKK'>DKK</option>
+<option value='HKD'>HKD</option>
+<option value='HUF'>HUF</option>
+<option value='NOK'>NOK</option>
+<option value='NZD'>NZD</option>
+<option value='PLN'>PLN</option>
+<option value='SEK'>SEK</option>
+<option value='SGD'>SGD</option>
+     </field>
+   <field name="paypalval_button" type="text" default="Donate" label="Button Text" description="Text to put on donation button."/>
+   <field name="paypalval_enteramount" type="text" default="Enter Amount" label="Text to replace Enter Amount" description="Text to put instead of Enter Amount"/>
+   <field name="paypalval_val" type="text" default="5" label="PayPal Amount" description="Amount of Donation if Textbox off."/>
+   <field name="paypalvalleast_val" type="text" default="5" label="Smallest PayPal Amount" description="Smallest acceptable amount of Donation (to prevent loss from people donating less than the PayPal fee)."/>
+	<field name="paypalreturn" type="text" size="40" default="http://www.yoursite.com" label="Return URL" description="Return URL when payment is made."/>
+    <field name="paypalcancel" type="text" size="40" default="http://www.yoursite.com" label="Cancel URL" description="Return URL when payment is cancelled."/>
+    <field name="paymentlocation" type="text" size="10" default="" label="PayPal Location" description="Enter location code (if needed)"/>
+<field name="link" type="radio" default="1" label="Invisible Link to Author" description="Invisible Link to author of the module">
+		  <option value="0">No</option>
+		  <option value="1">Yes</option>
+		</field>
+
+   </fieldset>
+</fields>
+</config>
+   </extension>

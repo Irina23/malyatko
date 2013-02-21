@@ -1,0 +1,1565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="2.5" client="site"
+	method="upgrade"
+>
+<name>Donate</name>
+<author>Leonidas</author>
+<creationDate>August 2012</creationDate>
+<copyright>Released under GNU/GPL License</copyright>
+<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+<authorEmail>leonidas78@mail.ru</authorEmail> 
+<authorUrl>www.foto-s.ru</authorUrl>
+<version>0.9.8</version>
+<description>MOD_AMONEY_INFORMATION_FROM_THE_AUTHOR</description>
+<files>
+    <filename module="mod_amoney">mod_amoney.php</filename>
+	<folder>tmpl</folder>
+	<folder>images</folder>
+	<folder>js</folder>
+	<folder>css</folder>
+	<folder>conf</folder>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <filename>images/logowm.gif</filename>
+    <filename>images/logorupay.gif</filename>
+    <filename>images/logoyandex.gif</filename>
+    <filename>images/logoegold.gif</filename>
+    <filename>images/logopaypal.gif</filename>
+    <filename>images/logolibertyreserve.gif</filename>
+    <filename>images/logomoneybookers.gif</filename>
+    <filename>images/logorobox.gif</filename>
+    <filename>images/logosms.gif</filename>
+    <filename>images/logosms1.gif</filename>
+    <filename>images/logomm.gif</filename>
+    <filename>images/logoliqpay.gif</filename>
+    <filename>images/logosmscoin.gif</filename>
+    <filename>images/logowm_small.gif</filename>
+    <filename>images/logorupay_small.gif</filename>
+    <filename>images/logoyandex_small.gif</filename>
+    <filename>images/logoegold_small.gif</filename>
+    <filename>images/logopaypal_small.gif</filename>
+    <filename>images/logolibertyreserve_small.gif</filename>
+    <filename>images/logomoneybookers_small.gif</filename>
+    <filename>images/logorobox_small.gif</filename>
+    <filename>images/logosms_small.gif</filename>
+    <filename>images/logosms1_small.gif</filename>
+    <filename>images/logomm_small.gif</filename>
+    <filename>images/logoliqpay_small.gif</filename>
+    <filename>images/logosmscoin_small.gif</filename>
+    <filename>images/karma1.jpg</filename>
+    <filename>images/karma2.jpg</filename>
+    <filename>images/index.html</filename>
+    <filename>images/jc_rb_bl.gif</filename>
+    <filename>images/jc_rb_br.gif</filename>
+    <filename>images/jc_rb_tl.gif</filename>
+    <filename>images/jc_rb_tr.gif</filename>
+    <filename>images/tipsy.gif</filename>
+    <filename>js/jquery.js</filename>
+    <filename>js/jquery.tipsy.js</filename>
+    <filename>js/tipsy.js</filename>
+    <filename>js/index.html</filename>
+    <filename>tmpl/default.php</filename>
+    <filename>tmpl/index.html</filename>
+	<filename>css/templates.css</filename>
+	<filename>css/tipsy.css</filename>
+	<filename>css/index.html</filename>
+	<filename>conf/fail.html</filename>
+	<filename>conf/success.html</filename>
+	<filename>conf/pay.php</filename>
+	<filename>conf/nopay.php</filename>
+	<filename>conf/index.html</filename>
+	<filename>conf/css/error.css</filename>
+	<filename>conf/css/index.html</filename>
+	</files>
+	<languages>
+        <language tag="en-GB">en-GB.mod_amoney.ini</language>
+		<language tag="ru-RU">ru-RU.mod_amoney.ini</language>
+	</languages>
+<params>
+	<param name="moduleclass_sfx" type="text" default="" 
+			label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	<param type="spacer" />
+	<param name="amofixed" type="list" default="0" label="MOD_AMONEY_USE_A_FIXED_AMOUNT" description="">
+		<option value="1">MOD_AMONEY_YES</option>
+		<option value="0">MOD_AMONEY_NO</option>
+	</param>
+	<param type="spacer" />
+	<param name="off_jquery1" type="list" default="1" label="MOD_AMONEY_YOU_DOWNLOAD_JQUERY" description="">
+		<option value="1">MOD_AMONEY_YES</option>
+		<option value="0">MOD_AMONEY_NO</option>
+	</param>
+	<param name="t1" type="list" default="0" label="jQuery" description="">
+		<option value="0">jQuery</option>
+		<option value="1">$</option>
+		<option value="2">$j</option>
+		<option value="3">no</option>
+	</param>
+	<param name="off_tipsy1" type="list" default="1" label="MOD_AMONEY_YOU_DOWNLOAD_TIPSY" description="">
+		<option value="0">MOD_AMONEY_YES</option>
+		<option value="1">MOD_AMONEY_NO</option>
+	</param>
+	<param type="spacer" />
+	<param name="jfadtogquery" type="radio" default="0" label="MOD_AMONEY_VIEW_JQUERU" description="">
+			<option value="0">Adeptus</option>
+			<option value="1">Leonidas</option>
+	</param>
+	<param type="spacer" />
+    <param name="width_border" type="text" default="100" 
+			label="MOD_AMONEY_WIDTH" description="" />
+    <param name="height_border" type="text" default="180" 
+			label="MOD_AMONEY_HEIGHT" description="" />
+	<param type="spacer" />
+	<param name="gost5" type="radio" default="1" label="SEO" description="">
+			<option value="0">MOD_AMONEY_HIDE</option>
+			<option value="1">MOD_AMONEY_SHOW</option>
+	</param>
+	<param type="spacer" />
+	<param name="off_intrerst" type="list" default="1" label="MOD_AMONEY_OFF_INTEREST" description="">
+		<option value="1">MOD_AMONEY_YES</option>
+		<option value="0">MOD_AMONEY_NO</option>
+	</param>
+    <param name="goal1" type="text" default="10000" 
+			label="MOD_AMONEY_GOAL_AMOUT" description="MOD_AMONEY_OUR_GOAL_AMOUT" />
+	<param name="current1" type="text" default="3000" 
+			label="MOD_AMONEY_CURRENT_AMOUNT_RAISED" description="MOD_AMONEY_THE_CURRENT_AMOUNT_RAISED" />
+	<param name="datename" type="text" default="Updated:" 
+			label="MOD_AMONEY_TEXT_UPDATED" description="MOD_AMONEY_TEXT_UPDATED_DESCRIPTION" />     	
+    <param name="date1" type="text" default="27/1/2009" 
+			label="MOD_AMONEY_DATE_LAST_UPDATE" description="MOD_AMONEY_DATE_LAST_UPDATE_DESCRIPTION" />
+	<param type="spacer" />
+	<param name="pretext" type="text" size="40" default="Благодарность Автору"
+			label="MOD_AMONEY_INTRODUCTORY_TEXT" description=""  />
+	<param name="btntxt" type="text" default="Отправить"
+			label="MOD_AMONEY_TEXT_SEND_BUTTON" description=""  />
+	<param type="spacer" />
+	<param name="use_wm" type="radio" default="1" label="MOD_AMONEY_USE_WEBMONEY" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+	<param name="use_p2" type="radio" default="1" label="MOD_AMONEY_USE_WMZ" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+    <param name="wmz" type="text" size="17" default="Z000000000000" 
+			label="MOD_AMONEY_NUMBER_PURSES_WMZ" description="MOD_AMONEY_YOURNUMBERUSDOLLARS" />
+	<param name="use_p3" type="radio" default="1" label="MOD_AMONEY_USE_WME" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+	<param name="wme" type="text" size="17" default="E000000000000" 
+			label="MOD_AMONEY_NUMBER_PURSES_WME" description="MOD_AMONEY_YOURNUMBEREURO" />
+	<param name="use_p1" type="radio" default="1" label="MOD_AMONEY_USE_WMR" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+    <param name="wmr" type="text" size="17" default="R000000000000" 
+			label="MOD_AMONEY_NUMBER_PURSES_WMR" description="MOD_AMONEY_YOURNUMBERPURSESRUBLES" />
+	<param name="use_p4" type="radio" default="1" label="MOD_AMONEY_USE_WMU" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+    <param name="wmu" type="text" size="17" default="U000000000000" 
+			label="MOD_AMONEY_NUMBER_PURSES_WMU" description="MOD_AMONEY_YOURNUMBERRBMHRYVNA" />
+	<param name="use_p5" type="radio" default="1" label="MOD_AMONEY_USE_WMB" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+    <param name="wmb" type="text" size="17" default="B000000000000" 
+			label="MOD_AMONEY_NUMBER_PURSES_WMB" description="MOD_AMONEY_YOURNUMBERBELARUSRUB" />
+	<param name="wm_summ" type="text" size="5" default="10" 
+			label="MOD_AMONEY_TOTAL_DONATIONS" description="MOD_AMONEY_TOTALDONATIONSDEFAULT" />
+	<param name="wm_successurl" type="text" size="40" default="modules/mod_amoney/conf/success.html" 
+			label="MOD_AMONEY_URL_SUCCESSFUL_OPERATION" description="MOD_AMONEY_ADDRESPAYMENT" />
+	<param name="wm_errorurl" type="text" size="40" default="modules/mod_amoney/conf/fail.html" 
+			label="MOD_AMONEY_URL_ERRORS_OF_OPERATION" description="MOD_AMONEY_ADDRESERRORSMENT" />
+	<param name="wm_descpay" type="textarea" cols="20" rows="5" default="Gratitude to the Author" 
+			label="MOD_AMONEY_DESCRIPTION_OF_PAYMENT" description="MOD_AMONEY_DESCRIPTIONOFPAYMENTINFO" />
+	<param type="spacer" />
+	<param name="use_rupay" type="radio" default="0" label="MOD_AMONEY_USE_RBKMONEY" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+    <param name="rupay_submit" type="text" size="14" default="0000000" 
+			label="MOD_AMONEY_SITE_NUMBER_PRODOVTSA" description="MOD_AMONEY_USERBKMONEYINFO" />
+    <param name="RUR" type="text" size="14" default="RU000000000" 
+			label="Счет RU76" description="MOD_AMONEY_RBKMONEYYOURNUMBERRUBLES" />
+	<param name="rupay_summ" type="text" size="5" default="10" 
+			label="MOD_AMONEY_TOTAL_DONATIONS" description="MOD_AMONEY_TOTALDONATIONSDEFAULT" />
+	<param name="rupay_successurl" type="text" size="40" default="http://www.yoursite.com" 
+			label="MOD_AMONEY_LINK_TO_WEB_SITE" description="MOD_AMONEY_INDICATEWEBSITEADDRESS" />
+	<param type="spacer" />
+	<param name="use_yandex" type="radio" default="0" label="MOD_AMONEY_USE_YANDEXMONEY" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+    <param name="yandex" type="text" size="18" default="00000000000000" 
+			label="MOD_AMONEY_NUMBER_PURSES_YANDEX" description="MOD_AMONEY_YANDEXINFO" />
+	<param name="yandex_summ" type="text" size="14" default="10" 
+			label="MOD_AMONEY_TOTAL_DONATIONS" description="MOD_AMONEY_TOTALDONATIONSDEFAULT" />
+	<param name="yandex_successurl" type="text" size="40" default="http://www.yoursite.com" 
+			label="MOD_AMONEY_LINK_TO_WEB_SITE" description="MOD_AMONEY_INDICATEWEBSITEADDRESS" />
+	<param type="spacer" />
+	<param name="use_egold" type="radio" default="0" label="MOD_AMONEY_USING_E_GOLD" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+    <param name="number" type="text" size="14" default="0000000" 
+			label="MOD_AMONEY_NUMBER" description="MOD_AMONEY_YOUR_ACCOUNT_NUMBER" />
+    <param name="name" type="text" size="40" default="www.yoursite.com" 
+			label="MOD_AMONEY_NAME" description="MOD_AMONEY_NAME_OF_ACCOUNT" />
+	<param name="mail" type="text" size="40" default="you@mai.com" 
+			label="E-mail" description="MOD_AMONEY_E_GOLDINFO" />
+	<param name="egoldinfo" type="text" size="40" default="" 
+			label="MOD_AMONEY_AMONEY_INFO" description="" />
+    <param name="egold_summ" type="text" size="14" default="10" 
+			label="MOD_AMONEY_TOTAL_DONATIONS" description="MOD_AMONEY_TOTALDONATIONSDEFAULT" />
+	<param name="egold_successurl" type="text" size="40" default="modules/mod_amoney/conf/pay.php" 
+			label="MOD_AMONEY_URL_SUCCESSFUL_OPERATION" description="MOD_AMONEY_ADDRESPAYMENT" />
+	<param name="egold_errorurl" type="text" size="40" default="modules/mod_amoney/conf/nopay.php" 
+			label="MOD_AMONEY_URL_ERRORS_OF_OPERATION" description="MOD_AMONEY_ADDRESERRORSMENT" />
+	<param type="spacer" />
+	<param name="use_paypal" type="radio" default="0" label="MOD_AMONEY_USING_PAYPAL" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+	<param name="paypal_email" type="text" size="40" default="alex1962@donpac.ru" 
+			label="PayPal Email" description="MOD_AMONEY_PAYPALINFO" />
+	<param name="paypalcur_on" type="radio" default="0" label="MOD_AMONEY_SELECT_CURRENCY" description="MOD_AMONEY_OFFONSELECTCURRENCYPAYMENTS">
+			<option value="1">MOD_AMONEY_DISABLE</option>
+			<option value="0">MOD_AMONEY_INCLUSION</option>
+	</param>
+	<param name="donate_len" type="radio" default="1" label="MOD_AMONEY_FREQUENCY" description="MOD_AMONEY_FREQUENCYINFO">
+			<option value="1">MOD_AMONEY_DISABLE</option>
+			<option value="0">MOD_AMONEY_INCLUSION</option>
+	</param>
+		<param name="paypallen_val" type="list" default="4" label="MOD_AMONEY_PERIOD" description="MOD_AMONEY_PERIODINFO">
+		<option value='4'>MOD_AMONEY_ONCE</option>
+		<option value='1'>MOD_AMONEY_WEEKLY</option>
+		<option value='2'>MOD_AMONEY_MONTHLY</option>
+		<option value='3'>MOD_AMONEY_YEARLY</option>
+	</param>
+	<param name="paypalval_on" type="radio" default="0" label="MOD_AMONEY_ENTER_AMOUNT" description="MOD_AMONEY_ENTERAMOUNTINFO">
+			<option value="1">MOD_AMONEY_DISABLE</option>
+			<option value="0">MOD_AMONEY_INCLUSION</option>
+	</param>
+	<param name="paypalcur_val" type="list" default="USD" label="MOD_AMONEY_CURRENCY_DEFAULT" description="">
+		<option value='USD'>USD "$"</option>
+		<option value='GBP'>GBP "?"</option>
+		<option value='EUR'>EUR "€"</option>
+	</param>
+	<param name="paypalval_val" type="text" size="14" default="5" 
+			label="MOD_AMONEY_TOTAL_DONATIONS" description="MOD_AMONEY_TOTALDONATIONSDEFAULT" />
+    <param name="paypalvalleast_val" type="text" size="14" default="5" 
+			label="MOD_AMONEY_MINIMUM_AMOUNT" description="" />
+	<param name="link_return" type="text" size="40" default="http://www.yoursite.com" 
+			label="MOD_AMONEY_URL_SUCCESSFUL_OPERATION" description="MOD_AMONEY_ADDRESPAYMENT"/>
+    <param name="link_cancel" type="text" size="40" default="http://www.yoursite.com" 
+			label="MOD_AMONEY_URL_ERRORS_OF_OPERATION" description="MOD_AMONEY_ADDRESERRORSMENT"/>
+	<param type="spacer" />
+	<param name="use_libertyreserve" type="radio" default="0" label="MOD_AMONEY_USING_PAYPAL1" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+    <param name="ur" type="text" size="14" default="U6541727" 
+			label="" description="MOD_AMONEY_RBKMONEYYOURNUMBERRUBLES" />
+	<param name="currency_libertyreserve" type="list" default="USD" label="Currency" description="Type of currency">
+			<option value="USD">U.S. Dollars</option>
+			<option value="EUR">Euros</option>
+	</param>
+	<param name="choose_cur" type="radio" default="0" 
+			label="Show on Fronpage" description="Allow for donors choose currency">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+	<param name="country" type="list" default="RU" label="Donor's Default Country" description="You can change the default checkout language and content for your donor by selecting from the countries below. Otherwise, do nothing and your donors can choose for themselves.">
+			<option value="US">United States</option>
+			<option value="AL">Albania</option>
+			<option value="DZ">Algeria</option>
+			<option value="AD">Andorra</option>
+			<option value="AO">Angola</option>
+			<option value="AI">Anguilla</option>
+			<option value="AG">Antigua and Barbuda</option>
+			<option value="AR">Argentina</option>
+			<option value="AM">Armenia</option>
+			<option value="AW">Aruba</option>
+			<option value="AU">Australia</option>
+			<option value="AT">Austria</option>
+			<option value="AZ">Azerbaijan Republic</option>
+			<option value="BS">Bahamas</option>
+			<option value="BH">Bahrain</option>
+			<option value="BB">Barbados</option>
+			<option value="BE">Belgium</option>
+			<option value="BZ">Belize</option>
+			<option value="BJ">Benin</option>
+			<option value="BM">Bermuda</option>
+			<option value="BT">Bhutan</option>
+			<option value="BO">Bolivia</option>
+			<option value="BA">Bosnia and Herzegovina</option>
+			<option value="BW">Botswana</option>
+			<option value="BR">Brazil</option>
+			<option value="VG">British Virgin Islands</option>
+			<option value="BN">Brunei</option>
+			<option value="BG">Bulgaria</option>
+			<option value="BF">Burkina Faso</option>
+			<option value="BI">Burundi</option>
+			<option value="KH">Cambodia</option>
+			<option value="CA">Canada</option>
+			<option value="CV">Cape Verde</option>
+			<option value="KY">Cayman Islands</option>
+			<option value="TD">Chad</option>
+			<option value="CL">Chile</option>
+			<option value="C2">China</option>
+			<option value="CO">Colombia</option>
+			<option value="KM">Comoros</option>
+			<option value="CK">Cook Islands</option>
+			<option value="CR">Costa Rica</option>
+			<option value="HR">Croatia</option>
+			<option value="CY">Cyprus</option>
+			<option value="CZ">Czech Republic</option>
+			<option value="CD">Democratic Republic of the Congo</option>
+			<option value="DK">Denmark</option>
+			<option value="DJ">Djibouti</option>
+			<option value="DM">Dominica</option>
+			<option value="DO">Dominican Republic</option>
+			<option value="EC">Ecuador</option>
+			<option value="SV">El Salvador</option>
+			<option value="ER">Eritrea</option>
+			<option value="EE">Estonia</option>
+			<option value="ET">Ethiopia</option>
+			<option value="FK">Falkland Islands</option>
+			<option value="FO">Faroe Islands</option>
+			<option value="FM">Federated States of Micronesia</option>
+			<option value="FJ">Fiji</option>
+			<option value="FI">Finland</option>
+			<option value="FR">France</option>
+			<option value="GF">French Guiana</option>
+			<option value="PF">French Polynesia</option>
+			<option value="GA">Gabon Republic</option>
+			<option value="GM">Gambia</option>
+			<option value="DE">Germany</option>
+			<option value="GI">Gibraltar</option>
+			<option value="GR">Greece</option>
+			<option value="GL">Greenland</option>
+			<option value="GD">Grenada</option>
+			<option value="GP">Guadeloupe</option>
+			<option value="GT">Guatemala</option>
+			<option value="GN">Guinea</option>
+			<option value="GW">Guinea Bissau</option>
+			<option value="GY">Guyana</option>
+			<option value="HN">Honduras</option>
+			<option value="HK">Hong Kong</option>
+			<option value="HU">Hungary</option>
+			<option value="IS">Iceland</option>
+			<option value="IN">India</option>
+			<option value="ID">Indonesia</option>
+			<option value="IE">Ireland</option>
+			<option value="IL">Israel</option>
+			<option value="IT">Italy</option>
+			<option value="JM">Jamaica</option>
+			<option value="JP">Japan</option>
+			<option value="JO">Jordan</option>
+			<option value="KZ">Kazakhstan</option>
+			<option value="KE">Kenya</option>
+			<option value="KI">Kiribati</option>
+			<option value="KW">Kuwait</option>
+			<option value="KG">Kyrgyzstan</option>
+			<option value="LA">Laos</option>
+			<option value="LV">Latvia</option>
+			<option value="LS">Lesotho</option>
+			<option value="LI">Liechtenstein</option>
+			<option value="LT">Lithuania</option>
+			<option value="LU">Luxembourg</option>
+			<option value="MG">Madagascar</option>
+			<option value="MW">Malawi</option>
+			<option value="MY">Malaysia</option>
+			<option value="MV">Maldives</option>
+			<option value="ML">Mali</option>
+			<option value="MT">Malta</option>
+			<option value="MH">Marshall Islands</option>
+			<option value="MQ">Martinique</option>
+			<option value="MR">Mauritania</option>
+			<option value="MU">Mauritius</option>
+			<option value="YT">Mayotte</option>
+			<option value="MX">Mexico</option>
+			<option value="MN">Mongolia</option>
+			<option value="MS">Montserrat</option>
+			<option value="MA">Morocco</option>
+			<option value="MZ">Mozambique</option>
+			<option value="NA">Namibia</option>
+			<option value="NR">Nauru</option>
+			<option value="NP">Nepal</option>
+			<option value="NL">Netherlands</option>
+			<option value="AN">Netherlands Antilles</option>
+			<option value="NC">New Caledonia</option>
+			<option value="NZ">New Zealand</option>
+			<option value="NI">Nicaragua</option>
+			<option value="NE">Niger</option>
+			<option value="NU">Niue</option>
+			<option value="NF">Norfolk Island</option>
+			<option value="NO">Norway</option>
+			<option value="OM">Oman</option>
+			<option value="PW">Palau</option>
+			<option value="PA">Panama</option>
+			<option value="PG">Papua New Guinea</option>
+			<option value="PE">Peru</option>
+			<option value="PH">Philippines</option>
+			<option value="PN">Pitcairn Islands</option>
+			<option value="PL">Poland</option>
+			<option value="PT">Portugal</option>
+			<option value="QA">Qatar</option>
+			<option value="CG">Republic of the Congo</option>
+			<option value="RE">Reunion</option>
+			<option value="RO">Romania</option>
+			<option value="RU">Russia</option>
+			<option value="RW">Rwanda</option>
+			<option value="VC">Saint Vincent and the Grenadines</option>
+			<option value="WS">Samoa</option>
+			<option value="SM">San Marino</option>
+			<option value="ST">Sao Tome and Principe</option>
+			<option value="SA">Saudi Arabia</option>
+			<option value="SN">Senegal</option>
+			<option value="SC">Seychelles</option>
+			<option value="SL">Sierra Leone</option>
+			<option value="SG">Singapore</option>
+			<option value="SK">Slovakia</option>
+			<option value="SI">Slovenia</option>
+			<option value="SB">Solomon Islands</option>
+			<option value="SO">Somalia</option>
+			<option value="ZA">South Africa</option>
+			<option value="KR">South Korea</option>
+			<option value="ES">Spain</option>
+			<option value="LK">Sri Lanka</option>
+			<option value="SH">St. Helena</option>
+			<option value="KN">St. Kitts and Nevis</option>
+			<option value="LC">St. Lucia</option>
+			<option value="PM">St. Pierre and Miquelon</option>
+			<option value="SR">Suriname</option>
+			<option value="SJ">Svalbard and Jan Mayen Islands</option>
+			<option value="SZ">Swaziland</option>
+			<option value="SE">Sweden</option>
+			<option value="CH">Switzerland</option>
+			<option value="TW">Taiwan</option>
+			<option value="TJ">Tajikistan</option>
+			<option value="TZ">Tanzania</option>
+			<option value="TH">Thailand</option>
+			<option value="TG">Togo</option>
+			<option value="TO">Tonga</option>
+			<option value="TT">Trinidad and Tobago</option>
+			<option value="TN">Tunisia</option>
+			<option value="TR">Turkey</option>
+			<option value="TM">Turkmenistan</option>
+			<option value="TC">Turks and Caicos Islands</option>
+			<option value="TV">Tuvalu</option>
+			<option value="UG">Uganda</option>
+			<option value="UA">Ukraine</option>
+			<option value="AE">United Arab Emirates</option>
+			<option value="GB">United Kingdom</option>
+			<option value="UY">Uruguay</option>
+			<option value="VU">Vanuatu</option>
+			<option value="VA">Vatican City State</option>
+			<option value="VE">Venezuela</option>
+			<option value="VN">Vietnam</option>
+			<option value="WF">Wallis and Futuna Islands</option>
+			<option value="YE">Yemen</option>
+			<option value="ZM">Zambia</option>		
+	</param>
+	<param name="libertyreserve_successurl" type="text" size="40" default="http://www.nnea.net/thank-you" 
+			label="MOD_AMONEY_URL_SUCCESSFUL_OPERATION" description="MOD_AMONEY_ADDRESPAYMENT"/>
+    <param name="libertyreserve_errorurl" type="text" size="40" default="http://www.nnea.net/payment-error" 
+			label="MOD_AMONEY_URL_ERRORS_OF_OPERATION" description="MOD_AMONEY_ADDRESERRORSMENT"/>
+	<param type="spacer" />
+	<param name="use_moneybookers" type="radio" default="0" label="MOD_AMONEY_USING_PAYPAL2" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+    </param>
+	<param name="pretext5" type="text" size="40" default="Donate"
+			label="MOD_AMONEY_INTRODUCTORY_TEXT" description=""  />
+	<param name="currency_moneybookers" type="list" default="USD" label="Currency" description="Type of currency">
+			<option value="USD">U.S. Dollars</option>
+			<option value="AUD">Australian Dollars</option>
+			<option value="GBP">British Pounds</option>
+			<option value="CAD">Canadian Dollars</option>
+			<option value="CZK">Czech Koruna</option>
+			<option value="DKK">Danish Kroner</option>
+			<option value="EUR">Euros</option>
+			<option value="HKD">Hong Kong Dollars</option>
+			<option value="HUF">Hungarian Forint</option>
+			<option value="ILS">Israeli New Shekels</option>
+			<option value="JPY">Japanese Yen</option>
+			<option value="MXN">Mexican Pesos</option>
+			<option value="NZD">New Zealand Dollars</option>
+			<option value="NOK">Norwegian Kroner</option>
+			<option value="PLN">Polish Zlotych</option>
+			<option value="SGD">Singapore Dollars</option>
+			<option value="SEK">Swedish Kronor</option>
+			<option value="CHF">Swiss Francs</option>
+	</param>
+	<param name="country1" type="list" default="RU" label="Donor's Default Country" description="You can change the default checkout language and content for your donor by selecting from the countries below. Otherwise, do nothing and your donors can choose for themselves.">
+			<option value="US">United States</option>
+			<option value="AL">Albania</option>
+			<option value="DZ">Algeria</option>
+			<option value="AD">Andorra</option>
+			<option value="AO">Angola</option>
+			<option value="AI">Anguilla</option>
+			<option value="AG">Antigua and Barbuda</option>
+			<option value="AR">Argentina</option>
+			<option value="AM">Armenia</option>
+			<option value="AW">Aruba</option>
+			<option value="AU">Australia</option>
+			<option value="AT">Austria</option>
+			<option value="AZ">Azerbaijan Republic</option>
+			<option value="BS">Bahamas</option>
+			<option value="BH">Bahrain</option>
+			<option value="BB">Barbados</option>
+			<option value="BE">Belgium</option>
+			<option value="BZ">Belize</option>
+			<option value="BJ">Benin</option>
+			<option value="BM">Bermuda</option>
+			<option value="BT">Bhutan</option>
+			<option value="BO">Bolivia</option>
+			<option value="BA">Bosnia and Herzegovina</option>
+			<option value="BW">Botswana</option>
+			<option value="BR">Brazil</option>
+			<option value="VG">British Virgin Islands</option>
+			<option value="BN">Brunei</option>
+			<option value="BG">Bulgaria</option>
+			<option value="BF">Burkina Faso</option>
+			<option value="BI">Burundi</option>
+			<option value="KH">Cambodia</option>
+			<option value="CA">Canada</option>
+			<option value="CV">Cape Verde</option>
+			<option value="KY">Cayman Islands</option>
+			<option value="TD">Chad</option>
+			<option value="CL">Chile</option>
+			<option value="C2">China</option>
+			<option value="CO">Colombia</option>
+			<option value="KM">Comoros</option>
+			<option value="CK">Cook Islands</option>
+			<option value="CR">Costa Rica</option>
+			<option value="HR">Croatia</option>
+			<option value="CY">Cyprus</option>
+			<option value="CZ">Czech Republic</option>
+			<option value="CD">Democratic Republic of the Congo</option>
+			<option value="DK">Denmark</option>
+			<option value="DJ">Djibouti</option>
+			<option value="DM">Dominica</option>
+			<option value="DO">Dominican Republic</option>
+			<option value="EC">Ecuador</option>
+			<option value="SV">El Salvador</option>
+			<option value="ER">Eritrea</option>
+			<option value="EE">Estonia</option>
+			<option value="ET">Ethiopia</option>
+			<option value="FK">Falkland Islands</option>
+			<option value="FO">Faroe Islands</option>
+			<option value="FM">Federated States of Micronesia</option>
+			<option value="FJ">Fiji</option>
+			<option value="FI">Finland</option>
+			<option value="FR">France</option>
+			<option value="GF">French Guiana</option>
+			<option value="PF">French Polynesia</option>
+			<option value="GA">Gabon Republic</option>
+			<option value="GM">Gambia</option>
+			<option value="DE">Germany</option>
+			<option value="GI">Gibraltar</option>
+			<option value="GR">Greece</option>
+			<option value="GL">Greenland</option>
+			<option value="GD">Grenada</option>
+			<option value="GP">Guadeloupe</option>
+			<option value="GT">Guatemala</option>
+			<option value="GN">Guinea</option>
+			<option value="GW">Guinea Bissau</option>
+			<option value="GY">Guyana</option>
+			<option value="HN">Honduras</option>
+			<option value="HK">Hong Kong</option>
+			<option value="HU">Hungary</option>
+			<option value="IS">Iceland</option>
+			<option value="IN">India</option>
+			<option value="ID">Indonesia</option>
+			<option value="IE">Ireland</option>
+			<option value="IL">Israel</option>
+			<option value="IT">Italy</option>
+			<option value="JM">Jamaica</option>
+			<option value="JP">Japan</option>
+			<option value="JO">Jordan</option>
+			<option value="KZ">Kazakhstan</option>
+			<option value="KE">Kenya</option>
+			<option value="KI">Kiribati</option>
+			<option value="KW">Kuwait</option>
+			<option value="KG">Kyrgyzstan</option>
+			<option value="LA">Laos</option>
+			<option value="LV">Latvia</option>
+			<option value="LS">Lesotho</option>
+			<option value="LI">Liechtenstein</option>
+			<option value="LT">Lithuania</option>
+			<option value="LU">Luxembourg</option>
+			<option value="MG">Madagascar</option>
+			<option value="MW">Malawi</option>
+			<option value="MY">Malaysia</option>
+			<option value="MV">Maldives</option>
+			<option value="ML">Mali</option>
+			<option value="MT">Malta</option>
+			<option value="MH">Marshall Islands</option>
+			<option value="MQ">Martinique</option>
+			<option value="MR">Mauritania</option>
+			<option value="MU">Mauritius</option>
+			<option value="YT">Mayotte</option>
+			<option value="MX">Mexico</option>
+			<option value="MN">Mongolia</option>
+			<option value="MS">Montserrat</option>
+			<option value="MA">Morocco</option>
+			<option value="MZ">Mozambique</option>
+			<option value="NA">Namibia</option>
+			<option value="NR">Nauru</option>
+			<option value="NP">Nepal</option>
+			<option value="NL">Netherlands</option>
+			<option value="AN">Netherlands Antilles</option>
+			<option value="NC">New Caledonia</option>
+			<option value="NZ">New Zealand</option>
+			<option value="NI">Nicaragua</option>
+			<option value="NE">Niger</option>
+			<option value="NU">Niue</option>
+			<option value="NF">Norfolk Island</option>
+			<option value="NO">Norway</option>
+			<option value="OM">Oman</option>
+			<option value="PW">Palau</option>
+			<option value="PA">Panama</option>
+			<option value="PG">Papua New Guinea</option>
+			<option value="PE">Peru</option>
+			<option value="PH">Philippines</option>
+			<option value="PN">Pitcairn Islands</option>
+			<option value="PL">Poland</option>
+			<option value="PT">Portugal</option>
+			<option value="QA">Qatar</option>
+			<option value="CG">Republic of the Congo</option>
+			<option value="RE">Reunion</option>
+			<option value="RO">Romania</option>
+			<option value="RU">Russia</option>
+			<option value="RW">Rwanda</option>
+			<option value="VC">Saint Vincent and the Grenadines</option>
+			<option value="WS">Samoa</option>
+			<option value="SM">San Marino</option>
+			<option value="ST">Sao Tome and Principe</option>
+			<option value="SA">Saudi Arabia</option>
+			<option value="SN">Senegal</option>
+			<option value="SC">Seychelles</option>
+			<option value="SL">Sierra Leone</option>
+			<option value="SG">Singapore</option>
+			<option value="SK">Slovakia</option>
+			<option value="SI">Slovenia</option>
+			<option value="SB">Solomon Islands</option>
+			<option value="SO">Somalia</option>
+			<option value="ZA">South Africa</option>
+			<option value="KR">South Korea</option>
+			<option value="ES">Spain</option>
+			<option value="LK">Sri Lanka</option>
+			<option value="SH">St. Helena</option>
+			<option value="KN">St. Kitts and Nevis</option>
+			<option value="LC">St. Lucia</option>
+			<option value="PM">St. Pierre and Miquelon</option>
+			<option value="SR">Suriname</option>
+			<option value="SJ">Svalbard and Jan Mayen Islands</option>
+			<option value="SZ">Swaziland</option>
+			<option value="SE">Sweden</option>
+			<option value="CH">Switzerland</option>
+			<option value="TW">Taiwan</option>
+			<option value="TJ">Tajikistan</option>
+			<option value="TZ">Tanzania</option>
+			<option value="TH">Thailand</option>
+			<option value="TG">Togo</option>
+			<option value="TO">Tonga</option>
+			<option value="TT">Trinidad and Tobago</option>
+			<option value="TN">Tunisia</option>
+			<option value="TR">Turkey</option>
+			<option value="TM">Turkmenistan</option>
+			<option value="TC">Turks and Caicos Islands</option>
+			<option value="TV">Tuvalu</option>
+			<option value="UG">Uganda</option>
+			<option value="UA">Ukraine</option>
+			<option value="AE">United Arab Emirates</option>
+			<option value="GB">United Kingdom</option>
+			<option value="UY">Uruguay</option>
+			<option value="VU">Vanuatu</option>
+			<option value="VA">Vatican City State</option>
+			<option value="VE">Venezuela</option>
+			<option value="VN">Vietnam</option>
+			<option value="WF">Wallis and Futuna Islands</option>
+			<option value="YE">Yemen</option>
+			<option value="ZM">Zambia</option>		
+	</param>
+	<param name="choose_cur1" type="radio" default="0" label="Show on Fronpage" description="Allow for donors choose currency">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+	<param name="moneybookers_email" type="text" size="40" default="andrew.opeyda@gmail.com" 
+			label="Pay to Email" description="MOD_AMONEY_PAYPALINFO" />
+    <param name="moneybookers_successurl" type="text" size="40" default="http://www.nnea.net/thank-you" 
+			label="MOD_AMONEY_URL_SUCCESSFUL_OPERATION" description="MOD_AMONEY_ADDRESPAYMENT"/>
+	<param type="spacer" />
+	<param name="use_robox" type="radio" default="0" label="MOD_AMONEY_ROBOX_INCLUDE" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+    <param name="mrh_login" type="text" size="40" default="demo" 
+			label="MOD_AMONEY_LOGIN_ROBOX" description="" />
+    <param name="mrh_pass1" type="password" size="40" default="Morbid11" 
+			label="Password" description="" />
+    <param name="out_summ" type="text" size="14" default="8.96" 
+			label="MOD_AMONEY_TOTAL_DONATIONS" description="MOD_AMONEY_TOTALDONATIONSDEFAULT" />
+	<param name="culture" type="list" default="ru" label="Language" description="">
+			<option value="en">English</option>
+			<option value="ru">Russian</option>
+	</param>
+	<param type="spacer" />
+	<param name="use_sms" type="radio" default="0" label="MOD_AMONEY_SMS_INCLUDE" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+	<param name="sms_imag" type="radio" default="58160" label="MOD_AMONEY_SMS_IMAGE" description="">
+			<option value="58160">MOD_AMONEY_PIG</option>
+			<option value="58291">MOD_AMONEY_CAT</option>
+			<option value="58290">MOD_AMONEY_SAFE</option>
+			<option value="58287">MOD_AMONEY_PURSE</option>
+			<option value="58288">MOD_AMONEY_CREDIT_CARD</option>
+	</param>
+	<param name="sms_id" type="text" size="6" default="00000"
+			label="MOD_AMONEY_ID" description="" />
+	<param type="spacer" />
+	<param name="use_sms1" type="radio" default="0" label="MOD_AMONEY_SMS1_INCLUDE" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+	<param name="sms1_id" type="text" size="6" default="00000"
+			label="MOD_AMONEY_ID" description="" />
+	<param type="spacer" />
+	<param name="use_mmail" type="radio" default="0" label="MOD_AMONEY_MMAIL_INCLUDE" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+	<param name="mail_li" type="radio" default="1" label="MOD_AMONEY_OFFICERS" description="">
+			<option value="0">MOD_AMONEY_LEGAL_ENTITIES</option>
+			<option value="1">MOD_AMONEY_INDIVIDUALS</option>
+	</param>
+    <param name="mmna" type="text" size="20" default="0000000000000000" 
+			label="MOD_AMONEY_NUMBER_ACCOUNT_MAIL" description="" />
+	<param name="imagemm" type="radio" default="0" label="MOD_AMONEY_APPEARANCE" description="">
+			<option value="0">MOD_AMONEY_BANKNOTES</option>
+			<option value="1">MOD_AMONEY_FIVE_RUBLES</option>
+			<option value="2">MOD_AMONEY_ONE_RUBLE</option>
+	</param>
+	<param name="mmtext" type="text" size="40" default="Дай пять!" 
+			label="MOD_AMONEY_INTRODUCTORY_TEXT_MAIL" description="" />
+	<param type="spacer" />
+    <param name="mmshop_is" type="text" size="7" default="123456" 
+			label="MOD_AMONEY_NUMBER_SHOP_IS_MAIL" description="" />
+    <param name="mmsum" type="text" size="20" default="10.00" 
+			label="MOD_AMONEY_SUM_MAIL" description="" />
+    <param name="mmdescription" type="textarea" cols="20" rows="5" default="Order in this store-syakom" 
+			label="MOD_AMONEY_DESCRIPTION_MAIL" description="" />
+    <param name="mmissuer_id" type="text" size="20" default="543-TSH" 
+			label="MOD_AMONEY_ISSUER_MAIL" description="" />
+    <param name="mmmessage" type="textarea" cols="20" rows="5" default="Pokupua so-so stuff" 
+			label="MOD_AMONEY_MESSAGE_MAIL" description="" />
+    <param name="mmsignature" type="text" size="20" default="1234567890abcdef" 
+			label="MOD_AMONEY_SIGNATURE_MAIL" description="" />
+	<param type="spacer" />
+	<param name="use_liqpay" type="radio" default="0" label="MOD_AMONEY_LIQPAY_INCLUDE" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+	<param name="merchant_id" type="text" size="17" default="i0000000000" 
+			label="MOD_AMONEY_MERCHANT_ID" description="" />
+    <param name="phone" type="text" size="20" default="+00000000000" 
+			label="MOD_AMONEY_PHONE" description="" />
+    <param name="signature" type="text" size="60" default="XFXBKtVRGNKlyappjJUylZGjHFwDQ2zBCK2VH3J" 
+			label="MOD_AMONEY_SIGNED_FOR_OPERATION" description="" />
+	<param name="liqpay_summ" type="text" size="5" default="10" 
+			label="MOD_AMONEY_TOTAL_DONATIONS" description="MOD_AMONEY_TOTALDONATIONSDEFAULT" />
+	<param name="liqpay_currency" type="radio" default="0" label="MOD_AMONEY_LIQPAY_CRRENCY" description="">
+			<option value="0">UAH</option>
+			<option value="1">EUR</option>
+			<option value="2">USD</option>
+			<option value="3">RUR</option>
+	</param>
+	<param name="switch_fixed" type="radio" default="1" label="MOD_AMONEY_SWTCH_FIXED" description="">
+			<option value="0">MOD_AMONEY_NOT_FIXED</option>
+			<option value="1">MOD_AMONEY_FIXED</option>
+	</param>
+	<param name="server_url" type="text" size="40" default="http://www.yoursite.com" 
+			label="MOD_AMONEY_URL_SUCCESSFUL_OPERATION" description="MOD_AMONEY_ADDRESPAYMENT"/>
+    <param name="result_url" type="text" size="40" default="http://www.yoursite.com" 
+			label="MOD_AMONEY_URL_ERRORS_OF_OPERATION" description="MOD_AMONEY_ADDRESERRORSMENT"/>
+	<param name="info_liqpay" type="radio" default="0" label="Disable info" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+	<param type="spacer" />
+	<param name="use_smscoin" type="radio" default="0" label="MOD_AMONEY_SMSCOIN_INCLUDE" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+	<param name="smscoin_id" type="text" size="17" default="000000" 
+			label="ID" description="" />
+	<param name="don_but" type="text" size="17" default="10" 
+			label="Donate Button" description="" />
+	<param type="spacer" />
+	<param name="copy" type="radio" default="1" label="MOD_AMONEY_SHOW_LINK" description="MOD_AMONEY_SALTDTPI">
+			<option value="0">MOD_AMONEY_HIDE</option>
+			<option value="1">MOD_AMONEY_SHOW</option>
+	</param>
+	<param name="exterlink" type="radio" default="0" label="MOD_AMONEY_EXTERNAL_LINK" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</param>
+	</params>
+	<params group="advanced">
+		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+	<field name="amofixed" type="list" default="0" label="MOD_AMONEY_USE_A_FIXED_AMOUNT" description="">
+		<option value="1">MOD_AMONEY_YES</option>
+		<option value="0">MOD_AMONEY_NO</option>
+	</field>
+	<field type="spacer" name="myspacer00" hr="true" />
+	<field name="off_jquery1" type="list" default="1" label="MOD_AMONEY_YOU_DOWNLOAD_JQUERY" description="">
+		<option value="1">MOD_AMONEY_YES</option>
+		<option value="0">MOD_AMONEY_NO</option>
+	</field>
+	<field name="t1" type="list" default="0" label="jQuery" description="">
+		<option value="0">jQuery</option>
+		<option value="1">$</option>
+		<option value="2">$j</option>
+		<option value="3">no</option>
+	</field>
+	<field name="off_tipsy1" type="list" default="1" label="MOD_AMONEY_YOU_DOWNLOAD_TIPSY" description="">
+		<option value="0">MOD_AMONEY_YES</option>
+		<option value="1">MOD_AMONEY_NO</option>
+	</field>
+	<field type="spacer" name="myspacer01" hr="true" />
+	<field name="jfadtogquery" type="radio" default="0" label="MOD_AMONEY_VIEW_JQUERU" description="">
+			<option value="0">Adeptus</option>
+			<option value="1">Leonidas</option>
+	</field>
+	<field type="spacer" name="myspacer" hr="true" />
+    <field name="width_border" type="text" default="100" 
+			label="MOD_AMONEY_WIDTH" description="" />
+    <field name="height_border" type="text" default="180" 
+			label="MOD_AMONEY_HEIGHT" description="" />
+	<field type="spacer" name="myspacer1" hr="true" />
+	<field name="gost5" type="radio" default="1" label="SEO" description="">
+			<option value="0">MOD_AMONEY_HIDE</option>
+			<option value="1">MOD_AMONEY_SHOW</option>
+	</field>
+	<field type="spacer" name="myspacer2" hr="true" />
+	<field name="off_intrerst" type="list" default="1" label="MOD_AMONEY_OFF_INTEREST" description="">
+		<option value="1">MOD_AMONEY_YES</option>
+		<option value="0">MOD_AMONEY_NO</option>
+	</field>
+    <field name="goal1" type="text" default="10000" 
+			label="MOD_AMONEY_GOAL_AMOUT" description="MOD_AMONEY_OUR_GOAL_AMOUT" />
+	<field name="current1" type="text" default="3000" 
+			label="MOD_AMONEY_CURRENT_AMOUNT_RAISED" description="MOD_AMONEY_THE_CURRENT_AMOUNT_RAISED" />
+	<field name="datename" type="text" default="Updated:" 
+			label="MOD_AMONEY_TEXT_UPDATED" description="MOD_AMONEY_TEXT_UPDATED_DESCRIPTION" />     	
+    <field name="date1" type="text" default="27/1/2009" 
+			label="MOD_AMONEY_DATE_LAST_UPDATE" description="MOD_AMONEY_DATE_LAST_UPDATE_DESCRIPTION" />
+	<field type="spacer" name="myspacer3" hr="true" />
+	<field name="pretext" type="text" size="40" default="Благодарность Автору"
+			label="MOD_AMONEY_INTRODUCTORY_TEXT" description=""  />
+	<field name="btntxt" type="text" default="Отправить"
+			label="MOD_AMONEY_TEXT_SEND_BUTTON" description=""  />
+    <field type="spacer" name="myspacer4" hr="true" />
+	<field name="use_wm" type="radio" default="1" label="MOD_AMONEY_USE_WEBMONEY" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+	<field name="use_p2" type="radio" default="1" label="MOD_AMONEY_USE_WMZ" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+    <field name="wmz" type="text" size="17" default="Z000000000000" 
+			label="MOD_AMONEY_NUMBER_PURSES_WMZ" description="MOD_AMONEY_YOURNUMBERUSDOLLARS" />
+	<field name="use_p3" type="radio" default="1" label="MOD_AMONEY_USE_WME" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+	<field name="wme" type="text" size="17" default="E000000000000" 
+			label="MOD_AMONEY_NUMBER_PURSES_WME" description="MOD_AMONEY_YOURNUMBEREURO" />
+	<field name="use_p1" type="radio" default="1" label="MOD_AMONEY_USE_WMR" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+    <field name="wmr" type="text" size="17" default="R000000000000" 
+			label="MOD_AMONEY_NUMBER_PURSES_WMR" description="MOD_AMONEY_YOURNUMBERPURSESRUBLES" />
+	<field name="use_p4" type="radio" default="1" label="MOD_AMONEY_USE_WMU" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+    <field name="wmu" type="text" size="17" default="U000000000000" 
+			label="MOD_AMONEY_NUMBER_PURSES_WMU" description="MOD_AMONEY_YOURNUMBERRBMHRYVNA" />
+	<field name="use_p5" type="radio" default="1" label="MOD_AMONEY_USE_WMB" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+    <field name="wmb" type="text" size="17" default="B000000000000" 
+			label="MOD_AMONEY_NUMBER_PURSES_WMB" description="MOD_AMONEY_YOURNUMBERBELARUSRUB" />
+	<field name="wm_summ" type="text" size="5" default="10" 
+			label="MOD_AMONEY_TOTAL_DONATIONS" description="MOD_AMONEY_TOTALDONATIONSDEFAULT" />
+	<field name="wm_successurl" type="text" size="40" default="modules/mod_amoney/conf/success.html" 
+			label="MOD_AMONEY_URL_SUCCESSFUL_OPERATION" description="MOD_AMONEY_ADDRESPAYMENT" />
+	<field name="wm_errorurl" type="text" size="40" default="modules/mod_amoney/conf/fail.html" 
+			label="MOD_AMONEY_URL_ERRORS_OF_OPERATION" description="MOD_AMONEY_ADDRESERRORSMENT" />
+	<field name="wm_descpay" type="textarea" cols="20" rows="5" default="Gratitude to the Author" 
+			label="MOD_AMONEY_DESCRIPTION_OF_PAYMENT" description="MOD_AMONEY_DESCRIPTIONOFPAYMENTINFO" />
+    <field type="spacer" name="myspacer5" hr="true" />
+	<field name="use_rupay" type="radio" default="0" label="MOD_AMONEY_USE_RBKMONEY" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+    <field name="rupay_submit" type="text" size="14" default="0000000" 
+			label="MOD_AMONEY_SITE_NUMBER_PRODOVTSA" description="MOD_AMONEY_USERBKMONEYINFO" />
+    <field name="RUR" type="text" size="14" default="RU000000000" 
+			label="Счет RU76" description="MOD_AMONEY_RBKMONEYYOURNUMBERRUBLES" />
+	<field name="rupay_summ" type="text" size="5" default="10" 
+			label="MOD_AMONEY_TOTAL_DONATIONS" description="MOD_AMONEY_TOTALDONATIONSDEFAULT" />
+	<field name="rupay_successurl" type="text" size="40" default="http://www.yoursite.com" 
+			label="MOD_AMONEY_LINK_TO_WEB_SITE" description="MOD_AMONEY_INDICATEWEBSITEADDRESS" />
+    <field type="spacer" name="myspacer6" hr="true" />
+	<field name="use_yandex" type="radio" default="0" label="MOD_AMONEY_USE_YANDEXMONEY" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+    <field name="yandex" type="text" size="18" default="00000000000000" 
+			label="MOD_AMONEY_NUMBER_PURSES_YANDEX" description="MOD_AMONEY_YANDEXINFO" />
+	<field name="yandex_summ" type="text" size="14" default="10" 
+			label="MOD_AMONEY_TOTAL_DONATIONS" description="MOD_AMONEY_TOTALDONATIONSDEFAULT" />
+	<field name="yandex_successurl" type="text" size="40" default="http://www.yoursite.com" 
+			label="MOD_AMONEY_LINK_TO_WEB_SITE" description="MOD_AMONEY_INDICATEWEBSITEADDRESS" />
+    <field type="spacer" name="myspacer7" hr="true" />
+	<field name="use_egold" type="radio" default="0" label="MOD_AMONEY_USING_E_GOLD" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+    <field name="number" type="text" size="14" default="0000000" 
+			label="MOD_AMONEY_NUMBER" description="MOD_AMONEY_YOUR_ACCOUNT_NUMBER" />
+    <field name="name" type="text" size="40" default="www.yoursite.com" 
+			label="MOD_AMONEY_NAME" description="MOD_AMONEY_NAME_OF_ACCOUNT" />
+	<field name="mail" type="text" size="40" default="you@mai.com" 
+			label="E-mail" description="MOD_AMONEY_E_GOLDINFO" />
+	<field name="egoldinfo" type="text" size="40" default="" 
+			label="MOD_AMONEY_AMONEY_INFO" description="" />
+    <field name="egold_summ" type="text" size="14" default="10" 
+			label="MOD_AMONEY_TOTAL_DONATIONS" description="MOD_AMONEY_TOTALDONATIONSDEFAULT" />
+	<field name="egold_successurl" type="text" size="40" default="modules/mod_amoney/conf/pay.php" 
+			label="MOD_AMONEY_URL_SUCCESSFUL_OPERATION" description="MOD_AMONEY_ADDRESPAYMENT" />
+	<field name="egold_errorurl" type="text" size="40" default="modules/mod_amoney/conf/nopay.php" 
+			label="MOD_AMONEY_URL_ERRORS_OF_OPERATION" description="MOD_AMONEY_ADDRESERRORSMENT" />
+    <field type="spacer" name="myspacer8" hr="true" />
+	<field name="use_paypal" type="radio" default="0" label="MOD_AMONEY_USING_PAYPAL" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+	<field name="paypal_email" type="text" size="40" default="alex1962@donpac.ru" 
+			label="PayPal Email" description="MOD_AMONEY_PAYPALINFO" />
+	<field name="paypalcur_on" type="radio" default="0" label="MOD_AMONEY_SELECT_CURRENCY" description="MOD_AMONEY_OFFONSELECTCURRENCYPAYMENTS">
+			<option value="1">MOD_AMONEY_DISABLE</option>
+			<option value="0">MOD_AMONEY_INCLUSION</option>
+	</field>
+	<field name="donate_len" type="radio" default="1" label="MOD_AMONEY_FREQUENCY" description="MOD_AMONEY_FREQUENCYINFO">
+			<option value="1">MOD_AMONEY_DISABLE</option>
+			<option value="0">MOD_AMONEY_INCLUSION</option>
+	</field>
+	<field name="paypallen_val" type="list" default="4" label="MOD_AMONEY_PERIOD" description="MOD_AMONEY_PERIODINFO">
+		<option value='4'>MOD_AMONEY_ONCE</option>
+		<option value='1'>MOD_AMONEY_WEEKLY</option>
+		<option value='2'>MOD_AMONEY_MONTHLY</option>
+		<option value='3'>MOD_AMONEY_YEARLY</option>
+	</field>
+	<field name="paypalval_on" type="radio" default="0" label="MOD_AMONEY_ENTER_AMOUNT" description="MOD_AMONEY_ENTERAMOUNTINFO">
+			<option value="1">MOD_AMONEY_DISABLE</option>
+			<option value="0">MOD_AMONEY_INCLUSION</option>
+	</field>
+	<field name="paypalcur_val" type="list" default="USD" label="MOD_AMONEY_CURRENCY_DEFAULT" description="">
+		<option value='USD'>USD "$"</option>
+		<option value='GBP'>GBP "?"</option>
+		<option value='EUR'>EUR "€"</option>
+	</field>
+	<field name="paypalval_val" type="text" size="14" default="5" 
+			label="MOD_AMONEY_TOTAL_DONATIONS" description="MOD_AMONEY_TOTALDONATIONSDEFAULT" />
+    <field name="paypalvalleast_val" type="text" size="14" default="5" 
+			label="MOD_AMONEY_MINIMUM_AMOUNT" description="" />
+	<field name="link_return" type="text" size="40" default="http://www.yoursite.com" 
+			label="MOD_AMONEY_URL_SUCCESSFUL_OPERATION" description="MOD_AMONEY_ADDRESPAYMENT"/>
+    <field name="link_cancel" type="text" size="40" default="http://www.yoursite.com" 
+			label="MOD_AMONEY_URL_ERRORS_OF_OPERATION" description="MOD_AMONEY_ADDRESERRORSMENT"/>
+    <field type="spacer" name="myspacer9" hr="true" />
+	<field name="use_libertyreserve" type="radio" default="0" label="MOD_AMONEY_USING_PAYPAL1" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+    <field name="ur" type="text" size="14" default="U6541727" 
+			label="" description="MOD_AMONEY_RBKMONEYYOURNUMBERRUBLES" />
+	<field name="currency_libertyreserve" type="list" default="USD" label="Currency" description="Type of currency">
+			<option value="USD">U.S. Dollars</option>
+			<option value="EUR">Euros</option>
+	</field>
+	<field name="choose_cur" type="radio" default="0" 
+			label="Show on Fronpage" description="Allow for donors choose currency">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+	<field name="country" type="list" default="RU" label="Donor's Default Country" description="You can change the default checkout language and content for your donor by selecting from the countries below. Otherwise, do nothing and your donors can choose for themselves.">
+			<option value="US">United States</option>
+			<option value="AL">Albania</option>
+			<option value="DZ">Algeria</option>
+			<option value="AD">Andorra</option>
+			<option value="AO">Angola</option>
+			<option value="AI">Anguilla</option>
+			<option value="AG">Antigua and Barbuda</option>
+			<option value="AR">Argentina</option>
+			<option value="AM">Armenia</option>
+			<option value="AW">Aruba</option>
+			<option value="AU">Australia</option>
+			<option value="AT">Austria</option>
+			<option value="AZ">Azerbaijan Republic</option>
+			<option value="BS">Bahamas</option>
+			<option value="BH">Bahrain</option>
+			<option value="BB">Barbados</option>
+			<option value="BE">Belgium</option>
+			<option value="BZ">Belize</option>
+			<option value="BJ">Benin</option>
+			<option value="BM">Bermuda</option>
+			<option value="BT">Bhutan</option>
+			<option value="BO">Bolivia</option>
+			<option value="BA">Bosnia and Herzegovina</option>
+			<option value="BW">Botswana</option>
+			<option value="BR">Brazil</option>
+			<option value="VG">British Virgin Islands</option>
+			<option value="BN">Brunei</option>
+			<option value="BG">Bulgaria</option>
+			<option value="BF">Burkina Faso</option>
+			<option value="BI">Burundi</option>
+			<option value="KH">Cambodia</option>
+			<option value="CA">Canada</option>
+			<option value="CV">Cape Verde</option>
+			<option value="KY">Cayman Islands</option>
+			<option value="TD">Chad</option>
+			<option value="CL">Chile</option>
+			<option value="C2">China</option>
+			<option value="CO">Colombia</option>
+			<option value="KM">Comoros</option>
+			<option value="CK">Cook Islands</option>
+			<option value="CR">Costa Rica</option>
+			<option value="HR">Croatia</option>
+			<option value="CY">Cyprus</option>
+			<option value="CZ">Czech Republic</option>
+			<option value="CD">Democratic Republic of the Congo</option>
+			<option value="DK">Denmark</option>
+			<option value="DJ">Djibouti</option>
+			<option value="DM">Dominica</option>
+			<option value="DO">Dominican Republic</option>
+			<option value="EC">Ecuador</option>
+			<option value="SV">El Salvador</option>
+			<option value="ER">Eritrea</option>
+			<option value="EE">Estonia</option>
+			<option value="ET">Ethiopia</option>
+			<option value="FK">Falkland Islands</option>
+			<option value="FO">Faroe Islands</option>
+			<option value="FM">Federated States of Micronesia</option>
+			<option value="FJ">Fiji</option>
+			<option value="FI">Finland</option>
+			<option value="FR">France</option>
+			<option value="GF">French Guiana</option>
+			<option value="PF">French Polynesia</option>
+			<option value="GA">Gabon Republic</option>
+			<option value="GM">Gambia</option>
+			<option value="DE">Germany</option>
+			<option value="GI">Gibraltar</option>
+			<option value="GR">Greece</option>
+			<option value="GL">Greenland</option>
+			<option value="GD">Grenada</option>
+			<option value="GP">Guadeloupe</option>
+			<option value="GT">Guatemala</option>
+			<option value="GN">Guinea</option>
+			<option value="GW">Guinea Bissau</option>
+			<option value="GY">Guyana</option>
+			<option value="HN">Honduras</option>
+			<option value="HK">Hong Kong</option>
+			<option value="HU">Hungary</option>
+			<option value="IS">Iceland</option>
+			<option value="IN">India</option>
+			<option value="ID">Indonesia</option>
+			<option value="IE">Ireland</option>
+			<option value="IL">Israel</option>
+			<option value="IT">Italy</option>
+			<option value="JM">Jamaica</option>
+			<option value="JP">Japan</option>
+			<option value="JO">Jordan</option>
+			<option value="KZ">Kazakhstan</option>
+			<option value="KE">Kenya</option>
+			<option value="KI">Kiribati</option>
+			<option value="KW">Kuwait</option>
+			<option value="KG">Kyrgyzstan</option>
+			<option value="LA">Laos</option>
+			<option value="LV">Latvia</option>
+			<option value="LS">Lesotho</option>
+			<option value="LI">Liechtenstein</option>
+			<option value="LT">Lithuania</option>
+			<option value="LU">Luxembourg</option>
+			<option value="MG">Madagascar</option>
+			<option value="MW">Malawi</option>
+			<option value="MY">Malaysia</option>
+			<option value="MV">Maldives</option>
+			<option value="ML">Mali</option>
+			<option value="MT">Malta</option>
+			<option value="MH">Marshall Islands</option>
+			<option value="MQ">Martinique</option>
+			<option value="MR">Mauritania</option>
+			<option value="MU">Mauritius</option>
+			<option value="YT">Mayotte</option>
+			<option value="MX">Mexico</option>
+			<option value="MN">Mongolia</option>
+			<option value="MS">Montserrat</option>
+			<option value="MA">Morocco</option>
+			<option value="MZ">Mozambique</option>
+			<option value="NA">Namibia</option>
+			<option value="NR">Nauru</option>
+			<option value="NP">Nepal</option>
+			<option value="NL">Netherlands</option>
+			<option value="AN">Netherlands Antilles</option>
+			<option value="NC">New Caledonia</option>
+			<option value="NZ">New Zealand</option>
+			<option value="NI">Nicaragua</option>
+			<option value="NE">Niger</option>
+			<option value="NU">Niue</option>
+			<option value="NF">Norfolk Island</option>
+			<option value="NO">Norway</option>
+			<option value="OM">Oman</option>
+			<option value="PW">Palau</option>
+			<option value="PA">Panama</option>
+			<option value="PG">Papua New Guinea</option>
+			<option value="PE">Peru</option>
+			<option value="PH">Philippines</option>
+			<option value="PN">Pitcairn Islands</option>
+			<option value="PL">Poland</option>
+			<option value="PT">Portugal</option>
+			<option value="QA">Qatar</option>
+			<option value="CG">Republic of the Congo</option>
+			<option value="RE">Reunion</option>
+			<option value="RO">Romania</option>
+			<option value="RU">Russia</option>
+			<option value="RW">Rwanda</option>
+			<option value="VC">Saint Vincent and the Grenadines</option>
+			<option value="WS">Samoa</option>
+			<option value="SM">San Marino</option>
+			<option value="ST">Sao Tome and Principe</option>
+			<option value="SA">Saudi Arabia</option>
+			<option value="SN">Senegal</option>
+			<option value="SC">Seychelles</option>
+			<option value="SL">Sierra Leone</option>
+			<option value="SG">Singapore</option>
+			<option value="SK">Slovakia</option>
+			<option value="SI">Slovenia</option>
+			<option value="SB">Solomon Islands</option>
+			<option value="SO">Somalia</option>
+			<option value="ZA">South Africa</option>
+			<option value="KR">South Korea</option>
+			<option value="ES">Spain</option>
+			<option value="LK">Sri Lanka</option>
+			<option value="SH">St. Helena</option>
+			<option value="KN">St. Kitts and Nevis</option>
+			<option value="LC">St. Lucia</option>
+			<option value="PM">St. Pierre and Miquelon</option>
+			<option value="SR">Suriname</option>
+			<option value="SJ">Svalbard and Jan Mayen Islands</option>
+			<option value="SZ">Swaziland</option>
+			<option value="SE">Sweden</option>
+			<option value="CH">Switzerland</option>
+			<option value="TW">Taiwan</option>
+			<option value="TJ">Tajikistan</option>
+			<option value="TZ">Tanzania</option>
+			<option value="TH">Thailand</option>
+			<option value="TG">Togo</option>
+			<option value="TO">Tonga</option>
+			<option value="TT">Trinidad and Tobago</option>
+			<option value="TN">Tunisia</option>
+			<option value="TR">Turkey</option>
+			<option value="TM">Turkmenistan</option>
+			<option value="TC">Turks and Caicos Islands</option>
+			<option value="TV">Tuvalu</option>
+			<option value="UG">Uganda</option>
+			<option value="UA">Ukraine</option>
+			<option value="AE">United Arab Emirates</option>
+			<option value="GB">United Kingdom</option>
+			<option value="UY">Uruguay</option>
+			<option value="VU">Vanuatu</option>
+			<option value="VA">Vatican City State</option>
+			<option value="VE">Venezuela</option>
+			<option value="VN">Vietnam</option>
+			<option value="WF">Wallis and Futuna Islands</option>
+			<option value="YE">Yemen</option>
+			<option value="ZM">Zambia</option>		
+	</field>
+	<field name="libertyreserve_successurl" type="text" size="40" default="http://www.nnea.net/thank-you" 
+			label="MOD_AMONEY_URL_SUCCESSFUL_OPERATION" description="MOD_AMONEY_ADDRESPAYMENT"/>
+    <field name="libertyreserve_errorurl" type="text" size="40" default="http://www.nnea.net/payment-error" 
+			label="MOD_AMONEY_URL_ERRORS_OF_OPERATION" description="MOD_AMONEY_ADDRESERRORSMENT"/>
+    <field type="spacer" name="myspacer10" hr="true" />
+	<field name="use_moneybookers" type="radio" default="0" label="MOD_AMONEY_USING_PAYPAL2" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+    </field>
+	<field name="pretext5" type="text" size="40" default="Donate"
+			label="MOD_AMONEY_INTRODUCTORY_TEXT" description=""  />
+	<field name="currency_moneybookers" type="list" default="USD" label="Currency" description="Type of currency">
+			<option value="USD">U.S. Dollars</option>
+			<option value="AUD">Australian Dollars</option>
+			<option value="GBP">British Pounds</option>
+			<option value="CAD">Canadian Dollars</option>
+			<option value="CZK">Czech Koruna</option>
+			<option value="DKK">Danish Kroner</option>
+			<option value="EUR">Euros</option>
+			<option value="HKD">Hong Kong Dollars</option>
+			<option value="HUF">Hungarian Forint</option>
+			<option value="ILS">Israeli New Shekels</option>
+			<option value="JPY">Japanese Yen</option>
+			<option value="MXN">Mexican Pesos</option>
+			<option value="NZD">New Zealand Dollars</option>
+			<option value="NOK">Norwegian Kroner</option>
+			<option value="PLN">Polish Zlotych</option>
+			<option value="SGD">Singapore Dollars</option>
+			<option value="SEK">Swedish Kronor</option>
+			<option value="CHF">Swiss Francs</option>
+	</field>
+	<field name="country1" type="list" default="RU" label="Donor's Default Country" description="You can change the default checkout language and content for your donor by selecting from the countries below. Otherwise, do nothing and your donors can choose for themselves.">
+			<option value="US">United States</option>
+			<option value="AL">Albania</option>
+			<option value="DZ">Algeria</option>
+			<option value="AD">Andorra</option>
+			<option value="AO">Angola</option>
+			<option value="AI">Anguilla</option>
+			<option value="AG">Antigua and Barbuda</option>
+			<option value="AR">Argentina</option>
+			<option value="AM">Armenia</option>
+			<option value="AW">Aruba</option>
+			<option value="AU">Australia</option>
+			<option value="AT">Austria</option>
+			<option value="AZ">Azerbaijan Republic</option>
+			<option value="BS">Bahamas</option>
+			<option value="BH">Bahrain</option>
+			<option value="BB">Barbados</option>
+			<option value="BE">Belgium</option>
+			<option value="BZ">Belize</option>
+			<option value="BJ">Benin</option>
+			<option value="BM">Bermuda</option>
+			<option value="BT">Bhutan</option>
+			<option value="BO">Bolivia</option>
+			<option value="BA">Bosnia and Herzegovina</option>
+			<option value="BW">Botswana</option>
+			<option value="BR">Brazil</option>
+			<option value="VG">British Virgin Islands</option>
+			<option value="BN">Brunei</option>
+			<option value="BG">Bulgaria</option>
+			<option value="BF">Burkina Faso</option>
+			<option value="BI">Burundi</option>
+			<option value="KH">Cambodia</option>
+			<option value="CA">Canada</option>
+			<option value="CV">Cape Verde</option>
+			<option value="KY">Cayman Islands</option>
+			<option value="TD">Chad</option>
+			<option value="CL">Chile</option>
+			<option value="C2">China</option>
+			<option value="CO">Colombia</option>
+			<option value="KM">Comoros</option>
+			<option value="CK">Cook Islands</option>
+			<option value="CR">Costa Rica</option>
+			<option value="HR">Croatia</option>
+			<option value="CY">Cyprus</option>
+			<option value="CZ">Czech Republic</option>
+			<option value="CD">Democratic Republic of the Congo</option>
+			<option value="DK">Denmark</option>
+			<option value="DJ">Djibouti</option>
+			<option value="DM">Dominica</option>
+			<option value="DO">Dominican Republic</option>
+			<option value="EC">Ecuador</option>
+			<option value="SV">El Salvador</option>
+			<option value="ER">Eritrea</option>
+			<option value="EE">Estonia</option>
+			<option value="ET">Ethiopia</option>
+			<option value="FK">Falkland Islands</option>
+			<option value="FO">Faroe Islands</option>
+			<option value="FM">Federated States of Micronesia</option>
+			<option value="FJ">Fiji</option>
+			<option value="FI">Finland</option>
+			<option value="FR">France</option>
+			<option value="GF">French Guiana</option>
+			<option value="PF">French Polynesia</option>
+			<option value="GA">Gabon Republic</option>
+			<option value="GM">Gambia</option>
+			<option value="DE">Germany</option>
+			<option value="GI">Gibraltar</option>
+			<option value="GR">Greece</option>
+			<option value="GL">Greenland</option>
+			<option value="GD">Grenada</option>
+			<option value="GP">Guadeloupe</option>
+			<option value="GT">Guatemala</option>
+			<option value="GN">Guinea</option>
+			<option value="GW">Guinea Bissau</option>
+			<option value="GY">Guyana</option>
+			<option value="HN">Honduras</option>
+			<option value="HK">Hong Kong</option>
+			<option value="HU">Hungary</option>
+			<option value="IS">Iceland</option>
+			<option value="IN">India</option>
+			<option value="ID">Indonesia</option>
+			<option value="IE">Ireland</option>
+			<option value="IL">Israel</option>
+			<option value="IT">Italy</option>
+			<option value="JM">Jamaica</option>
+			<option value="JP">Japan</option>
+			<option value="JO">Jordan</option>
+			<option value="KZ">Kazakhstan</option>
+			<option value="KE">Kenya</option>
+			<option value="KI">Kiribati</option>
+			<option value="KW">Kuwait</option>
+			<option value="KG">Kyrgyzstan</option>
+			<option value="LA">Laos</option>
+			<option value="LV">Latvia</option>
+			<option value="LS">Lesotho</option>
+			<option value="LI">Liechtenstein</option>
+			<option value="LT">Lithuania</option>
+			<option value="LU">Luxembourg</option>
+			<option value="MG">Madagascar</option>
+			<option value="MW">Malawi</option>
+			<option value="MY">Malaysia</option>
+			<option value="MV">Maldives</option>
+			<option value="ML">Mali</option>
+			<option value="MT">Malta</option>
+			<option value="MH">Marshall Islands</option>
+			<option value="MQ">Martinique</option>
+			<option value="MR">Mauritania</option>
+			<option value="MU">Mauritius</option>
+			<option value="YT">Mayotte</option>
+			<option value="MX">Mexico</option>
+			<option value="MN">Mongolia</option>
+			<option value="MS">Montserrat</option>
+			<option value="MA">Morocco</option>
+			<option value="MZ">Mozambique</option>
+			<option value="NA">Namibia</option>
+			<option value="NR">Nauru</option>
+			<option value="NP">Nepal</option>
+			<option value="NL">Netherlands</option>
+			<option value="AN">Netherlands Antilles</option>
+			<option value="NC">New Caledonia</option>
+			<option value="NZ">New Zealand</option>
+			<option value="NI">Nicaragua</option>
+			<option value="NE">Niger</option>
+			<option value="NU">Niue</option>
+			<option value="NF">Norfolk Island</option>
+			<option value="NO">Norway</option>
+			<option value="OM">Oman</option>
+			<option value="PW">Palau</option>
+			<option value="PA">Panama</option>
+			<option value="PG">Papua New Guinea</option>
+			<option value="PE">Peru</option>
+			<option value="PH">Philippines</option>
+			<option value="PN">Pitcairn Islands</option>
+			<option value="PL">Poland</option>
+			<option value="PT">Portugal</option>
+			<option value="QA">Qatar</option>
+			<option value="CG">Republic of the Congo</option>
+			<option value="RE">Reunion</option>
+			<option value="RO">Romania</option>
+			<option value="RU">Russia</option>
+			<option value="RW">Rwanda</option>
+			<option value="VC">Saint Vincent and the Grenadines</option>
+			<option value="WS">Samoa</option>
+			<option value="SM">San Marino</option>
+			<option value="ST">Sao Tome and Principe</option>
+			<option value="SA">Saudi Arabia</option>
+			<option value="SN">Senegal</option>
+			<option value="SC">Seychelles</option>
+			<option value="SL">Sierra Leone</option>
+			<option value="SG">Singapore</option>
+			<option value="SK">Slovakia</option>
+			<option value="SI">Slovenia</option>
+			<option value="SB">Solomon Islands</option>
+			<option value="SO">Somalia</option>
+			<option value="ZA">South Africa</option>
+			<option value="KR">South Korea</option>
+			<option value="ES">Spain</option>
+			<option value="LK">Sri Lanka</option>
+			<option value="SH">St. Helena</option>
+			<option value="KN">St. Kitts and Nevis</option>
+			<option value="LC">St. Lucia</option>
+			<option value="PM">St. Pierre and Miquelon</option>
+			<option value="SR">Suriname</option>
+			<option value="SJ">Svalbard and Jan Mayen Islands</option>
+			<option value="SZ">Swaziland</option>
+			<option value="SE">Sweden</option>
+			<option value="CH">Switzerland</option>
+			<option value="TW">Taiwan</option>
+			<option value="TJ">Tajikistan</option>
+			<option value="TZ">Tanzania</option>
+			<option value="TH">Thailand</option>
+			<option value="TG">Togo</option>
+			<option value="TO">Tonga</option>
+			<option value="TT">Trinidad and Tobago</option>
+			<option value="TN">Tunisia</option>
+			<option value="TR">Turkey</option>
+			<option value="TM">Turkmenistan</option>
+			<option value="TC">Turks and Caicos Islands</option>
+			<option value="TV">Tuvalu</option>
+			<option value="UG">Uganda</option>
+			<option value="UA">Ukraine</option>
+			<option value="AE">United Arab Emirates</option>
+			<option value="GB">United Kingdom</option>
+			<option value="UY">Uruguay</option>
+			<option value="VU">Vanuatu</option>
+			<option value="VA">Vatican City State</option>
+			<option value="VE">Venezuela</option>
+			<option value="VN">Vietnam</option>
+			<option value="WF">Wallis and Futuna Islands</option>
+			<option value="YE">Yemen</option>
+			<option value="ZM">Zambia</option>		
+	</field>
+	<field name="choose_cur1" type="radio" default="0" label="Show on Fronpage" description="Allow for donors choose currency">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+	<field name="moneybookers_email" type="text" size="40" default="andrew.opeyda@gmail.com" 
+			label="Pay to Email" description="MOD_AMONEY_PAYPALINFO" />
+    <field name="moneybookers_successurl" type="text" size="40" default="http://www.nnea.net/thank-you" 
+			label="MOD_AMONEY_URL_SUCCESSFUL_OPERATION" description="MOD_AMONEY_ADDRESPAYMENT"/>
+    <field type="spacer" name="myspacer11" hr="true" />
+	<field name="use_robox" type="radio" default="0" label="MOD_AMONEY_ROBOX_INCLUDE" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+    <field name="mrh_login" type="text" size="40" default="demo" 
+			label="MOD_AMONEY_LOGIN_ROBOX" description="" />
+    <field name="mrh_pass1" type="password" size="40" default="Morbid11" 
+			label="Password" description="" />
+    <field name="out_summ" type="text" size="14" default="8.96" 
+			label="MOD_AMONEY_TOTAL_DONATIONS" description="MOD_AMONEY_TOTALDONATIONSDEFAULT" />
+	<field name="culture" type="list" default="ru" label="Language" description="">
+			<option value="en">English</option>
+			<option value="ru">Russian</option>
+	</field>
+	<field type="spacer" name="myspacer12" hr="true" />
+	<field name="use_sms" type="radio" default="0" label="MOD_AMONEY_SMS_INCLUDE" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+	<field name="sms_imag" type="radio" default="58160" label="MOD_AMONEY_SMS_IMAGE" description="">
+			<option value="58160">MOD_AMONEY_PIG</option>
+			<option value="58291">MOD_AMONEY_CAT</option>
+			<option value="58290">MOD_AMONEY_SAFE</option>
+			<option value="58287">MOD_AMONEY_PURSE</option>
+			<option value="58288">MOD_AMONEY_CREDIT_CARD</option>
+	</field>
+	<field name="sms_id" type="text" size="6" default="00000"
+			label="MOD_AMONEY_ID" description="" />
+	<field type="spacer" name="myspacer13" hr="true" />
+	<field name="use_sms1" type="radio" default="0" label="MOD_AMONEY_SMS1_INCLUDE" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+	<field name="sms1_id" type="text" size="6" default="00000"
+			label="MOD_AMONEY_ID" description="" />
+    <field type="spacer" name="myspacer14" hr="true" />
+	<field name="use_mmail" type="radio" default="0" label="MOD_AMONEY_MMAIL_INCLUDE" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+	<field name="mail_li" type="radio" default="1" label="MOD_AMONEY_OFFICERS" description="">
+			<option value="0">MOD_AMONEY_LEGAL_ENTITIES</option>
+			<option value="1">MOD_AMONEY_INDIVIDUALS</option>
+	</field>
+    <field name="mmna" type="text" size="20" default="0000000000000000" 
+			label="MOD_AMONEY_NUMBER_ACCOUNT_MAIL" description="" />
+	<field name="imagemm" type="radio" default="0" label="MOD_AMONEY_APPEARANCE" description="">
+			<option value="0">MOD_AMONEY_BANKNOTES</option>
+			<option value="1">MOD_AMONEY_FIVE_RUBLES</option>
+			<option value="2">MOD_AMONEY_ONE_RUBLE</option>
+	</field>
+	<field name="mmtext" type="text" size="40" default="Дай пять!" 
+			label="MOD_AMONEY_INTRODUCTORY_TEXT_MAIL" description="" />
+    <field type="spacer" name="myspacer15" hr="true" />
+    <field name="mmshop_is" type="text" size="7" default="123456" 
+			label="MOD_AMONEY_NUMBER_SHOP_IS_MAIL" description="" />
+    <field name="mmsum" type="text" size="20" default="10.00" 
+			label="MOD_AMONEY_SUM_MAIL" description="" />
+    <field name="mmdescription" type="textarea" cols="20" rows="5" default="Order in this store-syakom" 
+			label="MOD_AMONEY_DESCRIPTION_MAIL" description="" />
+    <field name="mmissuer_id" type="text" size="20" default="543-TSH" 
+			label="MOD_AMONEY_ISSUER_MAIL" description="" />
+    <field name="mmmessage" type="textarea" cols="20" rows="5" default="Pokupua so-so stuff" 
+			label="MOD_AMONEY_MESSAGE_MAIL" description="" />
+    <field name="mmsignature" type="text" size="20" default="1234567890abcdef" 
+			label="MOD_AMONEY_SIGNATURE_MAIL" description="" />
+    <field type="spacer" name="myspacer16" hr="true" />
+	<field name="use_liqpay" type="radio" default="0" label="MOD_AMONEY_LIQPAY_INCLUDE" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+	<field name="merchant_id" type="text" size="17" default="i0000000000" 
+			label="MOD_AMONEY_MERCHANT_ID" description="" />
+    <field name="phone" type="text" size="20" default="+00000000000" 
+			label="MOD_AMONEY_PHONE" description="" />
+    <field name="signature" type="text" size="60" default="XFXBKtVRGNKlyappjJUylZGjHFwDQ2zBCK2VH3J" 
+			label="MOD_AMONEY_SIGNED_FOR_OPERATION" description="" />
+	<field name="liqpay_summ" type="text" size="5" default="10" 
+			label="MOD_AMONEY_TOTAL_DONATIONS" description="MOD_AMONEY_TOTALDONATIONSDEFAULT" />
+	<field name="liqpay_currency" type="radio" default="0" label="MOD_AMONEY_LIQPAY_CRRENCY" description="">
+			<option value="0">UAH</option>
+			<option value="1">EUR</option>
+			<option value="2">USD</option>
+			<option value="3">RUR</option>
+	</field>
+	<field name="switch_fixed" type="radio" default="1" label="MOD_AMONEY_SWTCH_FIXED" description="">
+			<option value="0">MOD_AMONEY_NOT_FIXED</option>
+			<option value="1">MOD_AMONEY_FIXED</option>
+	</field>
+	<field name="server_url" type="text" size="40" default="http://www.yoursite.com" 
+			label="MOD_AMONEY_URL_SUCCESSFUL_OPERATION" description="MOD_AMONEY_ADDRESPAYMENT"/>
+    <field name="result_url" type="text" size="40" default="http://www.yoursite.com" 
+			label="MOD_AMONEY_URL_ERRORS_OF_OPERATION" description="MOD_AMONEY_ADDRESERRORSMENT"/>
+	<field name="info_liqpay" type="radio" default="0" label="Disable info" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+    <field type="spacer" name="myspacer17" hr="true" />
+	<field name="use_smscoin" type="radio" default="0" label="MOD_AMONEY_SMSCOIN_INCLUDE" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+	<field  name="smscoin_id" type="text" size="17" default="000000" 
+			label="ID" description="" />
+	<field name="don_but" type="text" size="17" default="10" 
+			label="Donate Button" description="" />
+    <field type="spacer" name="myspacer17" hr="true" />
+	<field name="copy" type="radio" default="1" label="MOD_AMONEY_SHOW_LINK" description="MOD_AMONEY_SALTDTPI">
+			<option value="0">MOD_AMONEY_HIDE</option>
+			<option value="1">MOD_AMONEY_SHOW</option>
+	</field>
+	<field name="exterlink" type="radio" default="0" label="MOD_AMONEY_EXTERNAL_LINK" description="">
+			<option value="0">MOD_AMONEY_NO</option>
+			<option value="1">MOD_AMONEY_YES</option>
+	</field>
+			</fieldset>
+			<fieldset name="advanced">
+	<field name="moduleclass_sfx" type="text"
+			label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+	<field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+			<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+	</field>
+			</fieldset>
+		</fields>
+	</config>
+</install>

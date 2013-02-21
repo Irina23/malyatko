@@ -33,10 +33,7 @@ if ($menu->getActive() == $menu->getDefault()) {
         </div><!-- content -->
         <jdoc:include type="modules" name="user1" />
         <div id="footer">
-            <ul>
-                <li>text</li>
-                <li class="right">© Copyright 2013</li>
-            </ul>
+            <p>Комунальний заклад "Черкаський обласний спеціалізований Будинок дитини" Черкаської обласної ради</p>
         </div>
     </div>
 </body>

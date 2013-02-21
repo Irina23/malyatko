@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+    <name>SimpleP24</name>
+    <author>Malyavkin Evgeny</author>
+	<creationDate>Feb 15, 2010</creationDate>
+	<authorEmail>alushta@pochta.ru</authorEmail>
+	<authorUrl>http://www.alushta.ua/</authorUrl>
+    <version>1.1</version>
+    <licence>GNU/GPL http://www.gnu.org/licenses/gpl.html</licence>
+	<description>
+    	<![CDATA[<p>Module for displaying a simple P24 payment button<br />
+    		(c) 2010 Malyavkin Evgeny]]>
+	</description>
+	
+    <files>
+        <filename module="mod_simplep24">mod_simplep24.php</filename>
+        <filename>index.html</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        name="merchant"
+                        type="text"
+                        default="00000"
+                        label="ID мерчанта"
+                        description="Поле для ввода ID вашого мерчета в Приват24">
+                </field>
+                <field
+                        name="url"
+                        type="text"
+                        default="malyatko.ck.ua"
+                        label="Адреса сайту"
+                        description="Адреса, куди буде перенаправлено клієнт після оплати">
+                </field>
+                <field
+                        name="submit"
+                        type="text"
+                        default="Перерахувати кошти"
+                        label="Ім'я кнопки"
+                        description="Ім'я кнопки">
+                </field>
+
+                <field
+                        name="amt"
+                        type="text"
+                        default="0"
+                        label="Сума по замовчуванню"
+                        description="Сума по замовчуванню">
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+  
+</install>

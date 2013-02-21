@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+    <name>Free PayPal Module</name>
+    <author>Andrew Willis</author>
+    <licence>GNU/GPL</licence>
+    <creationDate>September 2009</creationDate>
+    <copyright>(C) 2008,2009,2011 Andrew Willis, All rights reserved.</copyright>
+    <authorEmail>drew@willisfamily.homelinux.org</authorEmail>
+    <authorUrl>http://www.hr1.game-host.org</authorUrl>
+    <version>2.0.0</version>
+    <description><![CDATA[ 
+			<p>Thank you for installing the Free PayPal Donations Module<br /></p>
+			]]>
+    </description>
+    <files>
+        <filename module="mod_freepaypal">mod_freepaypal.php</filename>
+        <filename>images/paypal00.jpg</filename>
+        <filename>images/btn_donateCC_LG.gif</filename>
+        <filename>images/btn_donate_LG.gif</filename>
+        <filename>images/btn_donate_SM.gif</filename>
+        <filename>images/btn_subscribeCC_LG.gif</filename>
+        <filename>images/btn_subscribe_LG.gif</filename>
+        <filename>images/btn_subscribe_SM.gif</filename>
+        <filename>images/btn_buynowCC_LG.gif</filename>
+        <filename>images/btn_buynow_LG.gif</filename>
+        <filename>images/btn_buynow_SM.gif</filename>
+    </files>
+    <languages folder="language/en-GB">
+        <language tag="en-GB">en-GB.mod_freepaypal.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="logo" type="text" default="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" label="Logo URL or Text" 
+	   description="URL of the logo you want viewed or HTML of some text." />
+    
+                <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+                <field name="paypal_email" type="text" default="you@yourdomain.com" label="PayPal Email" 
+	   description="Your PayPal Email Address." />
+                <field name="paypal_org" type="text" default="Donation" label="PayPal Organization" 
+	   description="Your PayPal Organization or Donation Name." />
+                <field name="paypalcur_on" type="radio" default="0" label="Currency On/Off" description="Turn on or off the Paypal Currency selection.">
+                    <option value="0">On</option>
+                    <option value="1">Off</option>
+                </field>
+                <field name="paypal_len" type="radio" default="1" label="Timed Donation On/Off" description="Turn on or off Paypal Subscription/Timed Donation.">
+                    <option value="0">On</option>
+                    <option value="1">Off</option>
+                </field>
+                <field name="paypallen_val" type="list" default="4" label="Timed Donation Interval" description="Timed Donation Interval, if Turned off.">
+                    <option value='4'>One Time</option>
+                    <option value='1'>Weekly</option>
+                    <option value='2'>Monthly</option>
+                    <option value='3'>Annual</option>
+                </field>
+                <field name="paypalval_on" type="radio" default="0" label="Value Textbox On/Off" description="Turn on or off the Paypal Input Box.">
+                    <option value="0">On</option>
+                    <option value="1">Off</option>
+                </field>
+                <field name="paypalcur_val" type="list" default="USD" label="Default Currency" description="If Currency Selection Turned off.">
+                    <option value='CAD'>CAD</option>
+                    <option value='USD'>USD</option>
+                    <option value='GBP'>GBP</option>
+                    <option value='AUD'>AUD</option>
+                    <option value='JPY'>JPY</option>
+                    <option value='EUR'>EUR</option>
+                </field>
+                <field name="paypalval_val" type="text" default="5" label="PayPal Amount" description="Amount of Donation if Textbox off."></field>
+                <field name="paypalvalleast_val" type="text" default="5" label="Smallest PayPal Amount" description="Smallest acceptable amount of Donation (to prevent loss from people donating less than the PayPal fee)."></field>
+                <field name="paypalreturn" type="text" size="40" default="http://www.yoursite.com/index.php?option=com_freepaypal&amp;view=donorthanks" label="Return URL" description="Return URL when payment is made."></field>
+                <field name="paypalcancel" type="text" size="40" default="http://www.yoursite.com/index.php?option=com_freepaypal&amp;view=donorcanceled" label="Cancel URL" description="Return URL when payment is canceled."></field>
+                <field name="allow_option1" type="radio" default="1" label="Allow Option1?" description="If enabled, donors will be able to specify a text note (200 characters or less) along with their donation.">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="option1" type="text" size="40" default="Note:" label="Optional Field 1" description="Label for optional text field (only used if Allow Option1? = Yes)"></field>
+                <field name="option1_default" type="text" size="40" default="Support the server." label="Optional Field 1 Default Value" description="Default Label for optional text field 1"></field>
+                <field name="allow_option2" type="radio" default="1" label="Allow Option2?" description="If enabled, donors will be able to specify a text note (200 characters or less) along with their donation.">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="option2" type="text" size="40" default="Note:" label="Optional Field 2" description="Label for optional text field (only used if Allow Option2? = Yes)"></field>
+                <field name="option2_default" type="text" size="40" default="" label="Optional Field 2 Default Value" description="Default Label for optional text field 2"></field>
+                <field name="paypalnotify" type="text" size="40" default="http://www.yoursite.com/index.php?option=com_freepaypal" label="Notification URL (IPN needs freepaypal component)" description="Notification URL when payment is made. You MUST have the Free PayPal Component com_freepaypal to use this function. If you do, com_freepaypal will log the donation via IPN (Instant Payment Notification) and keep a database that stores all donations and their associated information."></field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
