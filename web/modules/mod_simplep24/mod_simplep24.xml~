@@ -27,7 +27,7 @@
                         type="text"
                         default="00000"
                         label="ID мерчанта"
-                        description="Поле для ввода ID вашого мерчанта в Приват24">
+                        description="Поле для ввода ID вашого мерчета в Приват24">
                 </field>
                 <field
                         name="url"
@@ -44,7 +44,13 @@
                         description="Ім'я кнопки">
                 </field>
 
-
+                <field
+                        name="amt"
+                        type="text"
+                        default="0"
+                        label="Сума по замовчуванню"
+                        description="Сума по замовчуванню">
+                </field>
             </fieldset>
         </fields>
     </config>

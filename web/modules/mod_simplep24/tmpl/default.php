@@ -7,12 +7,13 @@ $user = JFactory::getUser();
 $id_merchant = $params->get("merchant");
 $return_url = $params->get("url");
 $name_submit= $params->get("submit");
-$amt= $params->get("amt");
+
 
 ?>
 
 <form method="POST" action="https://api.privatbank.ua/p24api/ishop" target="_blank">
-    Сума:&nbsp;<input type="text" name="amt" size="4" value="<?php echo "$amt"?>" style="text-align:right;"/>
+    <label for="amt">Сума:&nbsp;</label>
+    <input type="text" id="amt" name="amt" size="4" tabindex="1" value="" required/>
     <select name="ccy" >
         <option value="UAH" >UAH</option>
         <option value="USD" >USD</option>
@@ -29,11 +30,18 @@ $amt= $params->get("amt");
         $password.=$chars[rand(0,$size)];
     echo $password
     ?>" />
-    Додаткова інформація:&nbsp;<br />
-    <input type="text" name="details" value="текст" />
-    <input type="hidden" name="ext_details" value="&#1054;&#1087;&#1080;&#1089;&#1072;&#1085;&#1080;&#1077; &#1090;&#1086;&#1074;&#1072;&#1088;&#1072; &#8470;..." />
+    <label for="details">Додаткова інформація:</label><br />
+    <textarea id="details" tabindex="2" rows="5"  cols="20" name="details" value="Текст..." placeholder="Текст..."
+              onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"
+            >
+
+    </textarea>
+
+
+
+    <input type="hidden" name="ext_details" value="" />
     <input type="hidden" name="pay_way" value="privat24" />
-    <input type="hidden" name="return_url" value="https://<?php echo "$return_url"?>" />
+    <input type="hidden" name="return_url" value="http://<?php echo "$return_url"?>" />
     <input type="hidden" name="server_url" value="https://..." />
     <br /><br />
     <input type="submit" value="<?php echo "$name_submit"?>" />
