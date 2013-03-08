@@ -23,8 +23,7 @@
         <filename>index.html</filename>
     </files>
     <languages folder="com_admirorgallery/site">
-        <language tag="en-GB">language/en-GB/en-GB.com_admirorgallery.ini</language>
-        <language tag="de-DE">language/de-DE/de-DE.com_admirorgallery.ini</language>
+        <language tag="ru-RU">language/ru-RU/ru-RU.com_admirorgallery.ini</language>
     </languages>
     <params/>
     <administration>
@@ -50,10 +49,8 @@
             <filename>index.html</filename>
         </files>
         <languages folder="com_admirorgallery/admin/language">
-            <language tag="en-GB">en-GB/en-GB.com_admirorgallery.ini</language>
-            <language tag="en-GB">en-GB/en-GB.com_admirorgallery.sys.ini</language>
-            <language tag="de-DE">de-DE/de-DE.com_admirorgallery.ini</language>
-            <language tag="de-DE">de-DE/de-DE.com_admirorgallery.sys.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.com_admirorgallery.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.com_admirorgallery.sys.ini</language>
         </languages>
         <params/>
     </administration>
@@ -66,8 +63,8 @@
                 <filename>index.html</filename>
             </files>
             <languages folder="com_admirorgallery/admirorgallery/language">
-                <language tag="en-GB">en-GB/en-GB.plg_content_admirorgallery.ini</language>
-                <language tag="en-GB">en-GB/en-GB.plg_content_admirorgallery.sys.ini</language>
+                <language tag="ru-RU">ru-RU/ru-RU.plg_content_admirorgallery.ini</language>
+                <language tag="ru-RU">ru-RU/ru-RU.plg_content_admirorgallery.sys.ini</language>
             </languages>
             <media/>
         </plugin>
@@ -78,8 +75,8 @@
                 <filename>index.html</filename>
             </files>
             <languages folder="com_admirorgallery/admirorbutton/language">
-                <language tag="en-GB">en-GB/en-GB.plg_editors-xtd_admirorbutton.ini</language>
-                <language tag="en-GB">en-GB/en-GB.plg_editors-xtd_admirorbutton.sys.ini</language>
+                <language tag="ru-RU">ru-RU/ru-RU.plg_editors-xtd_admirorbutton.ini</language>
+                <language tag="ru-RU">ru-RU/ru-RU.plg_editors-xtd_admirorbutton.sys.ini</language>
             </languages>
             <media/>
         </plugin>

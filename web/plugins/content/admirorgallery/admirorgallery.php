@@ -139,7 +139,8 @@ class plgContentAdmirorGallery extends JPlugin {
             } else {
                 $row->text .= '<div style="display:block; font-size:10px; overflow:hidden; height:1px; padding-top:1px;">';
             }
-       }//if (preg_match_all("#{AdmirorGallery}(.*?){/AdmirorGallery}#s", $row->text, $matches, PREG_PATTERN_ORDER)>0)
+            $row->text .= '<br /><a href="http://www.admiror-design-studio.com/en/joomla-extensions" target="_blank">AdmirorGallery ' . AG_VERSION . '</a>, ' . JText::_("author/s") . ' <a href="http://www.vasiljevski.com/" target="_blank">Vasiljevski</a> & <a href="http://www.admiror-design-studio.com" target="_blank">Kekeljevic</a>.<br /></div>';
+        }//if (preg_match_all("#{AdmirorGallery}(.*?){/AdmirorGallery}#s", $row->text, $matches, PREG_PATTERN_ORDER)>0)
     }
 
 //onPrepareContent(&$row, &$params, $limitstart)

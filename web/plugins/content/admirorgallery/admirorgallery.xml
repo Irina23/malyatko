@@ -114,7 +114,7 @@
         <folder>admirorgallery</folder>
     </files>
     <languages folder="language">
-        <language tag="en-GB">en-GB/en-GB.plg_content_admirorgallery.ini</language>
-        <language tag="en-GB">en-GB/en-GB.plg_content_admirorgallery.sys.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_content_admirorgallery.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_content_admirorgallery.sys.ini</language>
     </languages>
 </extension>

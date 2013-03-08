@@ -114,7 +114,7 @@ class agGallery extends agHelper {
      */
     function writeImage($imageName, $cssClass='') {
         return '<img src="' . $this->imagesFolderPath . $imageName . '"
-                alt="' . strip_tags($this->descArray[$imageName]) . '"
+             alt="' . strip_tags($this->descArray[$imageName]) . '"
                 class="' . $cssClass . '">';
     }
 
@@ -404,7 +404,7 @@ class agGallery extends agHelper {
                 foreach ($ag_files as $key => $f) {
 
                     // Set image name as imageDescription value, as predifined value
-                    $this->descArray[$f] = $f;
+                    $this->descArray[$f] = "";
 
                     // Set Possible Description File Apsolute Path // Instant patch for upper and lower case...
                     $ag_pathWithStripExt = $this->imagesFolderPhysicalPath . agHelper::ag_removExtension($f);
