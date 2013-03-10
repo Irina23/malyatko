@@ -126,6 +126,18 @@ JHtml::_('behavior.framework');
 	</div>
 <?php endif; ?>
 
+
+<?php $imgfloat = (empty($images->float_fulltext)) ? $params->get('float_fulltext') : $images->float_fulltext; ?>
+    <div class="img-fulltext-<?php echo htmlspecialchars($imgfloat); ?>">
+        <img
+            <?php if ($images->image_fulltext_caption):
+            echo 'class="caption"'.' title="' .htmlspecialchars($images->image_fulltext_caption) .'"';
+        endif; ?>
+                src="<?php echo htmlspecialchars($images->image_fulltext); ?>" alt="<?php echo htmlspecialchars($images->image_fulltext_alt); ?>"/>
+    </div>
+
+
+
 <?php if ($params->get('show_title')) : ?>
 	<h2>
 		<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>

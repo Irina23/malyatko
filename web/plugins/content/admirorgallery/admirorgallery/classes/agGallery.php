@@ -114,7 +114,7 @@ class agGallery extends agHelper {
      */
     function writeImage($imageName, $cssClass='') {
         return '<img src="' . $this->imagesFolderPath . $imageName . '"
-             alt="' . strip_tags($this->descArray[$imageName]) . '"
+                alt="' . strip_tags($this->descArray[$imageName]) . '"
                 class="' . $cssClass . '">';
     }
 

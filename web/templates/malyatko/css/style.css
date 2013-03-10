@@ -4,7 +4,7 @@
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
 html,body                       { width:100%; height:100%; }
-body                            { padding:0; margin:0; font-size:20px; font-family: MyriadPro-Regular,Arial, sans-serif; color:#777777; }
+body                            { padding:0; margin:0; font-size:14px; font-family: MyriadPro-Regular,Arial, sans-serif; color:#777777; }
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea {
     padding:0;
     margin:0;
@@ -151,7 +151,7 @@ body#donate{
 /*----------------------------------------------------------------------------------*/
 #content {
     overflow:hidden;
-    padding:28px 0 40px;
+    padding:28px 40px 40px;
 }
 
 #content h2 a{
@@ -175,10 +175,12 @@ body#donate{
 .home {
     width:650px;
     float: right;
+    padding-left: 0 !important;
+
 }
 .djslider-loader{
     float: left;
-    padding: 28px 0 40px !important;
+    padding: 28px 0 40px 40px !important;
 }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------ABOUT----------------------------------------*/
@@ -194,8 +196,10 @@ body#donate{
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------PERSONNEL------------------------------------*/
 /*----------------------------------------------------------------------------------*/
+.personnel{padding-left:0 !important;
+    padding-right:0 !important;}
 .personnel div.blog {
-    margin-top: 50px;
+   /* margin-top: 50px;*/
     overflow:hidden;
 }
 
@@ -207,7 +211,44 @@ body#donate{
     overflow: hidden;
 
 }
+.personnel .img-fulltext-left img{
+    background: none !important;
+    position: absolute;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.personnel .row-0 .column-1 .img-fulltext-left img{
+    width: 83px;
+    height: 90px;
+    margin: 119px 0 0 -332px !important;
+}
 
+.personnel .row-0 .column-2 .img-fulltext-left img{
+    width: 78px;
+    height: 64px;
+   margin: 167px 0 0 902px !important;
+}
+
+.personnel .row-1 .column-1 .img-fulltext-left img{
+    width: 80px;
+    height: 83px;
+    margin: 149px 0 0 -108px !important;
+}
+.personnel .row-1 .column-2 .img-fulltext-left img{
+    width: 79px;
+    height: 59px;
+    margin: 163px 0 0 685px !important;
+}
+.personnel .row-2 .column-1 .img-fulltext-left img{
+    width: 80px;
+    height: 74px;
+    margin: 147px 0 0 -349px !important;
+}
+.personnel .row-2 .column-2 .img-fulltext-left img{
+    width: 67px;
+    height: 85px;
+    margin: 142px 0 0 687px !important;
+}
 .personnel div.item.column-1 h2,.personnel div.item.column-2 h2{
 
     position: relative;
@@ -281,7 +322,7 @@ body#donate{
 /*----------------------------------------------------------------------------------*/
 #AG_01{
     overflow:hidden;
-    padding:28px 0 26px;
+    padding:28px 40px 26px;
 
 }
 #AG_01 span, #AG_01 a{
@@ -305,11 +346,15 @@ dl dd.map {
 dl dd {
     padding:0 0 30px;
 }
+
+
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------donate---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-
-
+/*form{
+    padding:0 40px 40px;
+}
+*/
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/

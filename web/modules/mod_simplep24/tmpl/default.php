@@ -11,7 +11,7 @@ $name_submit= $params->get("submit");
 
 ?>
 
-<form method="POST" action="https://api.privatbank.ua/p24api/ishop" target="_blank">
+<form method="POST" action="https://api.privatbank.ua/p24api/ishop" target="_blank" style="padding:0 40px 40px;">
     <label for="amt">Сума:&nbsp;</label>
     <input type="text" id="amt" name="amt" size="4" tabindex="1" value="" required/>
     <select name="ccy" >
