@@ -1,25 +1,20 @@
 .AG_classic .ag_thumbclassic {
-  float:left;
-  background-position:bottom right;
-  background-repeat:no-repeat;
-  margin:0 10px 10px;
-  padding:0 4px 4px 0;
+    float:left;margin:10px 0;
+
 }
 
 .AG_classic .ag_imageThumb {
-  display:block;
-  position:relative;
-  background:#FFF;
-  border:1px solid #ccc;
-  margin:0;
-  padding:4px;
+    display:block;
+    position:relative;
+    background:url("../classic/foto.png")no-repeat;
+    padding:10px 14px 20px 14px;
 }
 
 
 .AG_classic h1
 {
-     text-align:left;
-     margin:10px 0 10px 0;
-     font-size:12px;
-     font-weight:bold;
+    text-align:left;
+    margin:10px 0 10px 0;
+    font-size:12px;
+    font-weight:bold;
 }

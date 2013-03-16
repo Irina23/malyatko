@@ -12,7 +12,7 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
     list-style:none;
 }
 select, input, textarea        { font-size:15px; color:#4c7689; vertical-align:middle; }
-textarea                       { vertical-align:top; }
+textarea                       { vertical-align:top; resize: none;}
 :focus                         { outline:none; }
 input[type=submit]             { cursor:pointer; }
 img, fieldset                  { border:0; }
@@ -154,7 +154,7 @@ body#donate{
     padding:28px 40px 40px;
 }
 
-#content h2 a{
+#content h2 a, #content h2 {
     font-size:30px;
     color: #00B2B2;
     font-weight: normal;
@@ -196,10 +196,9 @@ body#donate{
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------PERSONNEL------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-.personnel{padding-left:0 !important;
-    padding-right:0 !important;}
+
 .personnel div.blog {
-   /* margin-top: 50px;*/
+
     overflow:hidden;
 }
 
@@ -275,11 +274,11 @@ body#donate{
     background:url("../images/framework.png")no-repeat;
 }
 .personnel div.item.column-1 img{
-    margin:0 30px 0 53px;
+    margin-right:30px;
 }
 
 .personnel div.item.column-2 img{
-    margin:0 53px 0 30px;
+    margin-left:30px;
     float:right;
 }
 .personnel div.item.column-2 h2{
@@ -289,10 +288,6 @@ body#donate{
     text-align:right;
 }
 
-.doctors {
-    overflow:hidden;
-    padding:0 40px;
-}
 .doctors li{
     overflow:hidden;
     height:244px;
@@ -310,7 +305,7 @@ body#donate{
     color:#00B2B2;
 }
 .doctors li img{
-    margin:0 21px;
+    margin-right:21px;
 }
 .doctors li p{
     overflow:hidden;
@@ -320,34 +315,28 @@ body#donate{
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------photogallery---------------------------------*/
 /*----------------------------------------------------------------------------------*/
-#AG_01{
-    overflow:hidden;
-    padding:28px 40px 26px;
-
-}
-#AG_01 span, #AG_01 a{
-    font-size: 14px;
 
 
-}
+
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------contacts-------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-dl dt.map {
-    width:381px;
-}
 
 dl dd.map {
-    height:415px;
+    width:347px;
+    height:222px;
     float:left;
-    padding:27px 30px 28px 28px;
+    padding:23px 30px 47px 32px;
     background:url("../images/map.png")no-repeat;
-}
-dl dd {
-    padding:0 0 30px;
+    margin-right: 25px;
 }
 
-
+.contacts img{
+    margin: 15px 20px -5px 0;
+ }
+.contacts a{
+    color: #00B2B2;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------donate---------------------------------------*/
 /*----------------------------------------------------------------------------------*/

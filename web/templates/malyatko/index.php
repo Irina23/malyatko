@@ -30,12 +30,11 @@ $catid = JRequest::getInt('catid');
             <h2>Черкаський обласний<br /> спеціалізований<br /> Будинок дитини</h2>
                 <jdoc:include type="modules" name="mainmenu" />
         </div><!-- header -->
-        <div id="<?php if($_SERVER['REQUEST_URI'] <> '/index.php/photogallery'){echo 'content';}?>" class="<?php if($_SERVER['REQUEST_URI'] == '/'){echo 'home';}
+        <div id="content" class="<?php if($_SERVER['REQUEST_URI'] == '/'){echo 'home';}
         if($_SERVER['REQUEST_URI'] == '/index.php/contacts'){echo 'contacts';}
         if(($_SERVER['REQUEST_URI'] == '/index.php/personnel') or ($catid == 8)){echo 'personnel';}
         if($_SERVER['REQUEST_URI'] == '/index.php/about'){echo 'about';}?>">
                 <jdoc:include type="component" />
-                <jdoc:include type="modules" name="personnelmenu" />
         </div><!-- content -->
         <jdoc:include type="modules" name="user1" />
 
