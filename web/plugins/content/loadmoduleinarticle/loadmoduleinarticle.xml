@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="content" method="upgrade">
+	<name>Content - Load Module in Article</name>
+	<author>Carsten Engel</author>
+	<creationDate>fabuari 2012</creationDate>
+	<copyright>Copyright (C) 2008-2012 Carsten Engel, pages-and-items. All rights reserved.</copyright>
+	<license>GNU</license>
+	<authorEmail>-</authorEmail>
+	<authorUrl>www.pages-and-items.com</authorUrl>
+	<version>2.0.1</version>
+	<description>
+	   Plugin to display a module into an article. Placing the same module more then once on a page might result in conflicts. Dont forget to ENABLE this plugin in the plugin-manager. Syntax in editor: {module [63]} where 63 is the id of the module. You can overrule the default style like this: {module [63|rounded]}. Options are 'none', 'xhtml' (wrapped by a div) and 'rounded' (wrapped by multiple divs).
+	</description> 
+	<files>		
+		<filename plugin="loadmoduleinarticle">loadmoduleinarticle.php</filename>	
+		<filename plugin="loadmoduleinarticle">index.html</filename>		
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="style" type="list"
+					default="none"
+					description="Default style, unless specified/overruled in editor code, see example code in plugin description"
+					label="Default style">					
+					<option value="xhtml">xhtml (wrapped by divs)</option>
+					<option value="rounded">rounded (wrapped by multiple Divs)</option>
+					<option value="none">none (raw output)</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>	
+</extension>

@@ -11,8 +11,25 @@ $name_submit= $params->get("submit");
 
 ?>
 
-<form method="POST" action="https://api.privatbank.ua/p24api/ishop" target="_blank" style="padding:0 40px 40px;">
-    <label for="amt">Сума:&nbsp;</label>
+<script language="JavaScript" content="text/html; charset=utf-8">
+    <!--
+
+    function SendForm() {
+
+        if (document.forms[0].amt.value == "") {
+            alert('Поле сума не заповнене!');
+          //  document.ishop.amt.focus();
+            return false
+        }
+
+        return true;
+    }
+
+    //-->
+</script>
+
+<form method="POST" action="https://api.privatbank.ua/p24api/ishop" target="_blank" onsubmit="return SendForm();" >
+    <label for="amt">Сума:&nbsp;*</label>
     <input type="text" id="amt" name="amt" size="4" tabindex="1" value="" required="required" pattern="^[ 0-9]+$"/>
     <select name="ccy" >
         <option value="UAH" >UAH</option>

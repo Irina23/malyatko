@@ -16,8 +16,6 @@ $catid = JRequest::getInt('catid');
     <jdoc:include type="head" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/style.css" type="text/css" />
 
-
-
 </head>
     <body id="<?php if($_SERVER['REQUEST_URI'] == '/'){echo 'home';}
     if($_SERVER['REQUEST_URI'] == '/index.php/about'){echo 'about';}
@@ -27,8 +25,9 @@ $catid = JRequest::getInt('catid');
     if($_SERVER['REQUEST_URI'] == '/index.php/donate'){echo 'donate';}?>">
     <div id="wrap">
         <div id="header" >
+            <jdoc:include type="modules" name="mainmenu" />
             <h2>Черкаський обласний<br /> спеціалізований<br /> Будинок дитини</h2>
-                <jdoc:include type="modules" name="mainmenu" />
+
         </div><!-- header -->
         <div id="content" class="<?php if($_SERVER['REQUEST_URI'] == '/'){echo 'home';}
         if($_SERVER['REQUEST_URI'] == '/index.php/contacts'){echo 'contacts';}
@@ -36,7 +35,7 @@ $catid = JRequest::getInt('catid');
         if($_SERVER['REQUEST_URI'] == '/index.php/about'){echo 'about';}?>">
                 <jdoc:include type="component" />
         </div><!-- content -->
-        <jdoc:include type="modules" name="user1" />
+
 
     </div>
     <div id="footer">

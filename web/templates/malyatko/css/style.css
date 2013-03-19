@@ -61,11 +61,12 @@ body#donate{
     /*background: url("../images/contacts-background.png");*/
 }
 #wrap {
-    width:1051px;
-    overflow:visible;
-    margin:0 auto;
-    background-color:#EEEEEE;
-    border-radius: 10px;
+    width:1100px;
+    /*overflow:visible;*/
+    margin: 24px auto 0;
+   /* background-color:#EEEEEE;
+    border-radius: 15px;*/
+
 }
 
 @font-face {
@@ -75,66 +76,70 @@ body#donate{
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------HEADER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-#header {
-    position:relative;
+#header {position: relative;
     overflow:hidden;
-    height:300px;
-    margin: 57px -24px 0 -24px;
-    border-radius: 10px;
-    background: url("../images/background-header.png");
+    z-index: 1;
+    /*background: url('../images/header-shadow.png') center center no-repeat;*/
+}
+#header h2{position: relative;
+    display: block;
+    clear: both;
+    width: 1048px;
+    height: 167px;
+    padding: 134px 0 0 52px;
+    font-size: 40px;
+    font-weight: normal;
+    color: #fff;
+    background: url('../images/background-header.png') center center repeat;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    z-index: 2;
+  /* box-shadow: 0 0 12px rgba(0,0,0,0.5);*/
 
 }
-#header h2{
-    color:#fff;
-    font-size:40px;
-    padding: 0 0 30px 50px;
-    text-align: left;
-}
-#header h2 a {
-    display:block;
-    width:167px;
-    height:71px;
-}
-#header > a {
-    display:block;
-    position:absolute;
-    top:345px;
-    left:280px;
-    width:323px;
-    height:60px;
-    padding:23px 20px 0;
-    text-align:center;
-}
-#header > img {
-    position:absolute;
-    top:165px;
-    left:225px;
-    display:block;
-}
+
 
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------NAV------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 
 #header .nav {
-    float:right;
-    height:108px;
-    margin:0
+    float: right;
+    overflow: hidden;
+    width: 590px;
+    margin: 0 25px 0;
+    padding: 0 15px 0 445px;
+    text-align: right;
+    background: #fff;
+    -webkit-border-top-left-radius: 15px;
+    -webkit-border-top-right-radius: 15px;
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-topright: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
 }
 #header .nav li {
     float:left;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 2px;
+    background: url('../images/nav-vert.png') left center no-repeat;
+}
+#header .nav li:first-child {
+    background: none;
 }
 
-#header .nav li.item-101{
-    background: url("../images/home1.png") no-repeat 100% 51%;
+#header .nav li.item-101 a{
+    background: url("../images/home1.png") no-repeat 0 50%;
+    width: 18px;
+    height: 15px;
+    padding: 20px 16px;
 
 }
 #header .nav li a {
     display:block;
     height:16px;
-    padding: 48px 0 44px;
-    font-weight:bold;
+    padding: 20px 16px;
     font-size:13px;
     text-transform:uppercase;
 }
@@ -142,18 +147,28 @@ body#donate{
     color:#00B2B2;
 }
 #header .nav li.item-101.active a,#header .nav li.item-101 a:hover {
-    background: url("../images/home.png") no-repeat 0 51%;
-    width: 18px;
-    height: 15px;
+    background: url("../images/home.png") no-repeat 0 50%;
 }
+
+
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------CONTENT--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-#content {
+#content{
+    z-index: 1;
+    position: relative;
     overflow:hidden;
     padding:28px 40px 40px;
+    margin: 0 25px 0;
+    background: #eee;
+    -webkit-border-bottom-right-radius: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+    -moz-border-radius-bottomright: 15px;
+    -moz-border-radius-bottomleft: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
-
+#content h2 a:hover{ text-decoration: underline;}
 #content h2 a, #content h2 {
     font-size:30px;
     color: #00B2B2;
@@ -173,49 +188,70 @@ body#donate{
 /*-------------------------------------HOME-----------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .home {
-   width:550px;
-    float: right;
+    float: left;
     padding-left: 0 !important;
-    margin-top: 80px;
+
 
 }
+.home p{
+    width: 500px;
+    float: right;
+    text-align: left;
+    line-height: 1.5;
+
+
+}
+.home p.left{margin-top: 90px;}
 .djslider-loader{
     float: left;
-    margin: 28px 0 40px 40px !important;
-
-    padding: 48px 58px 72px 55px!important;
+    margin-left: 40px !important;
+   /* margin: 28px 0 40px 40px !important;*/
+    padding: 50px 53px 62px 48px/*48px 58px 72px 55px*/!important;
     background: url("../images/foto-home.png") no-repeat!important;
+
+
 }
 
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------ABOUT----------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 
-.about p, .about li, .home p{
-    text-indent: 20px;
-    text-align: justify;
+.about p, .about li{
+    /* text-indent: 20px;*/
+    text-align: left;
     line-height: 1.5;
+    margin-bottom:15px;
 
 }
 
-.about img{
+.about p.left img,.about p.right img{
     background: url("../images/foto-about.png") no-repeat;
     padding: 21px 29px 31px;
-    margin: 0 5px;
+    border: 0;
+    width: 311px;
+    height: 198px;
+}
+
+.about p.left img{
+    margin: 10px 10px 0 0;
+    float: left;
+}
+
+.about p.right img{
+    margin: 10px 0 10px 0;
+    float: right;
 }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------PERSONNEL------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 
 .personnel div.blog {
-
     overflow:hidden;
 }
 
-
 .personnel div.item{
-
-    height: 235px;
+display: block;
+   /*height: 235px;*/
     margin-bottom: 5px;
     overflow: hidden;
 
@@ -229,7 +265,7 @@ body#donate{
 .personnel .row-0 .column-1 .img-fulltext-left img{
     width: 83px;
     height: 90px;
-    margin: 119px 0 0 -332px !important;
+    margin: 119px 0 0 15px !important;
 }
 
 .personnel .row-0 .column-2 .img-fulltext-left img{
@@ -241,35 +277,32 @@ body#donate{
 .personnel .row-1 .column-1 .img-fulltext-left img{
     width: 80px;
     height: 83px;
-    margin: 149px 0 0 -108px !important;
+    margin: 149px 0 0 235px !important;
 }
 .personnel .row-1 .column-2 .img-fulltext-left img{
     width: 79px;
     height: 59px;
-    margin: 163px 0 0 685px !important;
+    margin: 163px 0 0 662px !important;
 }
 .personnel .row-2 .column-1 .img-fulltext-left img{
     width: 80px;
     height: 74px;
-    margin: 147px 0 0 -349px !important;
+    margin: 147px 0 0 5px !important;
 }
 .personnel .row-2 .column-2 .img-fulltext-left img{
     width: 67px;
     height: 85px;
-    margin: 142px 0 0 687px !important;
+    margin: 142px 0 0 900px !important;
 }
-.personnel div.item.column-1 h2,.personnel div.item.column-2 h2{
-
-    position: relative;
-    top: 110px;
-    margin-bottom: 20px;
+/*.personnel div.item.column-1 h2 a,.personnel div.item.column-2 h2 a{
+   margin-bottom: 20px;
 }
-
+*/
 .personnel div.item.column-1 p,.personnel div.item.column-2 p{
-    position: relative;
-    top: 110px;
-    height: 55px;
-    display: block;
+position: relative;
+    top: 20px;
+   /* height: 55px;
+    display: block;*/
     overflow: hidden;
 }
 
@@ -277,11 +310,13 @@ body#donate{
     float:left;
 }
 
-.personnel div.item.column-1 img,.doctors li img,.personnel div.item.column-2 img{
+.personnel div.item.column-1 h2 a img,.doctors li img,.personnel div.item.column-2 img{
     height: 170px;
     width: 255px;
     padding: 28px 31px 37px 30px;
-    background:url("../images/framework.png")no-repeat;
+    background-image: url("../images/framework.png");
+    background-repeat: no-repeat;
+    /*background:url("../images/framework.png")no-repeat;*/
 }
 .personnel div.item.column-1 img{
     margin-right:30px;
@@ -326,18 +361,23 @@ body#donate{
 /*-------------------------------------photogallery---------------------------------*/
 /*----------------------------------------------------------------------------------*/
 
+#photogallery #content #AG_01 td span a img{
+    background:url("../images/foto.png") no-repeat scroll 0 0 transparent;
+    padding: 10px 14px 20px;
+}
 
-
+#photogallery #content #AG_01 td span a img:hover{background:url("../images/foto-hover.png") no-repeat;}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------contacts-------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 
-dl dd.map {
+.contacts dl dd.map {
     width:347px;
     height:222px;
     float:left;
-    padding:23px 30px 47px 32px;
-    background:url("../images/map.png")no-repeat;
+    padding:23px 30px 36px 32px;
+    background-image: url("../images/map.png");
+    background-repeat: no-repeat;
     margin-right: 25px;
 }
 
@@ -347,6 +387,7 @@ dl dd.map {
 .contacts a{
     color: #00B2B2;
 }
+.contacts a:hover{text-decoration: underline;}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------donate---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -358,11 +399,13 @@ dl dd.map {
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 #footer {
-    padding:30px 0 42px 0;
+    padding-bottom:30px;
     font-family:Arial, Helvetica, sans-serif;
     font-size:12px;
     color:#333333;
     text-align: center;
+    clear: both;
+    padding-top: 30px;
 }
 
 
