@@ -231,18 +231,19 @@ class agGallery extends agHelper {
                     $html.= '<div class="AG_pagin_wrap">';
                     $paginPrev = ($this->paginInitPages[$this->index] - 1);
                     if ($paginPrev >= 1) {
-                        $html.= '<a href="" onClick="AG_form_submit_' . $this->articleID . '(' . $this->index . ',' . $paginPrev . ',\'' . $this->imagesFolderName . '\'); return false;" class="AG_pagin_prev">' . JText::_("Попередня") . '</a>';
+                        $html.= '<a href="" onClick="AG_form_submit_' . $this->articleID . '(' . $this->index . ',' . $paginPrev . ',\'' . $this->imagesFolderName . '\'); return false;" class="AG_pagin_prev">' . JText::_("Попередня сторінка") . '</a>';
                     }
+                    //$html.= '<div class=pagination>';
                     for ($i = 1; $i <= ceil($this->paginImgTotal / $this->params['paginImagesPerGallery']); $i++) {
-                        if ($i == $this->paginInitPages[$this->index]) {
+                       if ($i == $this->paginInitPages[$this->index]) {
                             $html.= '<span class="AG_pagin_current">' . $i . '</span>';
                         } else {
                             $html.= '<a href="" onClick="AG_form_submit_' . $this->articleID . '(' . $this->index . ',' . $i . ',\'' . $this->imagesFolderName . '\',this);return false;" class="AG_pagin_link">' . $i . '</a>';
                         }
-                    }
+                    }//$html.= '</div>';
                     $paginNext = ($this->paginInitPages[$this->index] + 1);
                     if ($paginNext <= ceil($this->paginImgTotal / $this->params['paginImagesPerGallery'])) {
-                        $html.= '<a href="" onClick="AG_form_submit_' . $this->articleID . '(' . $this->index . ',' . $paginNext . ',\'' . $this->imagesFolderName . '\'); return false;" class="AG_pagin_next">' . JText::_("Наступна") . '</a>';
+                        $html.= '<a href="" onClick="AG_form_submit_' . $this->articleID . '(' . $this->index . ',' . $paginNext . ',\'' . $this->imagesFolderName . '\'); return false;" class="AG_pagin_next">' . JText::_("Наступна сторінка") . '</a>';
                     }
                     $html.= '<br style="clear:both"></div>';
                 }

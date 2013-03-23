@@ -1,27 +1,53 @@
 div.AG_pagin_wrap
 {
-  margin-bottom:20px;
-  text-align:center;
-  display:block;
+text-align:center;
 }
 
+span.AG_pagin_current{
+    text-align: center;
+    background: url('../photogallery2.png') 50% 42% no-repeat;
+    padding: 1px 10px!important;
+    color: #000;
+}
 span.AG_pagin_current, a.AG_pagin_link, a.AG_pagin_prev, a.AG_pagin_next
 {
-  display:inline-block;
+  float: left;
   line-height:24px;
   margin:4px;
-  padding:0 5px;
-  float:left;
+  padding:1px 5px;
   text-decoration:none;
+
 }
 
 a.AG_pagin_link, a.AG_pagin_prev, a.AG_pagin_next
 {
-  border:1px solid silver;
   margin:3px;
 }
+div#AG_01 a.AG_pagin_prev{
+    background: url('../photogallery1.png') 0 50% no-repeat;
+    padding-left: 15px;
+    margin-right: 50px;
 
-a.AG_pagin_link, a.AG_pagin_link:hover, a.AG_pagin_prev:hover, a.AG_pagin_next:hover
-{
-  text-decoration:none;
+}
+div#AG_01 a.AG_pagin_next{
+    background: url('../photogallery3.png') 100% 50% no-repeat;
+    padding-right: 15px;
+    margin-left: 50px;
+
+}
+div#AG_01 a.AG_pagin_link:hover, div#AG_01 a.AG_pagin_prev:hover, div#AG_01 a.AG_pagin_next:hover{
+    color:#00B2B2;
+    text-decoration:none;
+}
+
+div#AG_01 a.AG_pagin_next:hover{
+    background: url('../photogallery5.png') 100% 50% no-repeat;
+    padding-right: 15px;
+    margin-left: 50px;
+}
+div#AG_01 a.AG_pagin_prev:hover{
+    background: url('../photogallery4.png') 0 50% no-repeat;
+    padding-left: 15px;
+    margin-right: 50px;
+
 }

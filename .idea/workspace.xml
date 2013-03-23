@@ -28,16 +28,25 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/templates/malyatko/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="462" selection-end="462" vertical-scroll-proportion="-8.0">
+            <state line="18" column="0" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/templates/malyatko/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="169" column="0" selection-start="6109" selection-end="6109" vertical-scroll-proportion="2.6041667">
+            <state line="61" column="17" selection-start="3010" selection-end="3023" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pagination.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/templates/classic/pagination/pagination.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="47" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.859375">
               <folding />
             </state>
           </provider>
@@ -46,8 +55,15 @@
       <file leaf-file-name="agGallery.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/classes/agGallery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="244" column="230" selection-start="11430" selection-end="11430" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="245" column="237" selection-start="11505" selection-end="11522" vertical-scroll-proportion="-13.75">
+              <folding>
+                <marker date="1364035552887" expanded="true" signature="10463:10470" placeholder="..." />
+                <marker date="1364035552887" expanded="false" signature="11597:11607" placeholder="..." />
+                <marker date="1364035552887" expanded="true" signature="11793:11855" placeholder="..." />
+                <marker date="1364035552887" expanded="true" signature="12755:13028" placeholder="..." />
+                <marker date="1364035552887" expanded="true" signature="12790:13028" placeholder="..." />
+                <marker date="1364035552887" expanded="true" signature="14108:14439" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,8 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/templates/classic/index.php" />
-        <option value="$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/classes/agGallery.php" />
         <option value="$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/popups/pirobox/js/pirobox.js" />
         <option value="$PROJECT_DIR$/web/administrator/components/com_admirorgallery/templates/default/css/template.css" />
         <option value="$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery.php" />
@@ -73,11 +87,13 @@
         <option value="$PROJECT_DIR$/web/templates/malyatko/html/com_content/category/blog_item.php" />
         <option value="$PROJECT_DIR$/web/modules/mod_simplep24/script.js" />
         <option value="$PROJECT_DIR$/web/templates/malyatko/templateDetails.xml" />
-        <option value="$PROJECT_DIR$/web/modules/mod_simplep24/tmpl/default.php" />
         <option value="$PROJECT_DIR$/web/templates/malyatko/html/mod_menu/default.php" />
         <option value="$PROJECT_DIR$/web/templates/malyatko/index.php" />
         <option value="$PROJECT_DIR$/web/templates/malyatko/html/mod_menu/default_component.php" />
+        <option value="$PROJECT_DIR$/web/modules/mod_simplep24/tmpl/default.php" />
         <option value="$PROJECT_DIR$/web/templates/malyatko/css/style.css" />
+        <option value="$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/classes/agGallery.php" />
+        <option value="$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/templates/classic/pagination/pagination.css" />
       </list>
     </option>
   </component>
@@ -114,6 +130,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -160,6 +177,118 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admirorgallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admirorgallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admirorgallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admirorgallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admirorgallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -178,25 +307,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="malyatko" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="malyatko" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="malyatko" />
+              <option name="myItemId" value="content" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="admirorgallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admirorgallery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -204,47 +327,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="malyatko" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="malyatko" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="malyatko" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="malyatko" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mod_menu" />
+              <option name="myItemId" value="classic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -253,8 +341,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/modules/mod_simplep24" />
       <recent name="$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/templates/classic" />
+      <recent name="$PROJECT_DIR$/web/modules/mod_simplep24" />
       <recent name="$PROJECT_DIR$/web/administrator/language/ru-RU" />
       <recent name="$PROJECT_DIR$/web/modules/mod_simplep24/images" />
       <recent name="$PROJECT_DIR$/web/templates/malyatko/html" />
@@ -314,7 +402,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42446044" sideWeight="0.95469254" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45803356" sideWeight="0.671521" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -395,11 +483,6 @@
         <state line="243" column="14" selection-start="4262" selection-end="4262" vertical-scroll-proportion="-1.20073" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/templates/classic/pagination/pagination.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/AdmirorGallery.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="1" selection-start="279" selection-end="279" vertical-scroll-proportion="0.27737227" />
@@ -408,11 +491,6 @@
     <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="136" column="12" selection-start="6966" selection-end="6966" vertical-scroll-proportion="0.5923913" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/templates/classic/template.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="223" selection-end="223" vertical-scroll-proportion="0.2801358" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/modules/mod_djimageslider/assets/style.css">
@@ -432,9 +510,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/templates/malyatko/templateDetails.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="11" selection-start="560" selection-end="560" vertical-scroll-proportion="0.33854166">
-          <folding />
-        </state>
+        <state line="13" column="11" selection-start="560" selection-end="560" vertical-scroll-proportion="0.33854166" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/templates/malyatko/html/com_content/article/default.php">
@@ -442,44 +518,57 @@
         <state line="41" column="0" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.9782609" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/classes/agGallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="244" column="230" selection-start="11430" selection-end="11430" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/modules/mod_simplep24/tmpl/default.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="84" selection-start="649" selection-end="649" vertical-scroll-proportion="-18.75" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/templates/malyatko/html/mod_menu/default_component.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="5" selection-start="887" selection-end="887" vertical-scroll-proportion="0.59659094">
-          <folding />
-        </state>
+        <state line="27" column="5" selection-start="887" selection-end="887" vertical-scroll-proportion="0.59659094" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/templates/malyatko/html/mod_menu/default.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="683" selection-end="683" vertical-scroll-proportion="-0.6460177">
-          <folding>
-            <element signature="e#6#237#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="28" column="0" selection-start="683" selection-end="683" vertical-scroll-proportion="-0.6460177" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/templates/malyatko/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="462" selection-end="462" vertical-scroll-proportion="-8.0">
+        <state line="18" column="0" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/templates/classic/template.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="223" selection-end="223" vertical-scroll-proportion="0.2920354" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/modules/mod_simplep24/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="16" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.59782606" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/templates/malyatko/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="0" selection-start="6109" selection-end="6109" vertical-scroll-proportion="2.6041667">
+        <state line="61" column="17" selection-start="3010" selection-end="3023" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/classes/agGallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="245" column="237" selection-start="11505" selection-end="11522" vertical-scroll-proportion="-13.75">
+          <folding>
+            <marker date="1364035552887" expanded="true" signature="10463:10470" placeholder="..." />
+            <marker date="1364035552887" expanded="false" signature="11597:11607" placeholder="..." />
+            <marker date="1364035552887" expanded="true" signature="11793:11855" placeholder="..." />
+            <marker date="1364035552887" expanded="true" signature="12755:13028" placeholder="..." />
+            <marker date="1364035552887" expanded="true" signature="12790:13028" placeholder="..." />
+            <marker date="1364035552887" expanded="true" signature="14108:14439" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/templates/classic/pagination/pagination.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="47" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.859375">
           <folding />
         </state>
       </provider>
