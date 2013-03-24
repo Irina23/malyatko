@@ -27,10 +27,30 @@ $name_submit= $params->get("submit");
 
     //-->
 </script>
+<script type="text/javascript">
+    function Numbers(e)
+    {
+        var keynum;
+        var keychar;
+        var numcheck;
+
+        if(window.event) // IE
+        {
+            keynum = e.keyCode;
+        }
+        else if(e.which) // Netscape/Firefox/Opera
+        {
+            keynum = e.which;
+        }
+        keychar = String.fromCharCode(keynum);
+        numcheck = /\d/;
+        return numcheck.test(keychar)|| keynum<32;
+    }
+</script>
 
 <form method="POST" action="https://api.privatbank.ua/p24api/ishop" target="_blank" onsubmit="return SendForm();" >
     <label for="amt" >Сума:&nbsp;*</label>
-    <input type="number" id="amt" name="amt" tabindex="1" value="" required="required" pattern="^[ 0-9]+$"/>
+    <input type="number" id="amt" name="amt" tabindex="1" value="" required="required" min="1" pattern="^[ 0-9]+$" maxlength="11" onkeypress="return Numbers(event)"/>
     <select name="ccy" >
         <option value="UAH" >UAH</option>
         <option value="USD" >USD</option>

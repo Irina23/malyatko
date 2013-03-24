@@ -79,11 +79,12 @@ body#donate{
     /*background: url('../images/header-shadow.png') center center no-repeat;*/
 }
 #header h2{position: relative;
+    line-height: 1.25;
     display: block;
     clear: both;
     width: 1048px;
-    height: 167px;
-    padding: 134px 0 0 52px;
+    height: 275px;
+    padding: 25px 0 0 52px;
     font-size: 40px;
     font-weight: normal;
     color: #fff;
@@ -106,9 +107,9 @@ body#donate{
 
 #header .nav {
     float: right;
-    width: 590px;
+    width: 625px;/*590*/
     margin: 0 25px 0;
-    padding: 0 15px 0 445px;
+    padding: 0 10px 0 410px;/*445*/
     text-align: right;
     background: #fff;
     -webkit-border-top-left-radius: 15px;
@@ -137,7 +138,7 @@ body#donate{
 }
 
 #header .nav li:first-child a{
-    background: url("../images/home1.png") no-repeat 0 50%;
+    background: url("../images/home1.png") no-repeat 50% 50%;
     width: 18px;
     height: 15px;
     padding: 20px 16px;
@@ -152,15 +153,31 @@ body#donate{
     font-size:13px;
     text-transform:uppercase;
 }
-#header .nav li:hover img, #header .nav li.active img{ left:-1px;top:auto;
+#header .nav li:last-child a{
+    padding-right: 0;
 }
-#header .nav li a img{margin:4px auto;
+#home #header .nav li img,#header .nav li:hover img, #header .nav li.active img{ left:auto;top:auto;
+    z-index: 10;
+}
+#header .nav li a img{/*margin:4px auto 0;*/
     position:absolute;
     left:-999em; /* скрывает выпадающий пункт */
     text-align:left;
-    padding:10px 5px 10px 5px;
+    padding:10px 0 0 0;/*5px 10px 5px;*/
     border-top:none;
 }
+#header .nav li a.about img{
+    margin-left:-30px;
+}
+
+#header .nav li a.personnel img,
+#header .nav li a.donate img{
+    margin-left:-20px;
+}
+#header .nav li a.contacts img{
+    margin-left:-10px;
+}
+
 #header .nav li.active a, #header .nav li:hover a{
     z-index: 3;
     text-align: left;
@@ -171,7 +188,7 @@ body#donate{
     color:#00B2B2;
 }
 #header .nav li.item-101.active a,#header .nav li.item-101 a:hover {
-    background: url("../images/home.png") no-repeat 0 50%;
+    background: url("../images/home.png") no-repeat 50% 50%;
 }
 
 
@@ -247,7 +264,6 @@ body#donate{
 /*----------------------------------------------------------------------------------*/
 
 .about p, .about li{
-    /* text-indent: 20px;*/
     text-align: left;
     line-height: 1.5;
     margin-bottom:15px;
@@ -263,12 +279,12 @@ body#donate{
 }
 
 .about p.left img{
-    margin: 10px 10px 0 0;
+    margin-right: 10px;
     float: left;
 }
 
 .about p.right img{
-    margin: 10px 0 0 10px;
+    margin-left: 10px;
     float: right;
 }
 /*----------------------------------------------------------------------------------*/
@@ -404,16 +420,16 @@ body#donate{
 /*----------------------------------------------------------------------------------*/
 
 .contacts dl dd.map {
-    width:347px;
-    height:222px;
+    width:485px;
+    height:311px;
+    padding:37px 37px 51px 38px;
     float:left;
-    padding:23px 30px 36px 32px;
     background-image: url("../images/map.png");
     background-repeat: no-repeat;
     margin-right: 25px;
 }
 
-.contacts img{
+div#content.contacts img{
     margin: 15px 20px -5px 0;
 }
 .contacts a{

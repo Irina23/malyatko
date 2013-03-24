@@ -27,7 +27,8 @@ $catid = JRequest::getInt('catid');
     <div id="wrap">
         <div id="header" >
             <jdoc:include type="modules" name="mainmenu" />
-            <h2>Черкаський обласний<br /> спеціалізований<br /> Будинок дитини</h2>
+            <h2>Комунальний заклад<br /> "Черкаський обласний<br /> спеціалізований<br /> Будинок дитини"<br /> Черкаської обласної ради</h2>
+
 
         </div><!-- header -->
         <div id="content" class="<?php if($_SERVER['REQUEST_URI'] == '/'){echo 'home';}
