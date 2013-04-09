@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+    <name>Content - MVSocialButtons</name>
+    <author>Maidanichenko Vladimir</author>
+    <creationDate>May 2011</creationDate>
+    <copyright>Copyright (C) 2011 Vladimir Maidanichenko ( JoomlaMaster.org.ua ). All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyright/gpl.html</license>
+    <authorEmail>support@joomlamaster.org.ua</authorEmail>
+    <authorUrl>http://joomlamaster.org.ua</authorUrl>
+    <version>1.0.0</version>
+    <description>
+	<![CDATA[
+	<h3><a href="http://joomlamaster.org.ua/">MVSocialButtons</a> модуль, который добавит кнопки социальных сетей на Ваш сайт.</h3>
+	]]>
+    </description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_mvsocialbuttons.ini</language>
+                <language tag="uk-UA">uk-UA.mod_mvsocialbuttons.ini</language>
+		<language tag="ru-RU">ru-RU.mod_mvsocialbuttons.ini</language>
+	</languages>    
+	<files>
+		<filename module="mod_mvsocialbuttons">mod_mvsocialbuttons.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>style.css</filename>
+		<folder>images</folder>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="style" type="list" default="default" label="Стиль" description="Выберите, пожалуйста, один из стилей отображения иконок." >
+				<option value="small">small</option>
+				<option value="default">default</option>
+				<option value="big">big</option>
+				</field>
+									
+			<field name="showTitle" type="radio" default="1" label="Показывать ли заголовок?" description="Показывать или скрывать заголовок, который располагается над значками." >
+				   <option value="0">Нет</option>
+				   <option value="1">Да</option>
+				</field>
+				<field name="title" type="text" default="Впишите сюда свой заголовок" size="100" 
+						label="Заголовок"
+						description="Пожалуйста, укажите свой заголовок, который располагается над значками." />
+				
+				<field name="displayLines" type="list" default="mv-sbb-bothl" label="Показывать линии?" description="Выводить строки выше и ниже значков?" >
+				   <option value="mv-sbb-nl">Нет</option>
+				   <option value="mv-sbb-tl">Только вверху</option>
+				   <option value="mv-sbb-bl">Только внизу</option>
+				   <option value="mv-sbb-bothl">Вверху и внизу</option>
+				</field>
+				
+				<field name="displayIcons" type="list" default="mv-sbb-left" label="Позиция иконок" description="Выберите, пожалуйста, позицию для отображения иконок." >
+				   <option value="mv-sb-left">Слева</option>
+				   <option value="mv-sb-right">Справа</option>
+				   <option value="mv-sb-center">Центр</option>
+				</field>
+				
+				<field name="displayDelicious" type="radio" default="1" label="Показывать Delicious" description="Показать или скрыть кнопку Delicious." >
+				   <option value="0">Нет</option>
+				   <option value="1">Да</option>
+				</field>
+				<field name="displayDigg" type="radio" default="1" label="Показывать Digg" description="Показать или скрыть кнопку Digg." >
+				   <option value="0">Нет</option>
+				   <option value="1">Да</option>
+				</field>
+				<field name="displayFacebook" type="radio" default="1" label="Показывать Facebook" description="Показать или скрыть кнопку Facebook." >
+				   <option value="0">Нет</option>
+				   <option value="1">Да</option>
+				</field>
+				<field name="displayGoogle" type="radio" default="1" label="Показывать Google" description="Показать или скрыть кнопку Google." >
+				   <option value="0">нет</option>
+				   <option value="1">Да</option>
+				</field>
+				<field name="displayLinkedIn" type="radio" default="1" label="Показывать LinkedIn" description="Показать или скрыть кнопку LinkedIn." >
+				   <option value="0">Нет</option>
+				   <option value="1">Да</option>
+				</field>
+				<field name="displayTechnorati" type="radio" default="1" label="Показывать Technorati" description="Показать или скрыть кнопку Technorati." >
+				   <option value="0">Нет</option>
+				   <option value="1">Да</option>
+				</field>
+				<field name="displayTwitter" type="radio" default="1" label="Показывать Twitter" description="Показать или скрыть кнопку Twitter." >
+				   <option value="0">Нет</option>
+				   <option value="1">Да</option>
+				</field>
+				<field name="displayVkruButton" type="radio" default="1" label="Показывать ВКонтакте" description="Показать или скрыть кнопку ВКонтакте." >
+				   <option value="0">Нет</option>
+				   <option value="1">Да</option>
+				</field>
+				<field name="displayLivejButton" type="radio" default="1" label="Показывать LiveJournal" description="Показать или скрыть кнопку LiveJournal." >
+				   <option value="0">Нет</option>
+				   <option value="1">Да</option>
+				</field>
+				<field name="displayMoymirButton" type="radio" default="1" label="Показывать Мой мир" description="Показать или скрыть кнопку Мой мир." >
+				   <option value="0">Нет</option>
+				   <option value="1">Да</option>
+				</field>
+				<field name="displayYaruButton" type="radio" default="1" label="Показывать Я.ру" description="Показать или скрыть кнопку Я.ру." >
+				   <option value="0">Нет</option>
+				   <option value="1">Да</option>
+				</field>
+				<field name="displayOdnoklassnikiButton" type="radio" default="1" label="Показывать Одноклассники" description="Показать или скрыть кнопку Одноклассники." >
+				   <option value="0">Нет</option>
+				   <option value="1">Да</option>
+				</field>
+				<field name="displayBobrdobrButton" type="radio" default="1" label="Показывать БобрДобр" description="Показать или скрыть кнопку БобрДобр." >
+				   <option value="0">Нет</option>
+				   <option value="1">Да</option>
+				</field>
+				<field name="displayLiveinternetButton" type="radio" default="1" label="Показывать Liveinternet" description="Показать или скрыть кнопку Liveinternet." >
+				   <option value="0">Нет</option>
+				   <option value="1">Да</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field name="owncache" type="list" default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" >
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING
+					</option>
+				</field>
+
+				<field name="cache_time" type="text" default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />              
+                <field name="spacer2" type="spacer" class="text" label="Вы также можете вписать свой код, Например с сервиса odnaknopka.ru" />
+            
+                <field name="ebuttons1" type="textarea" default="" label="Код кнопки 1" description="MOD_MVSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
+                <field name="ebuttons2" type="textarea" default="" label="Код кнопки 2" description="MOD_MVSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
+                <field name="ebuttons3" type="textarea" default="" label="Код кнопки 3" description="MOD_MVSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
+                <field name="ebuttons4" type="textarea" default="" label="Код кнопки 4" description="MOD_MVSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
+                <field name="ebuttons5" type="textarea" default="" label="Код кнопки 5" description="MOD_MVSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

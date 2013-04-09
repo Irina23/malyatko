@@ -104,12 +104,15 @@ body#donate{
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------NAV------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-
+#header .mod-languages{
+ float:left;
+margin-left: 30px;
+}
 #header .nav {
     float: right;
-    width: 625px;/*590*/
+    width: 625px;
     margin: 0 25px 0;
-    padding: 0 10px 0 410px;/*445*/
+    padding: 0 10px 0 410px;
     text-align: right;
     background: #fff;
     -webkit-border-top-left-radius: 15px;
@@ -153,9 +156,11 @@ body#donate{
     font-size:13px;
     text-transform:uppercase;
 }
+
 #header .nav li:last-child a{
     padding-right: 0;
 }
+
 #home #header .nav li img,#header .nav li:hover img, #header .nav li.active img{ left:auto;top:auto;
     z-index: 10;
 }
@@ -169,7 +174,12 @@ body#donate{
 #header .nav li a.about img{
     margin-left:-30px;
 }
-
+#header .nav li a.Stuff img{
+margin-left:-35px;
+}
+#header .nav li a.donate-eng img{
+margin-left:-40px;
+}
 #header .nav li a.personnel img,
 #header .nav li a.donate img{
     margin-left:-20px;
@@ -187,7 +197,8 @@ body#donate{
 #header .nav li.active a,#header .nav li a:hover {
     color:#00B2B2;
 }
-#header .nav li.item-101.active a,#header .nav li.item-101 a:hover {
+#header .nav li.item-101.active a,#header .nav li.item-101 a:hover,
+#header .nav li.item-230.active a,#header .nav li.item-230 a:hover {
     background: url("../images/home.png") no-repeat 50% 50%;
 }
 
@@ -229,7 +240,6 @@ body#donate{
 #content ul.menu li {
     float:left;
     padding: 0 50px 50px 0;}
-
 
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------HOME-----------------------------------------*/
@@ -412,7 +422,7 @@ body#donate{
     padding: 10px 14px 20px;
 }
 
-#photogallery #content #AG_01 td span a img:hover{
+#photogallery #content #AG_01 td span a:hover img{
     background:url("../images/foto-hover.png") no-repeat;
 }
 /*----------------------------------------------------------------------------------*/
@@ -436,14 +446,53 @@ div#content.contacts img{
     color: #00B2B2;
 }
 .contacts a:hover{text-decoration: underline;}
+
+.contacts > img {
+    float:left;
+    margin: 0 0 0 40px;
+}
+
+.contacts dl dd {
+    padding-top:20px;
+}
+.contacts dl ul {
+    overflow:hidden;
+    padding:0 0 0 150px;
+}
+.contacts dl ul li {
+    float:left;
+    padding:0 17px 0 0;
+}
+.contacts dl ul li a {
+    width:49px;
+    height:49px;
+    display:block;
+    text-indent:-200em;
+    overflow:hidden;
+    background:url('../images/contact_links.png') no-repeat;
+}
+
+.contacts dl ul li.fb a {
+    background-position: 0 0;
+}
+.contacts dl ul li.fb a:hover {
+    background-position: 0 -56px;
+}
+.contacts dl ul li.vk a {
+    background-position: -65px 0;
+}
+.contacts dl ul li.vk a:hover {
+    background-position: -65px -56px;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------donate---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 
 input{
-    width: 70px;
+    width: 60px;
     height: 20px;
     border-radius: 5px;
+padding: 0 5px 0;
 }
 
 
@@ -451,10 +500,11 @@ select{
     height: 27px;
 }
 textarea{
-    width: 348px;
-    height: 70px;
+    width: 338px;
+    height: 66px;
     margin: 13px 0 22px 0;
     border-radius: 5px;
+    padding: 2px 5px 2px;
 }
 input.submit{
     background-image: url("../images/submit.png");
@@ -467,6 +517,11 @@ input.submit{
     border: medium none;
     font-size: 16px;
 
+}
+#donate h3{
+    font-size:25px;
+    color: #00B2B2;
+    font-weight: normal;
 }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FOOTER---------------------------------------*/

@@ -1,0 +1,297 @@
+/**
+ * @author              Steven Palmer
+ * @author url          http://coalaweb.com
+ * @author email        support@coalaweb.com
+ * @copyright           Copyright (c) 2013 Steven Palmer All rights reserved.
+ */
+ 
+/* Module Style
+------------------------------------------------------------------------------- */
+.cwtest100 {width: 100%; margin-left: auto; margin-right: auto; }
+.cwtest90 {width: 90%; margin-left: auto; margin-right: auto; }
+.cwtest80 {width: 80%; margin-left: auto; margin-right: auto; }
+.cwtest70 {width: 70%; margin-left: auto; margin-right: auto; }
+.cwtest60 {width: 60%; margin-left: auto; margin-right: auto; }
+.cwtest50 {width: 50%; margin-left: auto; margin-right: auto; }
+
+
+.cw-social-mod h1, .cw-social-mod h2, .cw-social-mod h3,
+.cw-social-mod h4, .cw-social-mod h5, .cw-social-mod h6{
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.cw-social-mod-title-ac {text-align:center;}
+.cw-social-mod-title-al {text-align:left;}
+.cw-social-mod-title-ar {text-align:right;}
+
+.cw-social-mod-bookmark {
+    margin-bottom: 10px;
+    padding: 5px 5px 10px 5px;
+}
+
+.cw-social-mod-follow {
+    padding: 5px 5px 10px 5px;
+}
+
+/* Icon Alignment */
+.cw-social-mod-icon-ac {text-align:center;}
+.cw-social-mod-icon-al {text-align:left;}
+.cw-social-mod-icon-ar {text-align:right;}
+
+/* Copyright */
+.cw-social-mod_copyrht{
+    margin-top:10px;
+    text-align: center;
+    display:block;
+    font-size: 12px;
+}
+
+/* End
+------------------------------------------------------------------------------*/
+
+/* Module configuration styling
+------------------------------------------------------------------------------*/
+::-moz-selection { background: #fec23d; color: #fff }
+
+::selection { background: #fec23d; color: #fff }
+
+
+#jform_params_tabs_data-lbl,
+
+#jform_params___field1-lbl,
+
+#invisible { display: none; }
+
+span.unit { line-height:34px; }
+
+/* togglers */
+
+
+
+.pane-sliders .panel { border: none !important; }
+
+div.panel > h3 { 
+    height: 43px; 
+    background: transparent url('../images/icons/cw_panel_bg.png') repeat-x 0 0 !important; 
+    border: 1px solid #d8d8d8; 
+    -moz-border-radius: 3px; 
+    -webkit-border-radius: 3px; 
+    border-radius: 3px; 
+    font: bold 12px/43px Arial, Helvetica, sans-serif; 
+    text-transform: uppercase; 
+}
+
+div.panel > h3 a { color: #333; text-shadow: 0 1px 1px #fff; }
+
+div.panel > h3 a:hover,
+
+div.panel h3.pane-toggler-down a { color: #1272A5 }
+
+div.panel h3.pane-toggler-down { border-bottom: 4px solid #1272A5 !important }
+
+.pane-toggler span { background: transparent url('../images/icons/cw_panel_arrow.png') no-repeat 5px 50% !important; }
+
+.pane-toggler-down span { background: transparent url('../images/icons/cw_panel_arrow_down.png') no-repeat 5px 50% !important; }
+
+.pane-sliders .content { 
+    margin: 4px auto; 
+    width: 99%; 
+    -moz-border-radius: 3px; 
+    -webkit-border-radius: 3px; 
+    border-radius: 3px; 
+}
+
+
+/* form elements in the container */
+
+.panel fieldset.panelform > ul > li > label { 
+    color: #444; 
+    font-size: 11px; 
+    font-weight: bold; 
+    height: 24px; 
+    line-height: 24px; 
+    padding: 0 20px 0 10px; 
+    text-align: right; 
+    max-width: 30%!important; 
+    min-width: 30%!important; 
+}
+
+
+fieldset.panelform input { 
+    height: 16px; 
+    color: #555; 
+    line-height: 16px; 
+    padding: 4px;  
+}
+
+fieldset.panelform input.small { width: 40px; }
+
+fieldset.panelform input.tright { text-align: right; }
+
+fieldset.panelform input[type=button] { 
+    height: 26px; 
+    line-height: 26px; 
+}
+
+fieldset.panelform select { 
+    height: 26px; 
+    color: #555; 
+    line-height: 24px; 
+    padding: 4px; 
+    font-size:11px; 
+    border-radius: 2px; 
+    -moz-border-radius: 2px; 
+    -webkit-border-radius: 2px; 
+}
+
+fieldset.panelform select.position { width: 80px!important; }
+
+fieldset.panelform textarea { 
+    padding: 4px; 
+    border-radius: 2px; 
+    -moz-border-radius: 2px; 
+    -webkit-border-radius: 2px; 
+}
+
+.fltrt ul.adminformlist li { 
+    padding: 1px 10px; 
+    margin: 0; 
+}
+
+fieldset.panelform .label { 
+    font-size: 11px; 
+    font-weight: bold; 
+    width: auto; 
+    padding: 0 5px; 
+    line-height:34px; 
+}
+
+fieldset.panelform .desc { 
+    font-size: 11px; 
+    font-weight: normal; 
+    width: auto; 
+    padding: 10px; 
+}
+
+fieldset.adminform fieldset.radio, 
+fieldset.panelform fieldset.radio, 
+fieldset.adminform-legacy fieldset.radio { 
+    margin: 5px !important;
+    padding: 0;
+}
+
+/* End
+------------------------------------------------------------------------------*/
+
+/* Module description styling
+------------------------------------------------------------------------------*/
+span.cw_module { 
+    padding: 10px; 
+    font-family: "Trebuchet MS", Helvetica, sans-serif; 
+    font-size:13px !important; 
+    font-weight: normal !important; 
+    text-align: justify; color: #4d4d4d; 
+    line-height: 24px; 
+}
+
+span.cw_module h1 { 
+    clear:both; 
+    font-family: "Trebuchet MS", Helvetica, sans-serif; 
+    font-size:38px; 
+    margin:10px 5px; 
+    padding:0px 0px 5px 0px; 
+    color:#333; 
+    font-weight: normal; 
+}
+
+span.cw_module h3 { 
+    clear:both; 
+    font-family: "Trebuchet MS", Helvetica, sans-serif; 
+    font-size:22px; 
+    margin:10px 5px; 
+    padding:0px; 
+    color:#333;  
+    font-weight: normal; 
+}
+
+span.cw_module p { margin: 10px }
+
+span.cw_module p a, span.cw_module ul a  { 
+    color: #1272A5; 
+    text-decoration:none; 
+}
+
+span.cw_module p a:hover, span.cw_module ul a:hover  { 
+    color: #419EC9; 
+    text-decoration:none; 
+}
+
+span.cw_module p.homepage { margin-top: 30px; }
+
+span.cw_module p.license { 
+    border-top: 1px solid #eee; 
+    font-size: 11px; 
+    margin: 30px 26px 0; 
+    padding: 6px 0; 
+}
+
+span.cw_module p.info {
+    background: url("../images/icons/box_info.png") no-repeat scroll 0 0  #EBF5FA; 
+    border-bottom: 1px solid #D2DCE1;
+    border-top: 1px solid #D2DCE1; 
+    padding: 10px;
+}
+
+span.cw_module p.hint a { color:#CE6A23; }
+span.cw_module p.hint a:hover {color:#E2AB53;}
+span.cw_module p.hint {
+    background: url("../images/icons/box_hint.png") no-repeat scroll 0 0  #FFFAE6; 
+    border-bottom: 1px solid #FAE6BE;
+    border-top: 1px solid #FAE6BE; 
+    padding: 10px;
+}
+
+span.cw_module p.vote a { color:#8a916e; }
+span.cw_module p.vote a:hover {color:#b0bf7f;}
+span.cw_module p.vote {
+    background: url("../images/icons/cw-vote.png") no-repeat scroll 0 0  #FAFFE6; 
+    border-bottom: 1px solid #DCE6BE;
+    border-top: 1px solid #DCE6BE; 
+    padding: 10px;
+}
+
+span.cw_module p.donate a { color:#d4616c; }
+span.cw_module p.donate a:hover {color:#f7717e;}
+span.cw_module p.donate {
+    background: url("../images/icons/cw-donate.png") no-repeat scroll 0 0 #FFF0EB; 
+    border-bottom: 1px solid #FFD7CD;
+    border-top: 1px solid #FFD7CD;
+    padding: 10px;
+}
+
+span.cw_module p.info, span.cw_module p.hint, span.cw_module p.vote, span.cw_module p.donate {
+    padding-left:40px;
+    line-height: 18px; 
+    margin: 15px 10px; 
+}
+
+span.cw_module p a:hover, span.cw_module ul a:hover  {
+    -webkit-transition: color 0.2s ease-out;
+    -moz-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
+}
+
+span.cw_module img {}
+
+span.cw_module ul li {
+    margin-left:20px;
+    background: transparent url('../images/icons/cw_panel_arrow.png') no-repeat 5px 50% !important;
+    padding-left:20px;
+    list-style: none outside none;
+}
+
+
+/* End
+------------------------------------------------------------------------------*/

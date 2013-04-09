@@ -6,7 +6,7 @@
 
 .pirobox_caption{position:absolute;bottom:0;left:0;margin:0;display:block; padding:0px; cursor:text; background:#222;}
 .piro_nav{position:absolute;bottom:0;left:50%;margin:0;display:block; padding:0; background:none;}
-.pirobox_caption p{ display:block; margin:0;padding:4px 28px 4px 38px; text-align:center; font-weight:normal; background:black; color:white; font-size:12px;}
+.pirobox_caption p{ display:block; margin:0;padding:4px 28px 4px 38px; text-align:center; font-weight:normal; background:black; color:white; font-size:12px; font-style: italic;}
 
 a.piro_close{position:absolute;top:20px;right:20px;height:35px;width:35px;background:url(close_btn.png) no-repeat;cursor:pointer;z-index:100006;}
 a:hover.piro_close{background:url(close_btn_h.png) no-repeat;}

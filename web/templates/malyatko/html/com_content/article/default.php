@@ -33,7 +33,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
  ?>
 
 <?php if ($params->get('show_title')) : ?>
-	<h2>
+		<h2>
 
 		<?php echo $this->escape($this->item->title); ?>
 

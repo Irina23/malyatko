@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Мар 24 2013 г., 17:29
+-- Время создания: Апр 09 2013 г., 20:17
 -- Версия сервера: 5.5.29
 -- Версия PHP: 5.4.6-1ubuntu1.2
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_assets` (
   UNIQUE KEY `idx_asset_name` (`name`),
   KEY `idx_lft_rgt` (`lft`,`rgt`),
   KEY `idx_parent_id` (`parent_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=35 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=35 ;
 
 --
 -- Дамп данных таблицы `bak_o32yf_assets`
@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_associations` (
   `key` char(32) NOT NULL COMMENT 'The key for the association computed from an md5 on associated ids.',
   PRIMARY KEY (`context`,`id`),
   KEY `idx_key` (`key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -137,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_banners` (
   KEY `idx_metakey_prefix` (`metakey_prefix`),
   KEY `idx_banner_catid` (`catid`),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -163,7 +163,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_banner_clients` (
   PRIMARY KEY (`id`),
   KEY `idx_own_prefix` (`own_prefix`),
   KEY `idx_metakey_prefix` (`metakey_prefix`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -180,7 +180,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_banner_tracks` (
   KEY `idx_track_date` (`track_date`),
   KEY `idx_track_type` (`track_type`),
   KEY `idx_banner_id` (`banner_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -223,7 +223,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_categories` (
   KEY `idx_left_right` (`lft`,`rgt`),
   KEY `idx_alias` (`alias`),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Дамп данных таблицы `bak_o32yf_categories`
@@ -296,7 +296,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_contact_details` (
   KEY `idx_featured_catid` (`featured`,`catid`),
   KEY `idx_language` (`language`),
   KEY `idx_xreference` (`xreference`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -348,7 +348,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_content` (
   KEY `idx_featured_catid` (`featured`,`catid`),
   KEY `idx_language` (`language`),
   KEY `idx_xreference` (`xreference`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -360,7 +360,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_content_frontpage` (
   `content_id` int(11) NOT NULL DEFAULT '0',
   `ordering` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`content_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -374,7 +374,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_content_rating` (
   `rating_count` int(10) unsigned NOT NULL DEFAULT '0',
   `lastip` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`content_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -385,7 +385,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_content_rating` (
 CREATE TABLE IF NOT EXISTS `bak_o32yf_core_log_searches` (
   `search_term` varchar(128) NOT NULL DEFAULT '',
   `hits` int(10) unsigned NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -415,7 +415,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_extensions` (
   KEY `element_clientid` (`element`,`client_id`),
   KEY `element_folder_clientid` (`element`,`folder`,`client_id`),
   KEY `extension` (`type`,`element`,`folder`,`client_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=801 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=801 ;
 
 --
 -- Дамп данных таблицы `bak_o32yf_extensions`
@@ -570,7 +570,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_filters` (
   `data` text NOT NULL,
   `params` mediumtext,
   PRIMARY KEY (`filter_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -605,7 +605,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links` (
   KEY `idx_url` (`url`(75)),
   KEY `idx_published_list` (`published`,`state`,`access`,`publish_start_date`,`publish_end_date`,`list_price`),
   KEY `idx_published_sale` (`published`,`state`,`access`,`publish_start_date`,`publish_end_date`,`sale_price`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -620,7 +620,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links_terms0` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -635,7 +635,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links_terms1` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -650,7 +650,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links_terms2` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -665,7 +665,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links_terms3` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -680,7 +680,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links_terms4` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -695,7 +695,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links_terms5` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -710,7 +710,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links_terms6` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -725,7 +725,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links_terms7` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -740,7 +740,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links_terms8` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -755,7 +755,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links_terms9` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -770,7 +770,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links_termsa` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -785,7 +785,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links_termsb` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -800,7 +800,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links_termsc` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -815,7 +815,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links_termsd` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -830,7 +830,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links_termse` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -845,7 +845,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_links_termsf` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -866,7 +866,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_taxonomy` (
   KEY `ordering` (`ordering`),
   KEY `access` (`access`),
   KEY `idx_parent_published` (`parent_id`,`state`,`access`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Дамп данных таблицы `bak_o32yf_finder_taxonomy`
@@ -887,7 +887,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_taxonomy_map` (
   PRIMARY KEY (`link_id`,`node_id`),
   KEY `link_id` (`link_id`),
   KEY `node_id` (`node_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -909,7 +909,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_terms` (
   KEY `idx_term_phrase` (`term`,`phrase`),
   KEY `idx_stem_phrase` (`stem`,`phrase`),
   KEY `idx_soundex_phrase` (`soundex`,`phrase`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -922,7 +922,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_terms_common` (
   `language` varchar(3) NOT NULL,
   KEY `idx_word_lang` (`term`,`language`),
   KEY `idx_lang` (`language`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `bak_o32yf_finder_terms_common`
@@ -1095,7 +1095,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_finder_types` (
   `mime` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `title` (`title`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1123,7 +1123,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_languages` (
   UNIQUE KEY `idx_langcode` (`lang_code`),
   KEY `idx_access` (`access`),
   KEY `idx_ordering` (`ordering`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Дамп данных таблицы `bak_o32yf_languages`
@@ -1172,7 +1172,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_menu` (
   KEY `idx_alias` (`alias`),
   KEY `idx_path` (`path`(255)),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=102 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=102 ;
 
 --
 -- Дамп данных таблицы `bak_o32yf_menu`
@@ -1216,7 +1216,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_menu_types` (
   `description` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_menutype` (`menutype`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Дамп данных таблицы `bak_o32yf_menu_types`
@@ -1243,7 +1243,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_messages` (
   `message` text NOT NULL,
   PRIMARY KEY (`message_id`),
   KEY `useridto_state` (`user_id_to`,`state`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1256,7 +1256,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_messages_cfg` (
   `cfg_name` varchar(100) NOT NULL DEFAULT '',
   `cfg_value` varchar(255) NOT NULL DEFAULT '',
   UNIQUE KEY `idx_user_var_name` (`user_id`,`cfg_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1286,7 +1286,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_modules` (
   KEY `published` (`published`,`access`),
   KEY `newsfeeds` (`module`,`published`),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=87 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=87 ;
 
 --
 -- Дамп данных таблицы `bak_o32yf_modules`
@@ -1319,7 +1319,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_modules_menu` (
   `moduleid` int(11) NOT NULL DEFAULT '0',
   `menuid` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`moduleid`,`menuid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `bak_o32yf_modules_menu`
@@ -1386,7 +1386,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_newsfeeds` (
   KEY `idx_createdby` (`created_by`),
   KEY `idx_language` (`language`),
   KEY `idx_xreference` (`xreference`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1400,7 +1400,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_overrider` (
   `string` text NOT NULL,
   `file` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1421,7 +1421,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_redirect_links` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_link_old` (`old_url`),
   KEY `idx_link_modifed` (`modified_date`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1433,7 +1433,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_schemas` (
   `extension_id` int(11) NOT NULL,
   `version_id` varchar(20) NOT NULL,
   PRIMARY KEY (`extension_id`,`version_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `bak_o32yf_schemas`
@@ -1461,7 +1461,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_session` (
   KEY `whosonline` (`guest`,`usertype`),
   KEY `userid` (`userid`),
   KEY `time` (`time`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1479,7 +1479,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_template_styles` (
   PRIMARY KEY (`id`),
   KEY `idx_template` (`template`),
   KEY `idx_home` (`home`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Дамп данных таблицы `bak_o32yf_template_styles`
@@ -1514,7 +1514,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_updates` (
   `detailsurl` text NOT NULL,
   `infourl` text NOT NULL,
   PRIMARY KEY (`update_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Available Updates' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Available Updates' AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1529,7 +1529,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_update_categories` (
   `parent` int(11) DEFAULT '0',
   `updatesite` int(11) DEFAULT '0',
   PRIMARY KEY (`categoryid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Update Categories' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Update Categories' AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1545,7 +1545,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_update_sites` (
   `enabled` int(11) DEFAULT '0',
   `last_check_timestamp` bigint(20) DEFAULT '0',
   PRIMARY KEY (`update_site_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Update Sites' AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Update Sites' AUTO_INCREMENT=4 ;
 
 --
 -- Дамп данных таблицы `bak_o32yf_update_sites`
@@ -1566,7 +1566,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_update_sites_extensions` (
   `update_site_id` int(11) NOT NULL DEFAULT '0',
   `extension_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`update_site_id`,`extension_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Links extensions to update sites';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Links extensions to update sites';
 
 --
 -- Дамп данных таблицы `bak_o32yf_update_sites_extensions`
@@ -1594,7 +1594,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_usergroups` (
   KEY `idx_usergroup_title_lookup` (`title`),
   KEY `idx_usergroup_adjacency_lookup` (`parent_id`),
   KEY `idx_usergroup_nested_set_lookup` (`lft`,`rgt`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Дамп данных таблицы `bak_o32yf_usergroups`
@@ -1637,7 +1637,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_users` (
   KEY `idx_block` (`block`),
   KEY `username` (`username`),
   KEY `email` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=957 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=957 ;
 
 --
 -- Дамп данных таблицы `bak_o32yf_users`
@@ -1671,7 +1671,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_user_notes` (
   PRIMARY KEY (`id`),
   KEY `idx_user_id` (`user_id`),
   KEY `idx_category_id` (`catid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1685,7 +1685,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_user_profiles` (
   `profile_value` varchar(255) NOT NULL,
   `ordering` int(11) NOT NULL DEFAULT '0',
   UNIQUE KEY `idx_user_id_profile_key` (`user_id`,`profile_key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Simple user profile storage table';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Simple user profile storage table';
 
 -- --------------------------------------------------------
 
@@ -1697,7 +1697,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_user_usergroup_map` (
   `user_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Foreign Key to #__users.id',
   `group_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Foreign Key to #__usergroups.id',
   PRIMARY KEY (`user_id`,`group_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `bak_o32yf_user_usergroup_map`
@@ -1719,7 +1719,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_viewlevels` (
   `rules` varchar(5120) NOT NULL COMMENT 'JSON encoded access control.',
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_assetgroup_title_lookup` (`title`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Дамп данных таблицы `bak_o32yf_viewlevels`
@@ -1776,7 +1776,7 @@ CREATE TABLE IF NOT EXISTS `bak_o32yf_weblinks` (
   KEY `idx_featured_catid` (`featured`,`catid`),
   KEY `idx_language` (`language`),
   KEY `idx_xreference` (`xreference`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1797,61 +1797,78 @@ CREATE TABLE IF NOT EXISTS `o32yf_assets` (
   UNIQUE KEY `idx_asset_name` (`name`),
   KEY `idx_lft_rgt` (`lft`,`rgt`),
   KEY `idx_parent_id` (`parent_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=53 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=70 ;
 
 --
 -- Дамп данных таблицы `o32yf_assets`
 --
 
 INSERT INTO `o32yf_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `title`, `rules`) VALUES
-(1, 0, 1, 95, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+(1, 0, 1, 129, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
 (2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}'),
 (3, 1, 3, 6, 1, 'com_banners', 'com_banners', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (4, 1, 7, 8, 1, 'com_cache', 'com_cache', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
 (5, 1, 9, 10, 1, 'com_checkin', 'com_checkin', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
 (6, 1, 11, 12, 1, 'com_config', 'com_config', '{}'),
 (7, 1, 13, 16, 1, 'com_contact', 'com_contact', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(8, 1, 17, 44, 1, 'com_content', 'com_content', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
-(9, 1, 45, 46, 1, 'com_cpanel', 'com_cpanel', '{}'),
-(10, 1, 47, 48, 1, 'com_installer', 'com_installer', '{"core.admin":[],"core.manage":{"7":0},"core.delete":{"7":0},"core.edit.state":{"7":0}}'),
-(11, 1, 49, 50, 1, 'com_languages', 'com_languages', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(12, 1, 51, 52, 1, 'com_login', 'com_login', '{}'),
-(13, 1, 53, 54, 1, 'com_mailto', 'com_mailto', '{}'),
-(14, 1, 55, 56, 1, 'com_massmail', 'com_massmail', '{}'),
-(15, 1, 57, 58, 1, 'com_media', 'com_media', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":{"5":1}}'),
-(16, 1, 59, 60, 1, 'com_menus', 'com_menus', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(17, 1, 61, 62, 1, 'com_messages', 'com_messages', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
-(18, 1, 63, 64, 1, 'com_modules', 'com_modules', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(19, 1, 65, 68, 1, 'com_newsfeeds', 'com_newsfeeds', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(20, 1, 69, 70, 1, 'com_plugins', 'com_plugins', '{"core.admin":{"7":1},"core.manage":[],"core.edit":[],"core.edit.state":[]}'),
-(21, 1, 71, 72, 1, 'com_redirect', 'com_redirect', '{"core.admin":{"7":1},"core.manage":[]}'),
-(22, 1, 73, 74, 1, 'com_search', 'com_search', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
-(23, 1, 75, 76, 1, 'com_templates', 'com_templates', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(24, 1, 77, 80, 1, 'com_users', 'com_users', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(25, 1, 81, 84, 1, 'com_weblinks', 'com_weblinks', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
-(26, 1, 85, 86, 1, 'com_wrapper', 'com_wrapper', '{}'),
-(27, 8, 18, 27, 2, 'com_content.category.2', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(8, 1, 17, 78, 1, 'com_content', 'com_content', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
+(9, 1, 79, 80, 1, 'com_cpanel', 'com_cpanel', '{}'),
+(10, 1, 81, 82, 1, 'com_installer', 'com_installer', '{"core.admin":[],"core.manage":{"7":0},"core.delete":{"7":0},"core.edit.state":{"7":0}}'),
+(11, 1, 83, 84, 1, 'com_languages', 'com_languages', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(12, 1, 85, 86, 1, 'com_login', 'com_login', '{}'),
+(13, 1, 87, 88, 1, 'com_mailto', 'com_mailto', '{}'),
+(14, 1, 89, 90, 1, 'com_massmail', 'com_massmail', '{}'),
+(15, 1, 91, 92, 1, 'com_media', 'com_media', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":{"5":1}}'),
+(16, 1, 93, 94, 1, 'com_menus', 'com_menus', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(17, 1, 95, 96, 1, 'com_messages', 'com_messages', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
+(18, 1, 97, 98, 1, 'com_modules', 'com_modules', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(19, 1, 99, 102, 1, 'com_newsfeeds', 'com_newsfeeds', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(20, 1, 103, 104, 1, 'com_plugins', 'com_plugins', '{"core.admin":{"7":1},"core.manage":[],"core.edit":[],"core.edit.state":[]}'),
+(21, 1, 105, 106, 1, 'com_redirect', 'com_redirect', '{"core.admin":{"7":1},"core.manage":[]}'),
+(22, 1, 107, 108, 1, 'com_search', 'com_search', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
+(23, 1, 109, 110, 1, 'com_templates', 'com_templates', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(24, 1, 111, 114, 1, 'com_users', 'com_users', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(25, 1, 115, 118, 1, 'com_weblinks', 'com_weblinks', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
+(26, 1, 119, 120, 1, 'com_wrapper', 'com_wrapper', '{}'),
+(27, 8, 18, 35, 2, 'com_content.category.2', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
 (28, 3, 4, 5, 2, 'com_banners.category.3', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (29, 7, 14, 15, 2, 'com_contact.category.4', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(30, 19, 66, 67, 2, 'com_newsfeeds.category.5', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(31, 25, 82, 83, 2, 'com_weblinks.category.6', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(32, 24, 78, 79, 1, 'com_users.category.7', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(33, 1, 87, 88, 1, 'com_finder', 'com_finder', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
-(34, 1, 89, 90, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{"core.admin":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
+(30, 19, 100, 101, 2, 'com_newsfeeds.category.5', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(31, 25, 116, 117, 2, 'com_weblinks.category.6', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(32, 24, 112, 113, 1, 'com_users.category.7', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(33, 1, 121, 122, 1, 'com_finder', 'com_finder', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
+(34, 1, 123, 124, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{"core.admin":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
 (35, 27, 19, 20, 3, 'com_content.article.1', 'Головна', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-(36, 8, 28, 43, 2, 'com_content.category.8', 'Персонал', '{"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+(36, 8, 36, 51, 2, 'com_content.category.8', 'Персонал', '{"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
 (37, 27, 21, 22, 3, 'com_content.article.2', 'Про нас', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
 (38, 27, 23, 24, 3, 'com_content.article.3', 'Контакти', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
 (39, 27, 25, 26, 3, 'com_content.article.4', 'Благодійність', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-(40, 1, 91, 92, 1, 'com_djimageslider', 'com_djimageslider', '{}'),
-(42, 36, 41, 42, 3, 'com_content.article.5', 'Адміністрація', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-(43, 36, 29, 30, 3, 'com_content.article.6', 'Лікарі', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-(44, 36, 37, 38, 3, 'com_content.article.7', 'Педагогічний колектив', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-(45, 36, 31, 32, 3, 'com_content.article.8', 'Медичні сестри', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-(46, 36, 33, 34, 3, 'com_content.article.9', 'Молодші медичні сестри', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-(47, 36, 35, 36, 3, 'com_content.article.10', 'Бугалтерія та адміністративно-господарчий відділ', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-(48, 36, 39, 40, 3, 'com_content.category.9', 'Адміністрація', '{"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
-(52, 1, 93, 94, 1, 'com_admirorgallery', 'com_admirorgallery', '{}');
+(40, 1, 125, 126, 1, 'com_djimageslider', 'com_djimageslider', '{}'),
+(42, 36, 49, 50, 3, 'com_content.article.5', 'Адміністрація', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(43, 36, 37, 38, 3, 'com_content.article.6', 'Лікарі', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(44, 36, 45, 46, 3, 'com_content.article.7', 'Педагогічний колектив', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(45, 36, 39, 40, 3, 'com_content.article.8', 'Медичні сестри', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(46, 36, 41, 42, 3, 'com_content.article.9', 'Молодші медичні сестри', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(47, 36, 43, 44, 3, 'com_content.article.10', 'Бугалтерія та адміністративно-господарчий відділ', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(48, 36, 47, 48, 3, 'com_content.category.9', 'Адміністрація', '{"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+(52, 1, 127, 128, 1, 'com_admirorgallery', 'com_admirorgallery', '{}'),
+(53, 8, 52, 77, 2, 'com_content.category.10', 'Stuff', '{"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+(54, 27, 27, 28, 3, 'com_content.article.11', 'Charity', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(55, 27, 29, 30, 3, 'com_content.article.12', 'Contacts', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(56, 27, 31, 32, 3, 'com_content.article.13', 'About Us', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(57, 27, 33, 34, 3, 'com_content.article.14', 'Home', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(58, 53, 53, 54, 3, 'com_content.article.15', 'Bygalteria', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(59, 53, 55, 56, 3, 'com_content.article.16', 'Teachers', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(60, 53, 61, 62, 3, 'com_content.article.17', 'Junior nurses', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(61, 53, 57, 58, 3, 'com_content.article.18', 'Nurses', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(62, 53, 59, 60, 3, 'com_content.article.19', 'Doctors', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(63, 53, 63, 64, 3, 'com_content.article.20', 'Admins', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(64, 53, 65, 66, 3, 'com_content.article.21', 'Admins', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(65, 53, 67, 68, 3, 'com_content.article.22', 'Doctors', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(66, 53, 69, 70, 3, 'com_content.article.23', 'Teachers', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(67, 53, 71, 72, 3, 'com_content.article.24', 'Nurses', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(68, 53, 73, 74, 3, 'com_content.article.25', 'Junior nurses', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+(69, 53, 75, 76, 3, 'com_content.article.26', 'Bygalteria', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}');
 
 -- --------------------------------------------------------
 
@@ -1865,7 +1882,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_associations` (
   `key` char(32) NOT NULL COMMENT 'The key for the association computed from an md5 on associated ids.',
   PRIMARY KEY (`context`,`id`),
   KEY `idx_key` (`key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1909,7 +1926,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_banners` (
   KEY `idx_metakey_prefix` (`metakey_prefix`),
   KEY `idx_banner_catid` (`catid`),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1935,7 +1952,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_banner_clients` (
   PRIMARY KEY (`id`),
   KEY `idx_own_prefix` (`own_prefix`),
   KEY `idx_metakey_prefix` (`metakey_prefix`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1952,7 +1969,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_banner_tracks` (
   KEY `idx_track_date` (`track_date`),
   KEY `idx_track_type` (`track_type`),
   KEY `idx_banner_id` (`banner_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1995,22 +2012,23 @@ CREATE TABLE IF NOT EXISTS `o32yf_categories` (
   KEY `idx_left_right` (`lft`,`rgt`),
   KEY `idx_alias` (`alias`),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Дамп данных таблицы `o32yf_categories`
 --
 
 INSERT INTO `o32yf_categories` (`id`, `asset_id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `extension`, `title`, `alias`, `note`, `description`, `published`, `checked_out`, `checked_out_time`, `access`, `params`, `metadesc`, `metakey`, `metadata`, `created_user_id`, `created_time`, `modified_user_id`, `modified_time`, `hits`, `language`) VALUES
-(1, 0, 0, 0, 17, 0, '', 'system', 'ROOT', 'root', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{}', '', '', '', 0, '2009-10-18 16:07:09', 0, '0000-00-00 00:00:00', 0, '*'),
+(1, 0, 0, 0, 19, 0, '', 'system', 'ROOT', 'root', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{}', '', '', '', 0, '2009-10-18 16:07:09', 0, '0000-00-00 00:00:00', 0, '*'),
 (2, 27, 1, 1, 2, 1, 'uncategorised', 'com_content', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"target":"","image":""}', '', '', '{"page_title":"","author":"","robots":""}', 42, '2010-06-28 13:26:37', 0, '0000-00-00 00:00:00', 0, '*'),
 (3, 28, 1, 3, 4, 1, 'uncategorised', 'com_banners', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"target":"","image":"","foobar":""}', '', '', '{"page_title":"","author":"","robots":""}', 42, '2010-06-28 13:27:35', 0, '0000-00-00 00:00:00', 0, '*'),
 (4, 29, 1, 5, 6, 1, 'uncategorised', 'com_contact', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"target":"","image":""}', '', '', '{"page_title":"","author":"","robots":""}', 42, '2010-06-28 13:27:57', 0, '0000-00-00 00:00:00', 0, '*'),
 (5, 30, 1, 7, 8, 1, 'uncategorised', 'com_newsfeeds', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"target":"","image":""}', '', '', '{"page_title":"","author":"","robots":""}', 42, '2010-06-28 13:28:15', 0, '0000-00-00 00:00:00', 0, '*'),
 (6, 31, 1, 9, 10, 1, 'uncategorised', 'com_weblinks', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"target":"","image":""}', '', '', '{"page_title":"","author":"","robots":""}', 42, '2010-06-28 13:28:33', 0, '0000-00-00 00:00:00', 0, '*'),
 (7, 32, 1, 11, 12, 1, 'uncategorised', 'com_users', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"target":"","image":""}', '', '', '{"page_title":"","author":"","robots":""}', 42, '2010-06-28 13:28:33', 0, '0000-00-00 00:00:00', 0, '*'),
-(8, 36, 1, 13, 16, 1, 'personnel', 'com_content', 'Персонал', 'personnel', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":""}', '', '', '{"author":"","robots":""}', 153, '2013-01-14 14:42:33', 153, '2013-03-07 18:39:02', 0, '*'),
-(9, 48, 8, 14, 15, 2, 'personnel/administration', 'com_content', 'Адміністрація', 'administration', '', '', -2, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":"images\\/1.png"}', '', '', '{"author":"","robots":""}', 153, '2013-01-16 21:16:16', 0, '0000-00-00 00:00:00', 0, '*');
+(8, 36, 1, 13, 16, 1, 'personnel', 'com_content', 'Персонал', 'personnel', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":""}', '', '', '{"author":"","robots":""}', 153, '2013-01-14 14:42:33', 153, '2013-03-14 21:07:45', 0, 'uk-UA'),
+(9, 48, 8, 14, 15, 2, 'personnel/administration', 'com_content', 'Адміністрація', 'administration', '', '', -2, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":"images\\/1.png"}', '', '', '{"author":"","robots":""}', 153, '2013-01-16 21:16:16', 0, '0000-00-00 00:00:00', 0, '*'),
+(10, 53, 1, 17, 18, 1, 'stuff', 'com_content', 'Stuff', 'stuff', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":""}', '', '', '{"author":"","robots":""}', 153, '2013-03-14 21:07:43', 0, '0000-00-00 00:00:00', 0, 'en-GB');
 
 -- --------------------------------------------------------
 
@@ -2070,7 +2088,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_contact_details` (
   KEY `idx_featured_catid` (`featured`,`catid`),
   KEY `idx_language` (`language`),
   KEY `idx_xreference` (`xreference`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -2122,23 +2140,40 @@ CREATE TABLE IF NOT EXISTS `o32yf_content` (
   KEY `idx_featured_catid` (`featured`,`catid`),
   KEY `idx_language` (`language`),
   KEY `idx_xreference` (`xreference`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
 
 --
 -- Дамп данных таблицы `o32yf_content`
 --
 
 INSERT INTO `o32yf_content` (`id`, `asset_id`, `title`, `alias`, `title_alias`, `introtext`, `fulltext`, `state`, `sectionid`, `mask`, `catid`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `images`, `urls`, `attribs`, `version`, `parentid`, `ordering`, `metakey`, `metadesc`, `access`, `hits`, `metadata`, `featured`, `language`, `xreference`) VALUES
-(1, 35, 'Головна', 'home', '', '<p class="left">КЗ «Черкаський обласний спеціалізований Будинок дитини» Черкаської обласної ради є спеціалізованим лікувально-профілактичним комунальним закладом охорони здоров’я для лікування та медико-соціального захисту дітей-сиріт. Навчально-виховний процес в Будинку дитини здійснюється на основі особистісно-орієнтованого підходу до дітей згідно річного плану з урахуванням нервово-психічного розвитку вихованців, стану їх здоров’я та сучасної концепції виховання і розвитку дітей дошкільного віку.</p>\r\n<p>{loadposition user1}</p>', '', 1, 0, 0, 2, '2013-01-14 14:29:59', 153, '', '2013-03-19 10:57:36', 153, 0, '0000-00-00 00:00:00', '2013-01-14 14:29:59', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"0","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 16, 0, 4, '', '', 1, 911, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
-(2, 37, 'Про нас', 'about', '', '<p class="left"><img src="images/PhotoGallery/IMG_9578.JPG" border="0" />КЗ «Черкаський обласний спеціалізований Будинок дитини» Черкаської обласної ради є спеціалізованим лікувально-профілактичним комунальним закладом охорони здоров’я для лікування та медико-соціального захисту дітей-сиріт, дітей, які залишилися без піклування батьків, дітей з вадами розумового та фізичного розвитку, органічним ураженням центрально-нервової системи (ІІ-V груп здоров’я) та порушенням психіки, забезпечує надання навчально-виховної, корекційно-відновлювальної та лікувально-профілактичної, реабілітаційної допомоги дітям-інвалідам та соціально-дезадаптованим дітям-вихованцям закладу із сімей зі складними життєвими обставинами, багатодітних сімей, матерів-одиначок та інших, які потребують постійного медичного супроводу. Заклад має у своєму розпорядженні територію, будівлі, медичне обладнання, апаратуру, господарський інвентар та інше майно.</p>\r\n<p>Будинок дитини безпосередньо підпорядкований Головному управлінню охорони здоров’я та медицини катастроф Черкаської обласної ради і знаходиться на його бюджеті. Функціонує цілий рік, розрахований на 105 ліжок і приймає дітей віком від 1 місяця до 4 років.</p>\r\n<p class="right"><img src="images/PhotoGallery/IMG_9700.JPG" border="0" />Будинок дитини має 10 груп, в т.ч. 2 – для дітей від 1міс до 1 року, 7 – для дітей від 1 року до 4 років , 1 – для дітей-інвалідів з важкою патологією центральної нервової системи, приймально-карантинну групу на 8 ліжок, та ізолятор на 6 ліжок, лікувально-реабілітаційні кабінети – фізіотерапевтичний, маніпуляційний, кабінет щеплень, масажу, ЛФК, кабінет Монтессорі, сенсорну кімнату, художню студію на базі логопедичних кабінетів.</p>\r\n<p>Заклад розташований у збудованій у 1980 році за типовим проектом споруді. Прилегла територія добре озеленена, відповідає санітарним нормам і використовується для прогулянок дітей – вихованців будинку дитини.</p>\r\n<p>Діти поступають в Будинок дитини на підставі рішень місцевих органів самоврядування та згідно путівки, виданої Головним управлінням охорони здоров`я та медицини катастроф Черкаської ОДА.</p>\r\n<p>Переведення дітей в інтернатні заклади освіти, в заклади соцзабезпечення здійснюються згідно висновку обласної медико-педагогічної комісії.</p>\r\n<p class="left"><img src="images/PhotoGallery/IMG_0379.jpg" border="0" />Штати працівників будинку дитини та їх укомплектування:</p>\r\n<ul type="disc">\r\n<li>Лікарі - 12</li>\r\n<li>Середній медперсонал - 89,75</li>\r\n<li>Молодший медперсонал - 75,75</li>\r\n<li>Інший персонал – 60,5</li>\r\n<li>В т.ч. педагогічний -30</li>\r\n</ul>\r\n<p>Педагогами закладу протягом року в повному обсязі забезпечується реалізація державної політики в сфері дошкільної освіти. В закладі працюють 3 логопеди, музичний керівник та психолог з відповідною освітою.</p>\r\n<p>Методкабінет установи забезпечений в достатній кількості методичною та художньою літературою з різноманітних питань навчання та виховання дітей раннього віку, відповідно до запитів педагогів та групових медсестер, інших фахівців будинку дитини.</p>\r\n<p class="right"><img src="images/PhotoGallery/DSC05844.JPG" border="0" />В установі систематично проводяться різноманітні методичні, творчі та оздоровчі заходи, а саме: свята, розваги, творчі вечори, семінари та семінари-практикуми, тренінги для персоналу груп грудного, раннього та дошкільного віку, відкриті перегляди занять та режимних моментів, заходи на народознавчу тематику, круглі столи, методичні педагогічні години та методичні вечорниці, консультації для всіх підрозділів будинку дитини, інструктажі, конкурси, тижні театру (арттерапія, казкотерапія і таке інше).</p>\r\n<p>Протягом останніх років значно поповнено матеріально-технічну та ігрову базу будинку дитини. Так співробітниками закладу виготовлено власноруч багато ігрових та дидактичних посібників з фізичного розвитку, розвитку мовлення, сенсорного виховання та ознайомлення з навколишнім світом. Придбано за спонсорські кошти обладнання для вуличних майданчиків, сухі басейни, модулі, м’які іграшки та дитячі ігрові меблі, художню літературу.</p>\r\n<p>Від Головного управління охорони здоров’я та медицини катастроф Черкаської облдержадміністрації отримано у вигляді подарунків до Дня захисту дітей та Святого Миколая медичне . Також до Дня Святого Миколая у 2011 році від голови обласної державної адміністрації, Тулуба Сергія Борисовича, дітям закладу був подарований ігровий фізкультурно-оздоровчий комплекс, який встановлений в залі ЛФК Будинку дитини. Це дало змогу значно покращити реабілітаційне лікування дітей-інвалідів з патологією центральної нервової системи.</p>\r\n<p>Працівниками будинку дитини постійно проводиться робота по заохоченню директорів державних підприємств, банків та приватних власників до надання спонсорської допомоги дітям-сиротам та дітям, позбавлених батьківської опіки – вихованцям нашої установи.</p>\r\n<p>З року в рік працівники установи відзначають покращення стану здоров’я, знань та умінь дітей які перебувають в будинку дитини.</p>\r\n<p>29.07.2011 року акредитаційною комісією ГУОЗ та МК ОДА була проведена акредитація закладу. Підтверджена вища акредитаційна категорія.</p>', '', 1, 0, 0, 2, '2013-01-14 14:46:27', 153, '', '2013-03-24 15:09:27', 153, 0, '0000-00-00 00:00:00', '2013-01-14 14:46:27', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 50, 0, 3, '', '', 1, 449, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
-(3, 38, 'Контакти', 'contacts', '', '<dl><dd class="map">{mosmap text='' г. Черкассы, ул. Капитана Пилипенко, 4''}</dd></dl>\r\n<p><img src="images/address.png" border="0" alt="" />18036 м. Черкаси вул. Пилипенка, 4</p>\r\n<p><img src="images/phone.png" border="0" alt="" />(0472)64-11-14</p>\r\n<p><img src="images/e-mail.png" border="0" alt="" />chobd@mail.ru</p>', '', 1, 0, 0, 2, '2013-01-14 14:47:26', 153, '', '2013-03-17 13:53:14', 153, 0, '0000-00-00 00:00:00', '2013-01-14 14:47:26', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 38, 0, 2, '', '', 1, 405, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
-(4, 39, 'Благодійність', 'donate', '', '<h2>Банківські реквізити для<br /> благодійних внесків</h2>\r\n<p>ГУДКСУ в Черкаській області</p>\r\n<p>р/р 35421004001934</p>\r\n<p>код 02005438</p>\r\n<p>МФО 854018</p>\r\n<p> </p>\r\n<p>{loadposition user1}</p>', '', 1, 0, 0, 2, '2013-01-14 14:47:54', 153, '', '2013-03-23 11:23:43', 153, 0, '0000-00-00 00:00:00', '2013-01-14 14:47:54', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 17, 0, 1, '', '', 1, 630, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
-(5, 42, 'Адміністрація', 'administration', '', '<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.</p>\r\n', '\r\n<p>Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.</p>', 1, 0, 0, 8, '2013-01-14 16:25:11', 153, '', '2013-03-10 20:06:10', 153, 0, '0000-00-00 00:00:00', '2013-01-14 16:25:11', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-administration.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 26, 0, 4, '', '', 1, 83, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
-(6, 43, 'Лікарі', 'doctors', '', '<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. </p>\r\n', '\r\n<p> </p>\r\n<ul class="doctors">\r\n<li><img src="images/Doctors/1.png" border="0" />\r\n<h3>Михно Світлана Леонідівна</h3>\r\n<p>- виконуючий обов’язки головного лікаря, закінчила Український державний медичний університет ім. акад.О.О.Богомольця у 1994 році, вища категорія.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0718.jpg" border="0" />\r\n<h3>Безпоясна Дар’я Костянтинівна</h3>\r\n<p>- заступник головного лікаря з медичної частини, закінчила Одеський медичний інститут ім.М.І.Пирогова у 1982 році. І категорія</p>\r\n</li>\r\n<li><img src="images/Doctors/1.png" border="0" />\r\n<h3>Остапчук Раїса Антонівна</h3>\r\n<p>- лікар-невролог дитячий, закінчила Київський медичний інститут у 1972 році. Вища категорія.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0711.jpg" border="0" />\r\n<h3>Білик Інна Степанівна</h3>\r\n<p>- лікар-педіатр, закінчила Вінницький медичний інститут ім.М.І.Пирогова у 1989 році, І категорія.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0697.jpg" border="0" />\r\n<h3>Недоступ Лариса Євгенівна</h3>\r\n<p>- лікар-педіатр, закінчила Київський медичний інститут у 1982 році. І категорія.</p>\r\n</li>\r\n<li><img src="images/Doctors/1.png" border="0" />\r\n<h3>Бурлака Лідія Федотівна</h3>\r\n<p>- лікар-педіатр. Закінчила Харківський медичний інститут у 1972 році.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0701.jpg" border="0" />\r\n<h3>Бєлая Марина Юріївна</h3>\r\n<p>- лікар-педіатр , ІІ кваліфікаційна категорія - педіатрія. Закінчила Запорізький державний медичний університет.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0703.jpg" border="0" />\r\n<h3>Криницька Ольга Олексіївна</h3>\r\n<p>- лікар-педіатр,закінчила Івано- Франківський медичний Інститут у 1989 році , ІІ категорія.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0706.jpg" border="0" />\r\n<h3>Михайленко Лариса Миколаївна</h3>\r\n<p>- лікар-педіатр, закінчила Дніпропетровський медичний інститут у 1987 році. ІІ категорія.</p>\r\n</li>\r\n</ul>', 1, 0, 0, 8, '2013-01-14 16:26:26', 153, '', '2013-03-10 20:06:40', 153, 0, '0000-00-00 00:00:00', '2013-01-14 16:26:26', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-doctors.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 20, 0, 3, '', '', 1, 132, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
-(7, 44, 'Педагогічний колектив', 'teachers', '', '<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. </p>\r\n', '\r\n<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.</p>', 1, 0, 0, 8, '2013-01-14 16:27:07', 153, '', '2013-03-10 20:07:27', 153, 0, '0000-00-00 00:00:00', '2013-01-14 16:27:07', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-teachers.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 6, 0, 0, '', '', 1, 16, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
-(8, 45, 'Медичні сестри', 'nurses', '', '<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. </p>\r\n', '\r\n<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.</p>', 1, 0, 0, 8, '2013-01-14 16:27:28', 153, '', '2013-03-10 20:07:06', 153, 0, '0000-00-00 00:00:00', '2013-01-14 16:27:28', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-nurses.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 6, 0, 2, '', '', 1, 8, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
-(9, 46, 'Молодші медичні сестри', 'junior-nurses', '', '<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. </p>\r\n', '\r\n<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.</p>', 1, 0, 0, 8, '2013-01-14 16:27:52', 153, '', '2013-03-10 20:07:16', 153, 0, '0000-00-00 00:00:00', '2013-01-14 16:27:52', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-junior-nurses.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 5, 0, 1, '', '', 1, 6, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
-(10, 47, 'Бугалтерія та адміністративно-господарчий відділ', 'bugalteriya', '', '<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. </p>\r\n', '\r\n<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.</p>', 1, 0, 0, 8, '2013-01-14 16:29:07', 153, '', '2013-03-10 20:06:24', 153, 0, '0000-00-00 00:00:00', '2013-01-14 16:29:07', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-bugalteriya.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 9, 0, 0, '', '', 1, 8, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', '');
+(1, 35, 'Головна', 'home', '', '<p class="left">КЗ «Черкаський обласний спеціалізований Будинок дитини» Черкаської обласної ради є спеціалізованим лікувально-профілактичним комунальним закладом охорони здоров’я для лікування та медико-соціального захисту дітей-сиріт. Навчально-виховний процес в Будинку дитини здійснюється на основі особистісно-орієнтованого підходу до дітей згідно річного плану з урахуванням нервово-психічного розвитку вихованців, стану їх здоров’я та сучасної концепції виховання і розвитку дітей дошкільного віку.</p>\r\n<p>{loadposition user1}</p>', '', 1, 0, 0, 2, '2013-01-14 14:29:59', 153, '', '2013-03-19 18:19:54', 153, 0, '0000-00-00 00:00:00', '2013-01-14 14:29:59', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"0","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 17, 0, 8, '', '', 1, 1105, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'uk-UA', ''),
+(2, 37, 'Про нас', 'about', '', '<p class="left"><img src="images/PhotoGallery/IMG_9578.JPG" border="0" />КЗ «Черкаський обласний спеціалізований Будинок дитини» Черкаської обласної ради є спеціалізованим лікувально-профілактичним комунальним закладом охорони здоров’я для лікування та медико-соціального захисту дітей-сиріт, дітей, які залишилися без піклування батьків, дітей з вадами розумового та фізичного розвитку, органічним ураженням центрально-нервової системи (ІІ-V груп здоров’я) та порушенням психіки, забезпечує надання навчально-виховної, корекційно-відновлювальної та лікувально-профілактичної, реабілітаційної допомоги дітям-інвалідам та соціально-дезадаптованим дітям-вихованцям закладу із сімей зі складними життєвими обставинами, багатодітних сімей, матерів-одиначок та інших, які потребують постійного медичного супроводу. Заклад має у своєму розпорядженні територію, будівлі, медичне обладнання, апаратуру, господарський інвентар та інше майно.</p>\r\n<p>Будинок дитини безпосередньо підпорядкований Головному управлінню охорони здоров’я та медицини катастроф Черкаської обласної ради і знаходиться на його бюджеті. Функціонує цілий рік, розрахований на 105 ліжок і приймає дітей віком від 1 місяця до 4 років.</p>\r\n<p class="right"><img src="images/PhotoGallery/IMG_9700.JPG" border="0" />Будинок дитини має 10 груп, в т.ч. 2 – для дітей від 1міс до 1 року, 7 – для дітей від 1 року до 4 років , 1 – для дітей-інвалідів з важкою патологією центральної нервової системи, приймально-карантинну групу на 8 ліжок, та ізолятор на 6 ліжок, лікувально-реабілітаційні кабінети – фізіотерапевтичний, маніпуляційний, кабінет щеплень, масажу, ЛФК, кабінет Монтессорі, сенсорну кімнату, художню студію на базі логопедичних кабінетів.</p>\r\n<p>Заклад розташований у збудованій у 1980 році за типовим проектом споруді. Прилегла територія добре озеленена, відповідає санітарним нормам і використовується для прогулянок дітей – вихованців будинку дитини.</p>\r\n<p>Діти поступають в Будинок дитини на підставі рішень місцевих органів самоврядування та згідно путівки, виданої Головним управлінням охорони здоров`я та медицини катастроф Черкаської ОДА.</p>\r\n<p>Переведення дітей в інтернатні заклади освіти, в заклади соцзабезпечення здійснюються згідно висновку обласної медико-педагогічної комісії.</p>\r\n<p class="left"><img src="images/PhotoGallery/IMG_0379.jpg" border="0" />Штати працівників будинку дитини та їх укомплектування:</p>\r\n<ul type="disc">\r\n<li>Лікарі - 12</li>\r\n<li>Середній медперсонал - 89,75</li>\r\n<li>Молодший медперсонал - 75,75</li>\r\n<li>Інший персонал – 60,5</li>\r\n<li>В т.ч. педагогічний -30</li>\r\n</ul>\r\n<p>Педагогами закладу протягом року в повному обсязі забезпечується реалізація державної політики в сфері дошкільної освіти. В закладі працюють 3 логопеди, музичний керівник та психолог з відповідною освітою.</p>\r\n<p>Методкабінет установи забезпечений в достатній кількості методичною та художньою літературою з різноманітних питань навчання та виховання дітей раннього віку, відповідно до запитів педагогів та групових медсестер, інших фахівців будинку дитини.</p>\r\n<p class="right"><img src="images/PhotoGallery/DSC05844.JPG" border="0" />В установі систематично проводяться різноманітні методичні, творчі та оздоровчі заходи, а саме: свята, розваги, творчі вечори, семінари та семінари-практикуми, тренінги для персоналу груп грудного, раннього та дошкільного віку, відкриті перегляди занять та режимних моментів, заходи на народознавчу тематику, круглі столи, методичні педагогічні години та методичні вечорниці, консультації для всіх підрозділів будинку дитини, інструктажі, конкурси, тижні театру (арттерапія, казкотерапія і таке інше).</p>\r\n<p>Протягом останніх років значно поповнено матеріально-технічну та ігрову базу будинку дитини. Так співробітниками закладу виготовлено власноруч багато ігрових та дидактичних посібників з фізичного розвитку, розвитку мовлення, сенсорного виховання та ознайомлення з навколишнім світом. Придбано за спонсорські кошти обладнання для вуличних майданчиків, сухі басейни, модулі, м’які іграшки та дитячі ігрові меблі, художню літературу.</p>\r\n<p>Від Головного управління охорони здоров’я та медицини катастроф Черкаської облдержадміністрації отримано у вигляді подарунків до Дня захисту дітей та Святого Миколая медичне . Також до Дня Святого Миколая у 2011 році від голови обласної державної адміністрації, Тулуба Сергія Борисовича, дітям закладу був подарований ігровий фізкультурно-оздоровчий комплекс, який встановлений в залі ЛФК Будинку дитини. Це дало змогу значно покращити реабілітаційне лікування дітей-інвалідів з патологією центральної нервової системи.</p>\r\n<p>Працівниками будинку дитини постійно проводиться робота по заохоченню директорів державних підприємств, банків та приватних власників до надання спонсорської допомоги дітям-сиротам та дітям, позбавлених батьківської опіки – вихованцям нашої установи.</p>\r\n<p>З року в рік працівники установи відзначають покращення стану здоров’я, знань та умінь дітей які перебувають в будинку дитини.</p>\r\n<p>29.07.2011 року акредитаційною комісією ГУОЗ та МК ОДА була проведена акредитація закладу. Підтверджена вища акредитаційна категорія.</p>', '', 1, 0, 0, 2, '2013-01-14 14:46:27', 153, '', '2013-04-05 14:25:54', 153, 0, '0000-00-00 00:00:00', '2013-01-14 14:46:27', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 37, 0, 7, '', '', 1, 509, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'uk-UA', ''),
+(23, 66, 'Teachers', 'teachers', '', '<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>\r\n', '\r\n<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>', 1, 0, 0, 10, '2013-04-05 06:27:30', 153, '', '2013-04-05 06:28:03', 153, 0, '0000-00-00 00:00:00', '2013-04-05 06:27:30', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-teachers.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 2, 0, 3, '', '', 1, 0, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
+(24, 67, 'Nurses', 'nurses', '', '<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>\r\n', '\r\n<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>', 1, 0, 0, 10, '2013-04-05 06:29:17', 153, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2013-04-05 06:29:17', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-nurses.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 0, 2, '', '', 1, 0, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'en-GB', ''),
+(3, 38, 'Контакти', 'contacts', '', '<dl><dd class="map">{mosmap text='' г. Черкассы, ул. Капитана Пилипенко, 4''}</dd></dl>\r\n<p><img src="images/address.png" border="0" alt="" />18036 м. Черкаси вул. Пилипенка, 4</p>\r\n<p><img src="images/phone.png" border="0" alt="" />(0472)64-11-14</p>\r\n<p><img src="images/e-mail.png" border="0" alt="" />chobd@mail.ru</p>\r\n<dl><dd>\r\n<ul>\r\n<li class="fb"><a href="http://www.facebook.com/dim.malyatka" target="_blank">facebook</a></li>\r\n<li class="vk"><a href="http://vk.com/id206738384" target="_blank">vkontakte</a></li>\r\n</ul>\r\n</dd></dl>', '', 1, 0, 0, 2, '2013-01-14 14:47:26', 153, '', '2013-04-05 16:05:01', 153, 153, '2013-04-05 16:41:49', '2013-01-14 14:47:26', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 42, 0, 6, '', '', 1, 553, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'uk-UA', ''),
+(4, 39, 'Благодійність', 'charity', '', '<div class="share42init" data-url="http://malyatko.ua/uk/about" data-title="Комунальний заклад &quot;Черкаський обласний спеціалізований Будинок дитини&quot; Черкаської обласної ради - Благодійність"> </div>\r\n<h2>Банківські реквізити для<br /> благодійних внесків</h2>\r\n<p>ГУДКСУ в Черкаській області</p>\r\n<p>р/р 35421004001934</p>\r\n<p>код 02005438</p>\r\n<p>МФО 854018</p>\r\n<p> </p>\r\n<h3>Приват24</h3>\r\n<p>{loadposition user1}</p>', '', 1, 0, 0, 2, '2013-01-14 14:47:54', 153, '', '2013-04-05 14:13:08', 153, 0, '0000-00-00 00:00:00', '2013-01-14 14:47:54', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 18, 0, 5, '', '', 1, 814, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'uk-UA', ''),
+(5, 42, 'Адміністрація', 'administration', '', '<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.</p>\r\n', '\r\n<p>Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.</p>', 1, 0, 0, 8, '2013-01-14 16:25:11', 153, '', '2013-03-14 21:25:21', 153, 0, '0000-00-00 00:00:00', '2013-01-14 16:25:11', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-administration.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 27, 0, 4, '', '', 1, 104, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'uk-UA', ''),
+(6, 43, 'Лікарі', 'doctors', '', '<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. </p>\r\n', '\r\n<p> </p>\r\n<ul class="doctors">\r\n<li><img src="images/Doctors/1.png" border="0" />\r\n<h3>Михно Світлана Леонідівна</h3>\r\n<p>- виконуючий обов’язки головного лікаря, закінчила Український державний медичний університет ім. акад.О.О.Богомольця у 1994 році, вища категорія.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0718.jpg" border="0" />\r\n<h3>Безпоясна Дар’я Костянтинівна</h3>\r\n<p>- заступник головного лікаря з медичної частини, закінчила Одеський медичний інститут ім.М.І.Пирогова у 1982 році. І категорія</p>\r\n</li>\r\n<li><img src="images/Doctors/1.png" border="0" />\r\n<h3>Остапчук Раїса Антонівна</h3>\r\n<p>- лікар-невролог дитячий, закінчила Київський медичний інститут у 1972 році. Вища категорія.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0711.jpg" border="0" />\r\n<h3>Білик Інна Степанівна</h3>\r\n<p>- лікар-педіатр, закінчила Вінницький медичний інститут ім.М.І.Пирогова у 1989 році, І категорія.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0697.jpg" border="0" />\r\n<h3>Недоступ Лариса Євгенівна</h3>\r\n<p>- лікар-педіатр, закінчила Київський медичний інститут у 1982 році. І категорія.</p>\r\n</li>\r\n<li><img src="images/Doctors/1.png" border="0" />\r\n<h3>Бурлака Лідія Федотівна</h3>\r\n<p>- лікар-педіатр. Закінчила Харківський медичний інститут у 1972 році.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0701.jpg" border="0" />\r\n<h3>Бєлая Марина Юріївна</h3>\r\n<p>- лікар-педіатр , ІІ кваліфікаційна категорія - педіатрія. Закінчила Запорізький державний медичний університет.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0703.jpg" border="0" />\r\n<h3>Криницька Ольга Олексіївна</h3>\r\n<p>- лікар-педіатр,закінчила Івано- Франківський медичний Інститут у 1989 році , ІІ категорія.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0706.jpg" border="0" />\r\n<h3>Михайленко Лариса Миколаївна</h3>\r\n<p>- лікар-педіатр, закінчила Дніпропетровський медичний інститут у 1987 році. ІІ категорія.</p>\r\n</li>\r\n</ul>', 1, 0, 0, 8, '2013-01-14 16:26:26', 153, '', '2013-03-14 21:23:44', 153, 0, '0000-00-00 00:00:00', '2013-01-14 16:26:26', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-doctors.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 21, 0, 3, '', '', 1, 140, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'uk-UA', ''),
+(7, 44, 'Педагогічний колектив', 'teachers', '', '<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. </p>\r\n', '\r\n<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.</p>', 1, 0, 0, 8, '2013-01-14 16:27:07', 153, '', '2013-03-14 21:19:28', 153, 0, '0000-00-00 00:00:00', '2013-01-14 16:27:07', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-teachers.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 8, 0, 0, '', '', 1, 18, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'uk-UA', ''),
+(8, 45, 'Медичні сестри', 'nurses', '', '<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. </p>\r\n', '\r\n<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.</p>', 1, 0, 0, 8, '2013-01-14 16:27:28', 153, '', '2013-03-14 21:21:53', 153, 0, '0000-00-00 00:00:00', '2013-01-14 16:27:28', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-nurses.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 7, 0, 2, '', '', 1, 11, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'uk-UA', ''),
+(9, 46, 'Молодші медичні сестри', 'junior-nurses', '', '<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. </p>\r\n', '\r\n<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.</p>', 1, 0, 0, 8, '2013-01-14 16:27:52', 153, '', '2013-03-14 21:20:48', 153, 0, '0000-00-00 00:00:00', '2013-01-14 16:27:52', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-junior-nurses.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 6, 0, 1, '', '', 1, 11, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'uk-UA', ''),
+(10, 47, 'Бугалтерія та адміністративно-господарчий відділ', 'bugalteriya', '', '<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. </p>\r\n', '\r\n<p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.</p>', 1, 0, 0, 8, '2013-01-14 16:29:07', 153, '', '2013-03-14 21:17:38', 153, 0, '0000-00-00 00:00:00', '2013-01-14 16:29:07', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-bugalteriya.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 10, 0, 0, '', '', 1, 14, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'uk-UA', ''),
+(11, 54, 'Charity', 'charity-en', '', '<p>English version of this article. <span style="line-height: 1.3em;">English version of this article. </span><span style="line-height: 1.3em;">English version of this article. </span><span style="line-height: 1.3em;">English version of this article. </span><span style="line-height: 1.3em;">English version of this article. </span></p>\r\n<h3>Privat24</h3>\r\n<p>{loadposition user1}</p>', '', 1, 0, 0, 2, '2013-03-14 21:10:25', 153, '', '2013-04-05 08:31:28', 153, 0, '0000-00-00 00:00:00', '2013-03-14 21:10:25', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 4, 0, 4, '', '', 1, 84, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'en-GB', ''),
+(12, 55, 'Contacts', 'contact-us', '', '<dl><dd class="map">{mosmap text='' 18036 Ukraine, Cherkassy street. Pylypenko, 4''}</dd></dl>\r\n<p><img src="images/address.png" border="0" alt="" />18036 Ukraine, Cherkassy street. Pylypenko, 4</p>\r\n<p><img src="images/phone.png" border="0" alt="" />64-11-14</p>\r\n<p><img src="images/e-mail.png" border="0" alt="" />chobd@mail.ru</p>\r\n<dl><dd>\r\n<ul>\r\n<li class="fb"><a href="http://www.facebook.com/dim.malyatka" target="_blank">facebook</a></li>\r\n<li class="vk"><a href="http://vk.com/id206738384" target="_blank">vkontakte</a></li>\r\n</ul>\r\n</dd></dl>', '', 1, 0, 0, 2, '2013-03-14 21:11:33', 153, '', '2013-04-05 16:05:39', 153, 0, '0000-00-00 00:00:00', '2013-03-14 21:11:33', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 9, 0, 3, '', '', 1, 69, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'en-GB', ''),
+(13, 56, 'About Us', 'about-us', '', '<p>English version of this article. <span style="line-height: 1.3em;">English version of this article. </span><span style="line-height: 1.3em;">English version of this article. </span><span style="line-height: 1.3em;">English version of this article. </span><span style="line-height: 1.3em;">English version of this article. </span></p>', '', 1, 0, 0, 2, '2013-03-14 21:12:08', 153, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2013-03-14 21:12:08', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 0, 2, '', '', 1, 45, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'en-GB', ''),
+(14, 57, 'Home', 'home-en', '', '<p class="left">English version of this article. <span style="line-height: 1.3em;">English version of this article. </span><span style="line-height: 1.3em;">English version of this article. </span><span style="line-height: 1.3em;">English version of this article. </span><span style="line-height: 1.3em;">English version of this article. </span></p>\r\n<p>{loadposition user1}</p>', '', 1, 0, 0, 2, '2013-03-14 21:12:47', 153, '', '2013-04-05 05:34:32', 153, 0, '0000-00-00 00:00:00', '2013-03-14 21:12:47', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 3, 0, 1, '', '', 1, 167, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'en-GB', ''),
+(15, 58, 'Bygalteria', 'bugalteriya-en', '', '<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>', '', -2, 0, 0, 10, '2013-03-14 21:17:05', 153, '', '2013-04-05 05:51:21', 153, 0, '0000-00-00 00:00:00', '2013-03-14 21:17:05', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-bugalteriya.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 5, 0, 8, '', '', 1, 1, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'en-GB', ''),
+(16, 59, 'Teachers', 'teachers-en', '', '<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>\r\n', '\r\n<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>\r\n<p> </p>\r\n<p> </p>', -2, 0, 0, 10, '2013-03-14 21:18:56', 153, '', '2013-04-05 06:13:27', 153, 0, '0000-00-00 00:00:00', '2013-03-14 21:18:56', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-teachers.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 5, 0, 5, '', '', 1, 1, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'en-GB', ''),
+(17, 60, 'Junior nurses', 'junior-nurses-en', '', '<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>\r\n', '\r\n<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>\r\n<p> </p>', -2, 0, 0, 10, '2013-03-14 21:20:41', 153, '', '2013-04-05 05:47:58', 153, 0, '0000-00-00 00:00:00', '2013-03-14 21:20:41', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-junior-nurses.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 4, 0, 6, '', '', 1, 1, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'en-GB', ''),
+(18, 61, 'Nurses', 'nurses-en', '', '<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>\r\n', '\r\n<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>\r\n<p> </p>', -2, 0, 0, 10, '2013-03-14 21:21:43', 153, '', '2013-04-05 05:47:49', 153, 0, '0000-00-00 00:00:00', '2013-03-14 21:21:43', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-nurses.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 4, 0, 7, '', '', 1, 1, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'en-GB', '');
+INSERT INTO `o32yf_content` (`id`, `asset_id`, `title`, `alias`, `title_alias`, `introtext`, `fulltext`, `state`, `sectionid`, `mask`, `catid`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `images`, `urls`, `attribs`, `version`, `parentid`, `ordering`, `metakey`, `metadesc`, `access`, `hits`, `metadata`, `featured`, `language`, `xreference`) VALUES
+(19, 62, 'Doctors', 'doctors-en', '', '<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>\r\n', '\r\n<p> </p>\r\n<ul class="doctors">\r\n<li><img src="images/Doctors/1.png" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0718.jpg" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n<li><img src="images/Doctors/1.png" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0711.jpg" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0697.jpg" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n<li><img src="images/Doctors/1.png" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0701.jpg" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0703.jpg" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0706.jpg" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n</ul>', -2, 0, 0, 10, '2013-03-14 21:23:33', 153, '', '2013-04-05 06:12:48', 153, 0, '0000-00-00 00:00:00', '2013-03-14 21:23:33', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-doctors.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 5, 0, 3, '', '', 1, 4, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'en-GB', ''),
+(21, 64, 'Admins', 'admins-en2', '', '<p>варвара</p>', '', -2, 0, 0, 10, '2013-04-05 06:20:39', 153, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2013-04-05 06:20:39', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 0, 0, '', '', 1, 0, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'en-GB', ''),
+(22, 65, 'Doctors', 'doctors', '', '<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>\r\n', '\r\n<p> </p>\r\n<ul class="doctors">\r\n<li><img src="images/Doctors/1.png" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0718.jpg" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n<li><img src="images/Doctors/1.png" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0711.jpg" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0697.jpg" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n<li><img src="images/Doctors/1.png" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0701.jpg" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0703.jpg" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n<li><img src="images/Doctors/IMG_0706.jpg" border="0" />\r\n<h3>Name</h3>\r\n<p>English variant of the article.</p>\r\n</li>\r\n</ul>', 1, 0, 0, 10, '2013-04-05 06:21:44', 153, '', '2013-04-05 06:25:33', 153, 0, '0000-00-00 00:00:00', '2013-04-05 06:21:44', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-doctors.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 3, 0, 4, '', '', 1, 12, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'en-GB', ''),
+(20, 63, 'Admins', 'administration', '', '<p>This is english variant. <span style="line-height: 1.3em;">This is english variant. </span><span style="line-height: 1.3em;">This is english variant. </span><span style="line-height: 1.3em;">This is english variant. </span><span style="line-height: 1.3em;">This is english variant. </span><span style="line-height: 1.3em;">This is english variant. </span><span style="line-height: 1.3em;">This is english variant. </span><span style="line-height: 1.3em;">This is english variant. </span><span style="line-height: 1.3em;">This is english variant. </span><span style="line-height: 1.3em;">This is english variant. </span></p>\r\n', '\r\n<p>This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. This is english variant. </p>\r\n<p> </p>', 1, 0, 0, 10, '2013-03-14 21:25:13', 153, '', '2013-04-05 10:47:38', 153, 0, '0000-00-00 00:00:00', '2013-03-14 21:25:13', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-administration.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 5, 0, 5, '', '', 1, 7, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'en-GB', ''),
+(25, 68, 'Junior nurses', 'junior-nurses', '', '<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>\r\n', '\r\n<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>', 1, 0, 0, 10, '2013-04-05 06:30:42', 153, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2013-04-05 06:30:42', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-junior-nurses.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 0, 1, '', '', 1, 0, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'en-GB', ''),
+(26, 69, 'Bygalteria', 'bugalteriya', '', '<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>\r\n', '\r\n<p>English variant of the article. <span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span><span style="line-height: 1.3em;">English variant of the article. </span></p>', 1, 0, 0, 10, '2013-04-05 06:31:16', 153, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2013-04-05 06:31:16', '0000-00-00 00:00:00', '{"image_intro":"images\\/1.png","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/img-bugalteriya.png","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 0, 0, '', '', 1, 0, '{"robots":"","author":"","rights":"","xreference":""}', 0, 'en-GB', '');
 
 -- --------------------------------------------------------
 
@@ -2150,7 +2185,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_content_frontpage` (
   `content_id` int(11) NOT NULL DEFAULT '0',
   `ordering` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`content_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2164,7 +2199,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_content_rating` (
   `rating_count` int(10) unsigned NOT NULL DEFAULT '0',
   `lastip` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`content_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2175,7 +2210,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_content_rating` (
 CREATE TABLE IF NOT EXISTS `o32yf_core_log_searches` (
   `search_term` varchar(128) NOT NULL DEFAULT '',
   `hits` int(10) unsigned NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2199,7 +2234,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_djimageslider` (
   `params` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `catid` (`catid`,`published`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -2229,7 +2264,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_extensions` (
   KEY `element_clientid` (`element`,`client_id`),
   KEY `element_folder_clientid` (`element`,`folder`,`client_id`),
   KEY `extension` (`type`,`element`,`folder`,`client_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=882 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=886 ;
 
 --
 -- Дамп данных таблицы `o32yf_extensions`
@@ -2249,7 +2284,7 @@ INSERT INTO `o32yf_extensions` (`extension_id`, `name`, `type`, `element`, `fold
 (11, 'com_languages', 'component', 'com_languages', '', 1, 1, 1, 1, '{"legacy":false,"name":"com_languages","type":"component","creationDate":"2006","author":"Joomla! Project","copyright":"(C) 2005 - 2012 Open Source Matters. All rights reserved.\\n\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"COM_LANGUAGES_XML_DESCRIPTION","group":""}', '{"administrator":"ru-RU","site":"uk-UA"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (12, 'com_login', 'component', 'com_login', '', 1, 1, 1, 1, '{"legacy":false,"name":"com_login","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2012 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"COM_LOGIN_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (13, 'com_media', 'component', 'com_media', '', 1, 1, 0, 1, '{"legacy":false,"name":"com_media","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2012 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"COM_MEDIA_XML_DESCRIPTION","group":""}', '{"upload_extensions":"bmp,csv,doc,gif,ico,jpg,jpeg,odg,odp,ods,odt,pdf,png,ppt,swf,txt,xcf,xls,BMP,CSV,DOC,GIF,ICO,JPG,JPEG,ODG,ODP,ODS,ODT,PDF,PNG,PPT,SWF,TXT,XCF,XLS","upload_maxsize":"10","file_path":"images","image_path":"images","restrict_uploads":"1","allowed_media_usergroup":"3","check_mime":"1","image_extensions":"bmp,gif,jpg,png","ignore_extensions":"","upload_mime":"image\\/jpeg,image\\/gif,image\\/png,image\\/bmp,application\\/x-shockwave-flash,application\\/msword,application\\/excel,application\\/pdf,application\\/powerpoint,text\\/plain,application\\/x-zip","upload_mime_illegal":"text\\/html","enable_flash":"0"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(14, 'com_menus', 'component', 'com_menus', '', 1, 1, 1, 1, '{"legacy":false,"name":"com_menus","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2012 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"COM_MENUS_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(14, 'com_menus', 'component', 'com_menus', '', 1, 1, 1, 1, '{"legacy":false,"name":"com_menus","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2012 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"COM_MENUS_XML_DESCRIPTION","group":""}', '{"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":""}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (15, 'com_messages', 'component', 'com_messages', '', 1, 1, 1, 1, '{"legacy":false,"name":"com_messages","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2012 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"COM_MESSAGES_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (16, 'com_modules', 'component', 'com_modules', '', 1, 1, 1, 1, '{"legacy":false,"name":"com_modules","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2012 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"COM_MODULES_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (17, 'com_newsfeeds', 'component', 'com_newsfeeds', '', 1, 1, 1, 0, '{"legacy":false,"name":"com_newsfeeds","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2012 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"COM_NEWSFEEDS_XML_DESCRIPTION","group":""}', '{"show_feed_image":"1","show_feed_description":"1","show_item_description":"1","feed_word_count":"0","show_headings":"1","show_name":"1","show_articles":"0","show_link":"1","show_description":"1","show_description_image":"1","display_num":"","show_pagination_limit":"1","show_pagination":"1","show_pagination_results":"1","show_cat_items":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -2326,13 +2361,13 @@ INSERT INTO `o32yf_extensions` (`extension_id`, `name`, `type`, `element`, `fold
 (419, 'plg_search_content', 'plugin', 'content', 'search', 0, 1, 1, 0, '{"legacy":false,"name":"plg_search_content","type":"plugin","creationDate":"November 2005","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_SEARCH_CONTENT_XML_DESCRIPTION","group":""}', '{"search_limit":"50","search_content":"1","search_archived":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (420, 'plg_search_newsfeeds', 'plugin', 'newsfeeds', 'search', 0, 1, 1, 0, '{"legacy":false,"name":"plg_search_newsfeeds","type":"plugin","creationDate":"November 2005","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_SEARCH_NEWSFEEDS_XML_DESCRIPTION","group":""}', '{"search_limit":"50","search_content":"1","search_archived":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (421, 'plg_search_weblinks', 'plugin', 'weblinks', 'search', 0, 1, 1, 0, '{"legacy":false,"name":"plg_search_weblinks","type":"plugin","creationDate":"November 2005","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_SEARCH_WEBLINKS_XML_DESCRIPTION","group":""}', '{"search_limit":"50","search_content":"1","search_archived":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(422, 'plg_system_languagefilter', 'plugin', 'languagefilter', 'system', 0, 0, 1, 1, '{"legacy":false,"name":"plg_system_languagefilter","type":"plugin","creationDate":"July 2010","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_SYSTEM_LANGUAGEFILTER_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 1, 0),
+(422, 'plg_system_languagefilter', 'plugin', 'languagefilter', 'system', 0, 1, 1, 1, '{"legacy":false,"name":"plg_system_languagefilter","type":"plugin","creationDate":"July 2010","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_SYSTEM_LANGUAGEFILTER_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 1, 0),
 (423, 'plg_system_p3p', 'plugin', 'p3p', 'system', 0, 1, 1, 1, '{"legacy":false,"name":"plg_system_p3p","type":"plugin","creationDate":"September 2010","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_P3P_XML_DESCRIPTION","group":""}', '{"headers":"NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"}', '', '', 0, '0000-00-00 00:00:00', 2, 0),
 (424, 'plg_system_cache', 'plugin', 'cache', 'system', 0, 0, 1, 1, '{"legacy":false,"name":"plg_system_cache","type":"plugin","creationDate":"February 2007","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_CACHE_XML_DESCRIPTION","group":""}', '{"browsercache":"0","cachetime":"15"}', '', '', 0, '0000-00-00 00:00:00', 9, 0),
 (425, 'plg_system_debug', 'plugin', 'debug', 'system', 0, 1, 1, 0, '{"legacy":false,"name":"plg_system_debug","type":"plugin","creationDate":"December 2006","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_DEBUG_XML_DESCRIPTION","group":""}', '{"profile":"1","queries":"1","memory":"1","language_files":"1","language_strings":"1","strip-first":"1","strip-prefix":"","strip-suffix":""}', '', '', 0, '0000-00-00 00:00:00', 4, 0),
-(426, 'plg_system_log', 'plugin', 'log', 'system', 0, 1, 1, 1, '{"legacy":false,"name":"plg_system_log","type":"plugin","creationDate":"April 2007","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_LOG_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 5, 0),
-(427, 'plg_system_redirect', 'plugin', 'redirect', 'system', 0, 1, 1, 1, '{"legacy":false,"name":"plg_system_redirect","type":"plugin","creationDate":"April 2009","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_REDIRECT_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 6, 0);
+(426, 'plg_system_log', 'plugin', 'log', 'system', 0, 1, 1, 1, '{"legacy":false,"name":"plg_system_log","type":"plugin","creationDate":"April 2007","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_LOG_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 5, 0);
 INSERT INTO `o32yf_extensions` (`extension_id`, `name`, `type`, `element`, `folder`, `client_id`, `enabled`, `access`, `protected`, `manifest_cache`, `params`, `custom_data`, `system_data`, `checked_out`, `checked_out_time`, `ordering`, `state`) VALUES
+(427, 'plg_system_redirect', 'plugin', 'redirect', 'system', 0, 1, 1, 1, '{"legacy":false,"name":"plg_system_redirect","type":"plugin","creationDate":"April 2009","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_REDIRECT_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 6, 0),
 (428, 'plg_system_remember', 'plugin', 'remember', 'system', 0, 1, 1, 1, '{"legacy":false,"name":"plg_system_remember","type":"plugin","creationDate":"April 2007","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_REMEMBER_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 7, 0),
 (429, 'plg_system_sef', 'plugin', 'sef', 'system', 0, 1, 1, 0, '{"legacy":false,"name":"plg_system_sef","type":"plugin","creationDate":"December 2007","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_SEF_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 8, 0),
 (430, 'plg_system_logout', 'plugin', 'logout', 'system', 0, 1, 1, 1, '{"legacy":false,"name":"plg_system_logout","type":"plugin","creationDate":"April 2009","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_SYSTEM_LOGOUT_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 3, 0),
@@ -2372,15 +2407,17 @@ INSERT INTO `o32yf_extensions` (`extension_id`, `name`, `type`, `element`, `fold
 (809, 'com_djimageslider', 'component', 'com_djimageslider', '', 1, 1, 0, 0, '{"legacy":false,"name":"com_djimageslider","type":"component","creationDate":"August 2012","author":"DJ-Extensions.com","copyright":"Copyright (C) 2012 DJ-Extensions.com, All rights reserved.","authorEmail":"contact@dj-extensions.com","authorUrl":"http:\\/\\/dj-extensions.com","version":"2.0.4.stable","description":"DJ-ImageSlider component","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (810, 'DJ-ImageSlider', 'module', 'mod_djimageslider', '', 0, 1, 0, 0, '{"legacy":false,"name":"DJ-ImageSlider","type":"module","creationDate":"August 2012","author":"DJ-Extensions.com","copyright":"Copyright (C) 2012 DJ-Extensions.com, All rights reserved.","authorEmail":"contact@dj-extensions.com","authorUrl":"http:\\/\\/dj-extensions.com","version":"2.0.4.stable","description":"DJ-ImageSlider Module","group":""}', '{"slider_source":"0","slider_type":"0","link_image":"1","image_folder":"images\\/sampledata\\/fruitshop","link":"","show_title":"1","show_desc":"1","show_readmore":"0","readmore_text":"","link_title":"1","link_desc":"0","limit_desc":"","image_width":"240","image_height":"180","fit_to":"0","visible_images":"3","space_between_images":"10","max_images":"20","sort_by":"1","effect":"Cubic","autoplay":"1","show_buttons":"1","show_arrows":"1","show_custom_nav":"0","desc_width":"","desc_bottom":"0","desc_horizontal":"0","left_arrow":"","right_arrow":"","play_button":"","pause_button":"","arrows_top":"30","arrows_horizontal":"5","effect_type":"0","duration":"","delay":"","preload":"800","cache":"1","cache_time":"900"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (811, 'dj-imageslider', 'package', 'pkg_dj-imageslider', '', 0, 1, 1, 0, '{"legacy":false,"name":"DJ-ImageSlider Package","type":"package","creationDate":"August 2012","author":"DJ-Extensions.com","copyright":"Copyright (C) 2012 DJ-Extensions.com, All rights reserved.","authorEmail":"contact@dj-extensions.com","authorUrl":"http:\\/\\/dj-extensions.com","version":"2.0.4.stable","description":"\\n\\t\\t<style> #right-text {font-family:Arial, Helvetica, sans-serif;\\tfont-size:11px;\\t} #right-text a:link, #right-text a:visited {color:#4991c1;font-weight:bold; font-size: 13px;} #right-text a:hover {text-decoration:underline;}\\t#right-text h2 {color:#fa9539;text-transform:uppercase;\\tfont-size:16px;\\tpadding:0;\\tmargin:2px 0;}\\t#right-text p {padding:0;margin:4px 0;}\\t#left-logo {float:left;width:270px;height:120px;display:block;} #left-logo img {margin: 40px 20px;} #right-text {float:left;width:400px;}<\\/style>\\n\\t\\n\\t\\t<div id=\\"left-logo\\">\\n\\t\\t\\t<a target=\\"_blank\\" href=\\"http:\\/\\/dj-extensions.com\\"><img src=\\"http:\\/\\/new.dj-extensions.com\\/templates\\/dj-extensions\\/images\\/logo.png\\" alt=\\"DJ-Extensions.com\\" \\/><\\/a>\\n\\t\\t<\\/div>\\n\\t\\t\\n\\t\\t<div id=\\"right-text\\">\\n\\t\\t\\t<h2>Thank you for installing DJ-ImageSlider!<\\/h2>\\n\\t\\t\\t<p>The DJ-ImageSlider extension allows you to display image slides with title and short description linked to any menu item, article or custom url address.<\\/p>\\n\\t\\t\\t<p>If you want to learn how to use DJ-ImageSlider please read <a target=\\"_blank\\" href=\\"http:\\/\\/dj-extensions.com\\/documentation\\">Documentation<\\/a> and search our <a target=\\"_blank\\" href=\\"http:\\/\\/dj-extensions.com\\/forum\\">Support Forum<\\/a><br \\/><br \\/>Check out our other extensions at <a target=\\"_blank\\" href=\\"http:\\/\\/dj-extensions.com\\">DJ-Extensions.com<\\/a><\\/p>\\n\\t\\t<\\/div>\\n\\t\\n\\t\\t","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(815, 'Google Maps', 'plugin', 'plugin_googlemap2', 'system', 0, 1, 1, 0, '{"legacy":false,"name":"Google Maps","type":"plugin","creationDate":"June 2012","author":"Mike Reumer","copyright":"(C) 2012 Reumer","authorEmail":"tech@reumer.net","authorUrl":"tech.reumer.net","version":"2.18","description":"PLUGIN_GOOGLE_MAPS_INSTALLATION","group":""}', '{"publ":"1","debug":"0","plugincode":"mosmap","brackets":"{","Google_API_version":"3.x","show":"1","mapclass":"","mapcss":"\\/* For img in the map remove borders, shadow, no margin and no max-width\\r\\n*\\/\\r\\n.map img {\\r\\n    border: 0px;\\r\\n    box-shadow: 0px;\\r\\n    margin: 0px;\\r\\n    max-width: none !important;\\r\\n}\\r\\n\\r\\n\\/* Make sure the directions are below the map\\r\\n*\\/\\r\\n.directions {\\r\\n    clear: left;\\r\\n}\\r\\n\\r\\n\\/* Solve problems in chrome with the show of the direction steps in full width\\r\\n*\\/\\r\\n.adp-placemark {\\r\\n    width : 100%\\r\\n}","loadmootools":"1","timeinterval":"500","Google_API_key":"","Google_Multi_API_key":"","urlsetting":"http_host","googlewebsite":"maps.google.com","googleindexing":"1","styledmap":"","align":"center","langtype":"site","lang":"","width":"485","height":"311","effect":"none","lat":"49.4232","lon":"32.0568","centerlat":"","centerlon":"","address":" \\u0433. \\u0427\\u0435\\u0440\\u043a\\u0430\\u0441\\u0441\\u044b, \\u0443\\u043b. \\u041a\\u0430\\u043f\\u0438\\u0442\\u0430\\u043d\\u0430 \\u041f\\u0438\\u043b\\u0438\\u043f\\u0435\\u043d\\u043a\\u043e, 4","latitudeid":"","latitudedesc":"1","latitudecoord":"0","latitudeform":"0","controltype":"UI","zoomType":"3D-large","svcontrol":"1","zoom":"15","corzoom":"0","minzoom":"0","maxzoom":"19","rotation":"1","zoomnew":"1","zoomWheel":"1","keyboard":"0","mapType":"Normal","showmaptype":"1","showNormalMaptype":"1","showSatelliteMaptype":"1","showHybridMaptype":"1","showTerrainMaptype":"1","showEarthMaptype":"1","showscale":"0","overview":"0","ovzoom":"-3","navlabel":"0","dragging":"1","marker":"1","icon":"","iconwidth":"","iconheight":"","iconanchorx":"","iconanchory":"","iconshadow":"","iconshadowwidth":"","iconshadowheight":"","iconinfoanchorx":"","iconinfoanchory":"","icontransparent":"","iconimagemap":"","traffic":"0","transit":"0","bicycle":"0","panoramio":"none","panotype":"none","panoorder":"popularity","panomax":"50","youtube":"none","wiki":"none","adsmanager":"0","maxads":"3","localsearch":"0","adsense":"","channel":"","googlebar":"0","searchlist":"inline","searchtarget":"_blank","searchzoompan":"1","weather":"0","weathercloud":"0","weatherinfo":"1","weathertempunit":"celsius","weatherwindunit":"km","dir":"0","dirtype":"D","avoidhighways":"0","diroptimize":"0","diralternatives":"0","showdir":"1","animdir":"0","animspeed":"1","animautostart":"0","animunit":"kilometers","formspeed":"0","formdirtype":"0","formaddress":"0","formdir":"0","autocompl":"both","langanim":"en;The requested panorama could not be displayed|Could not generate a route for the current start and end addresses|Street View coverage is not available for this route|You have reached your destination|miles|miles|ft|kilometers|kilometer|meters|In|You will reach your destination|Stop|Drive|Press Drive to follow your route|Route|Speed|Fast|Medium|Slow","txtdir":"Directions: ","txtgetdir":"Get Directions","txtfrom":"From here","txtto":"To here","txtdiraddr":"Address:  ","txt_driving":"","txt_avhighways":"","txt_walking":"","txt_bicycle":"","txt_transit":"","txt_optimize":"","txt_alternatives":"","dirdefault":"0","gotoaddr":"0","gotoaddrzoom":"0","txtaddr":"Address: ## ","erraddr":"Address ## not found!","clientgeotype":"google","lightbox":"0","txtlightbox":"Open lightbox","lbxcaption":"","lbxwidth":"500","lbxheight":"700","lbxcenterlat":"","lbxcenterlon":"","lbxzoom":"","sv":"none","svwidth":"100%","svheight":"300","svyaw":"0","svpitch":"0","svzoom":"","svautorotate":"0","svaddress":"1","earthtimeout":"100","earthborders":"1","earthbuildings":"0","earthroads":"0","earthterrain":"0","kmlrenderer":"google","kmlsidebar":"none","kmlsbwidth":"200","kmlfoldersopen":"0","kmlhide":"0","kmlscale":"0","kmlopenmethod":"click","kmlsbsort":"none","kmllightbox":"0","kmlmessshow":"0","kmlclickablemarkers":"1","kmlzoommarkers":"0","kmlopendivmarkers":"","kmlcontentlinkmarkers":"0","kmllinkablemarkers":"0","kmllinktarget":"_self","kmllinkmethod":"click","kmlmarkerlabel":"100","kmlmarkerlabelclass":"","kmlpolylabel":"100","kmlpolylabelclass":"","proxy":"1","maxcluster":"","gridsize":"","minmarkerscluster":"","maxlinesinfocluster":"","clusterinfowindow":"click","clusterzoom":"dblclick","clustermarkerzoom":"16","tilelayer":"","tilemethod":"","tileopacity":"1","tilebounds":"","tileminzoom":"0","tilemaxzoom":"19","imageurl":"","imagex":"","imagey":"","imagexyunits":"pixels","imagewidth":"","imageheight":"","imageanchorx":"","imageanchory":"","imageanchorunits":"pixels","twittername":"","twittertweets":"15","twittericon":"\\/media\\/plugin_googlemap2\\/site\\/Twitter\\/twitter_map_icon.png","twitterline":"#ff0000ff","twitterlinewidth":"4","twitterstartloc":"0,0,0"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(815, 'Google Maps', 'plugin', 'plugin_googlemap2', 'system', 0, 1, 1, 0, '{"legacy":false,"name":"Google Maps","type":"plugin","creationDate":"June 2012","author":"Mike Reumer","copyright":"(C) 2012 Reumer","authorEmail":"tech@reumer.net","authorUrl":"tech.reumer.net","version":"2.18","description":"PLUGIN_GOOGLE_MAPS_INSTALLATION","group":""}', '{"publ":"1","debug":"0","plugincode":"mosmap","brackets":"{","Google_API_version":"3.x","show":"1","mapclass":"","mapcss":"\\/* For img in the map remove borders, shadow, no margin and no max-width\\r\\n*\\/\\r\\n.map img {\\r\\n    border: 0px;\\r\\n    box-shadow: 0px;\\r\\n    margin: 0px;\\r\\n    max-width: none !important;\\r\\n}\\r\\n\\r\\n\\/* Make sure the directions are below the map\\r\\n*\\/\\r\\n.directions {\\r\\n    clear: left;\\r\\n}\\r\\n\\r\\n\\/* Solve problems in chrome with the show of the direction steps in full width\\r\\n*\\/\\r\\n.adp-placemark {\\r\\n    width : 100%\\r\\n}","loadmootools":"1","timeinterval":"500","Google_API_key":"","Google_Multi_API_key":"","urlsetting":"http_host","googlewebsite":"maps.google.com","googleindexing":"1","styledmap":"","align":"center","langtype":"site","lang":"","width":"485","height":"311","effect":"none","lat":"49.4232","lon":"32.0568","centerlat":"","centerlon":"","address":" \\u0433. \\u0427\\u0435\\u0440\\u043a\\u0430\\u0441\\u0441\\u044b, \\u0443\\u043b. \\u041a\\u0430\\u043f\\u0438\\u0442\\u0430\\u043d\\u0430 \\u041f\\u0438\\u043b\\u0438\\u043f\\u0435\\u043d\\u043a\\u043e, 4","latitudeid":"","latitudedesc":"1","latitudecoord":"0","latitudeform":"0","controltype":"UI","zoomType":"3D-large","svcontrol":"1","zoom":"15","corzoom":"0","minzoom":"0","maxzoom":"19","rotation":"1","zoomnew":"1","zoomWheel":"1","keyboard":"0","mapType":"Normal","showmaptype":"1","showNormalMaptype":"1","showSatelliteMaptype":"1","showHybridMaptype":"1","showTerrainMaptype":"1","showEarthMaptype":"1","showscale":"0","overview":"0","ovzoom":"-3","navlabel":"0","dragging":"1","marker":"1","icon":"","iconwidth":"","iconheight":"","iconanchorx":"","iconanchory":"","iconshadow":"","iconshadowwidth":"","iconshadowheight":"","iconinfoanchorx":"","iconinfoanchory":"","icontransparent":"","iconimagemap":"","traffic":"0","transit":"0","bicycle":"0","panoramio":"none","panotype":"none","panoorder":"popularity","panomax":"50","youtube":"none","wiki":"none","adsmanager":"0","maxads":"3","localsearch":"0","adsense":"","channel":"","googlebar":"0","searchlist":"inline","searchtarget":"_blank","searchzoompan":"1","weather":"0","weathercloud":"0","weatherinfo":"1","weathertempunit":"celsius","weatherwindunit":"km","dir":"0","dirtype":"D","avoidhighways":"0","diroptimize":"0","diralternatives":"0","showdir":"1","animdir":"0","animspeed":"1","animautostart":"0","animunit":"kilometers","formspeed":"0","formdirtype":"0","formaddress":"0","formdir":"0","autocompl":"both","langanim":"en;The requested panorama could not be displayed|Could not generate a route for the current start and end addresses|Street View coverage is not available for this route|You have reached your destination|miles|miles|ft|kilometers|kilometer|meters|In|You will reach your destination|Stop|Drive|Press Drive to follow your route|Route|Speed|Fast|Medium|Slow","txtdir":"Directions: ","txtgetdir":"Get Directions","txtfrom":"From here","txtto":"To here","txtdiraddr":"Address:  ","txt_driving":"","txt_avhighways":"","txt_walking":"","txt_bicycle":"","txt_transit":"","txt_optimize":"","txt_alternatives":"","dirdefault":"0","gotoaddr":"0","gotoaddrzoom":"0","txtaddr":"Address: ## ","erraddr":"Address ## not found!","clientgeotype":"google","lightbox":"0","txtlightbox":"Open lightbox","lbxcaption":"","lbxwidth":"500","lbxheight":"700","lbxcenterlat":"","lbxcenterlon":"","lbxzoom":"","sv":"none","svwidth":"100%","svheight":"300","svyaw":"0","svpitch":"0","svzoom":"","svautorotate":"0","svaddress":"1","earthtimeout":"100","earthborders":"1","earthbuildings":"0","earthroads":"0","earthterrain":"0","kmlrenderer":"google","kmlsidebar":"none","kmlsbwidth":"200","kmlfoldersopen":"0","kmlhide":"0","kmlscale":"0","kmlopenmethod":"click","kmlsbsort":"none","kmllightbox":"0","kmlmessshow":"0","kmlclickablemarkers":"1","kmlzoommarkers":"0","kmlopendivmarkers":"","kmlcontentlinkmarkers":"0","kmllinkablemarkers":"0","kmllinktarget":"_self","kmllinkmethod":"click","kmlmarkerlabel":"100","kmlmarkerlabelclass":"","kmlpolylabel":"100","kmlpolylabelclass":"","proxy":"1","maxcluster":"","gridsize":"","minmarkerscluster":"","maxlinesinfocluster":"","clusterinfowindow":"click","clusterzoom":"dblclick","clustermarkerzoom":"16","tilelayer":"","tilemethod":"","tileopacity":"1","tilebounds":"","tileminzoom":"0","tilemaxzoom":"19","imageurl":"","imagex":"","imagey":"","imagexyunits":"pixels","imagewidth":"","imageheight":"","imageanchorx":"","imageanchory":"","imageanchorunits":"pixels","twittername":"","twittertweets":"15","twittericon":"\\/media\\/plugin_googlemap2\\/site\\/Twitter\\/twitter_map_icon.png","twitterline":"#ff0000ff","twitterlinewidth":"4","twitterstartloc":"0,0,0"}', '', '', 153, '2013-03-23 22:08:52', 0, 0),
 (817, 'malyatko', 'template', 'malyatko', '', 0, 1, 1, 0, '{"legacy":false,"name":"malyatko","type":"template","creationDate":"10 November 2012","author":"Ira","copyright":"\\u00a9 Copyright 2011-2012","authorEmail":"admin@malyatko.ck.ua","authorUrl":"http:\\/\\/geekhub.ck.ua","version":"2.5.8","description":"TPL_BEEZ3_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (818, 'PHP Module', 'module', 'mod_php', '', 0, 1, 0, 0, '{"legacy":false,"name":"PHP Module","type":"module","creationDate":"Jun 17, 2008","author":"Fiji Web Design","copyright":"(C) 2004 Fiji Web Design","authorEmail":"gabe@fijiwebdesign.com","authorUrl":"www.fijiwebdesign.com","version":"1.0.Beta","description":"\\n  \\t\\n  \\tThis module allows you to add any html\\/javascript\\/css and PHP to a Joomla or Mambo module position. It can be used to add affiliate code, copy and paste codes, google adsense etc. You can copy the module using Joomla''s module copy feature, to create multiple versions with different content. This is module is based on mod_html so has all the mod_html features, plus the ability to include php code. You can find some copy and paste code exmaples here: <a href=\\"http:\\/\\/fijiwebdesign.com\\/content\\/view\\/94\\/55\\/1\\/1\\/\\" target=\\"_blank\\">http:\\/\\/fijiwebdesign.com\\/content\\/view\\/94\\/55\\/1\\/1\\/<\\/a>\\n\\t\\n  ","group":""}', '{"moduleclass_sfx":"","cache":"0","@spacer":"","php":"","eval_php":"1","discovery":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (862, 'Easy Joomla PayPal Payment / Donations Module', 'module', 'mod_paypal', '', 0, 1, 0, 0, '{"legacy":false,"name":"Easy Joomla PayPal Payment \\/ Donations Module","type":"module","creationDate":"April 2012","author":"DART Creations","copyright":"","authorEmail":"spam-me@dart-creations.com","authorUrl":"http:\\/\\/www.dart-creations.com","version":"2.5.0","description":" \\n\\t\\t\\t<p>Thank you for installing Easy Joomla PayPal Payment \\/ Donations Module. This module is a customizable module to enable Paypal Donations or Payments on your Joomla website. The following features are available: <ul>\\n\\t\\t\\t    <li>Allows you to use whether to display a Paypal Image or your own text\\n     <li>Customizable Paypal email\\n    <li>Paypal Name of Organization to send money to\\n    <li>User selectable Currency for Payment\\n    <li>Choose whether to enable timed payments, and choose the frequency of the timed payment (Daily, Weekly, Monthly, Annually)\\n    <li>Fixed value or user entered monetary value, with smallest amount of payment possible\\n    <li>Choice of default currency\\n    <li>Choice of text for Submit button e.g. Donate, Buy Now etc.\\n    <li>Return address (URL) when payment is complete\\n    <li>Cancel address (URL) in case payment is cancelled.\\n    <li>CSS aware for customizable style of module<\\/ul>\\n<br \\/> Visit <a href=\\"http:\\/\\/www.dart-creations.com\\">http:\\/\\/www.dart-creations.com<\\/a> for details.\\n\\t\\t\\t<\\/p>\\n\\t","group":""}', '{"payment_type":"1","logo_on":"2","logo":"http:\\/\\/www.paypal.com\\/en_US\\/i\\/btn\\/x-click-but04.gif","moduleclass_sfx":"","paypal_email":"dattard@gmail.com","paypal_org":"Donation","paypalcur_on":"0","paypalval_on":"0","paypalcur_val":"USD","paypalval_button":"Donate","paypalval_enteramount":"Enter Amount","paypalval_val":"5","paypalvalleast_val":"5","paypalreturn":"http:\\/\\/www.yoursite.com","paypalcancel":"http:\\/\\/www.yoursite.com","paymentlocation":"","link":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(870, 'SimpleP24', 'module', 'mod_simplep24', '', 0, 1, 0, 0, '{"legacy":true,"name":"SimpleP24","type":"module","creationDate":"Feb 15, 2010","author":"Malyavkin Evgeny","copyright":"","authorEmail":"alushta@pochta.ru","authorUrl":"http:\\/\\/www.alushta.ua\\/","version":"1.1","description":"\\n    \\t<p>Module for displaying a simple P24 payment button<br \\/>\\n    \\t\\t(c) 2010 Malyavkin Evgeny\\n\\t","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(882, 'SimpleP24', 'module', 'mod_simplep24', '', 0, 1, 0, 0, '{"legacy":true,"name":"SimpleP24","type":"module","creationDate":"Feb 15, 2010","author":"Malyavkin Evgeny","copyright":"","authorEmail":"alushta@pochta.ru","authorUrl":"http:\\/\\/www.alushta.ua\\/","version":"1.1","description":"\\n    \\t<p>Module for displaying a simple P24 payment button<br \\/>\\n    \\t\\t(c) 2010 Malyavkin Evgeny\\n\\t","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (878, 'PLG_CONTENT_ADMIRORGALLERY', 'plugin', 'admirorgallery', 'content', 0, 1, 1, 0, '{"legacy":false,"name":"PLG_CONTENT_ADMIRORGALLERY","type":"plugin","creationDate":"26\\/07\\/2011","author":"Igor Kekeljevic and Nikola Vasiljevski","copyright":"This extension in released under the GNU\\/GPL License - http:\\/\\/www.gnu.org\\/copyleft\\/gpl.html","authorEmail":"","authorUrl":"http:\\/\\/www.admiror-design-studio.com","version":"4.5.0","description":"PLG_ADMIRORGALLERY_XML_DESCRIPTION","group":""}', '{"rootFolder":"/images/","thumbWidth":"200","thumbHeight":"120","thumbAutoSize":"none","template":"classic","popupEngine":"slimbox","arrange":"priority","backgroundColor":"ffffff","foregroundColor":"808080","highliteColor":"fea804","frame_width":"500","frame_height":"300","newImageTag":"1","newImageTag_days":"7","paginUse":"1","paginImagesPerGallery":"10","albumUse":"1","showSignature":"1","plainTextCaptions":"1","ignoreError":"1","ignoreAllError":"0"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (879, 'plg_editors-xtd_admirorbutton', 'plugin', 'admirorbutton', 'editors-xtd', 0, 1, 1, 0, '{"legacy":false,"name":"plg_editors-xtd_admirorbutton","type":"plugin","creationDate":"05\\/05\\/2012","author":"Igor Kekeljevic and Nikola Vasiljevski","copyright":"This extension in released under the GNU\\/GPL License - http:\\/\\/www.gnu.org\\/copyleft\\/gpl.html","authorEmail":"","authorUrl":"http:\\/\\/www.admiror-design-studio.com","version":"4.5.0","description":"","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (880, 'com_admirorgallery', 'component', 'com_admirorgallery', '', 1, 1, 0, 0, '{"legacy":false,"name":"COM_ADMIRORGALLERY","type":"component","creationDate":"Nov 7, 2012","author":"Kekeljevic, Vasiljevski, Jongen","copyright":"This extension in released under the GNU\\/GPL License - http:\\/\\/www.gnu.org\\/copyleft\\/gpl.html","authorEmail":"Igor.Kekeljevic@gmail.com","authorUrl":"http:\\/\\/www.admiror-design-studio.com","version":"4.5.0","description":"COM_ADMIRORGALLERY_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(881, 'Content - Load Module in Article', 'plugin', 'loadmoduleinarticle', 'content', 0, 1, 1, 0, '{"legacy":false,"name":"Content - Load Module in Article","type":"plugin","creationDate":"fabuari 2012","author":"Carsten Engel","copyright":"Copyright (C) 2008-2012 Carsten Engel, pages-and-items. All rights reserved.","authorEmail":"-","authorUrl":"www.pages-and-items.com","version":"2.0.1","description":"\\n\\t   Plugin to display a module into an article. Placing the same module more then once on a page might result in conflicts. Dont forget to ENABLE this plugin in the plugin-manager. Syntax in editor: {module [63]} where 63 is the id of the module. You can overrule the default style like this: {module [63|rounded]}. Options are ''none'', ''xhtml'' (wrapped by a div) and ''rounded'' (wrapped by multiple divs).\\n\\t","group":""}', '{"style":"none"}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
+(881, 'Content - Load Module in Article', 'plugin', 'loadmoduleinarticle', 'content', 0, 1, 1, 0, '{"legacy":false,"name":"Content - Load Module in Article","type":"plugin","creationDate":"fabuari 2012","author":"Carsten Engel","copyright":"Copyright (C) 2008-2012 Carsten Engel, pages-and-items. All rights reserved.","authorEmail":"-","authorUrl":"www.pages-and-items.com","version":"2.0.1","description":"\\n\\t   Plugin to display a module into an article. Placing the same module more then once on a page might result in conflicts. Dont forget to ENABLE this plugin in the plugin-manager. Syntax in editor: {module [63]} where 63 is the id of the module. You can overrule the default style like this: {module [63|rounded]}. Options are ''none'', ''xhtml'' (wrapped by a div) and ''rounded'' (wrapped by multiple divs).\\n\\t","group":""}', '{"style":"none"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(884, 'MOD_COALAWEBSOCIALLINKS', 'module', 'mod_coalawebsociallinks', '', 0, 1, 0, 0, '{"legacy":false,"name":"MOD_COALAWEBSOCIALLINKS","type":"module","creationDate":"March 2013","author":"Steven Palmer","copyright":"Copyright (c) 2013 Steven Palmer All rights reserved","authorEmail":"support@coalaweb.com","authorUrl":"http:\\/\\/coalaweb.com","version":"0.0.8","description":"MOD_COALAWEBSOCIALLINKS_DESCRIPTION","group":""}', '{"themes_icon":"wpzoom-fadein","icon_size":"32","icon_align":"cw-social-mod-icon-ac","title_align":"cw-social-mod-title-ac","title_format":"3","display_bm_sec":"1","display_f_sec":"1","display_borders":"1","border_width":"1","module_width":"100","display_title_bm":"1","title_bm":"","title_color_bm":"#444444","border_color_bm":"#C4C4C4","display_delicious_bm":"1","display_digg_bm":"1","display_facebook_bm":"1","display_google_bm":"1","display_linkedin_bm":"1","display_stumbleupon_bm":"1","display_technorati_bm":"1","display_twitter_bm":"1","display_orkut_bm":"1","display_reddit_bm":"1","display_newsvine_bm":"1","display_email_bm":"1","display_title_f":"1","title_f":"","title_color_f":"444444","border_color_f":"C4C4C4","display_facebook_f":"1","link_facebook":"www.facebook.com","display_google_f":"1","link_google":"www.google.com","display_linkedin_f":"1","link_linkedin":"www.linkedin.com","display_twitter_f":"1","link_twitter":"www.twitter.com","display_rss_f":"1","link_rss":"www.example.com\\/rss","display_myspace_f":"1","link_myspace":"www.myspace.com","display_vimeo_f":"1","link_vimeo":"www.vimeo.com","display_youtube_f":"1","link_youtube":"www.youtube.com","display_dribbble_f":"1","link_dribbble":"www.dribbble.com","display_deviantart_f":"1","link_deviantart":"www.deviantart.com","display_contact_f":"1","link_contact":"www.example.com\\/contact-us","display_ebay_f":"1","link_ebay":"www.ebay.es","display_tuenti_f":"1","link_tuenti":"www.tuenti.com","display_behance_f":"1","link_behance":"www.behance.com","display_designmoo_f":"1","link_designmoo":"www.designmoo.com","display_flickr_f":"1","link_flickr":"www.flickr.com","display_lastfm_f":"1","link_lastfm":"www.last.fm","display_pinterest_f":"1","link_pinterest":"www.pinterest.com","display_tumblr_f":"0","link_tumblr":"www.tumblr.com","display_instagram_f":"0","link_instagram":"www.instagram.com","module_unique_id":"cwsociallinks1","owncache":"1","cache_time":"900","load_layout_css":"1","powered":"","copy":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(885, 'Content - MVSocialButtons', 'module', 'mod_mvsocialbuttons', '', 0, 1, 0, 0, '{"legacy":false,"name":"Content - MVSocialButtons","type":"module","creationDate":"May 2011","author":"Maidanichenko Vladimir","copyright":"Copyright (C) 2011 Vladimir Maidanichenko ( JoomlaMaster.org.ua ). All rights reserved.","authorEmail":"support@joomlamaster.org.ua","authorUrl":"http:\\/\\/joomlamaster.org.ua","version":"1.0.0","description":"\\n\\t\\n\\t<h3><a href=\\"http:\\/\\/joomlamaster.org.ua\\/\\">MVSocialButtons<\\/a> \\u043c\\u043e\\u0434\\u0443\\u043b\\u044c, \\u043a\\u043e\\u0442\\u043e\\u0440\\u044b\\u0439 \\u0434\\u043e\\u0431\\u0430\\u0432\\u0438\\u0442 \\u043a\\u043d\\u043e\\u043f\\u043a\\u0438 \\u0441\\u043e\\u0446\\u0438\\u0430\\u043b\\u044c\\u043d\\u044b\\u0445 \\u0441\\u0435\\u0442\\u0435\\u0439 \\u043d\\u0430 \\u0412\\u0430\\u0448 \\u0441\\u0430\\u0439\\u0442.<\\/h3>\\n\\t\\n    ","group":""}', '{"style":"default","showTitle":"1","title":"\\u0412\\u043f\\u0438\\u0448\\u0438\\u0442\\u0435 \\u0441\\u044e\\u0434\\u0430 \\u0441\\u0432\\u043e\\u0439 \\u0437\\u0430\\u0433\\u043e\\u043b\\u043e\\u0432\\u043e\\u043a","displayLines":"mv-sbb-bothl","displayIcons":"mv-sbb-left","displayDelicious":"1","displayDigg":"1","displayFacebook":"1","displayGoogle":"1","displayLinkedIn":"1","displayTechnorati":"1","displayTwitter":"1","displayVkruButton":"1","displayLivejButton":"1","displayMoymirButton":"1","displayYaruButton":"1","displayOdnoklassnikiButton":"1","displayBobrdobrButton":"1","displayLiveinternetButton":"1","owncache":"1","cache_time":"900","ebuttons1":"","ebuttons2":"","ebuttons3":"","ebuttons4":"","ebuttons5":""}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -2404,7 +2441,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_filters` (
   `data` text NOT NULL,
   `params` mediumtext,
   PRIMARY KEY (`filter_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -2439,7 +2476,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links` (
   KEY `idx_url` (`url`(75)),
   KEY `idx_published_list` (`published`,`state`,`access`,`publish_start_date`,`publish_end_date`,`list_price`),
   KEY `idx_published_sale` (`published`,`state`,`access`,`publish_start_date`,`publish_end_date`,`sale_price`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -2454,7 +2491,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links_terms0` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2469,7 +2506,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links_terms1` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2484,7 +2521,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links_terms2` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2499,7 +2536,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links_terms3` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2514,7 +2551,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links_terms4` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2529,7 +2566,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links_terms5` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2544,7 +2581,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links_terms6` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2559,7 +2596,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links_terms7` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2574,7 +2611,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links_terms8` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2589,7 +2626,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links_terms9` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2604,7 +2641,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links_termsa` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2619,7 +2656,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links_termsb` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2634,7 +2671,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links_termsc` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2649,7 +2686,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links_termsd` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2664,7 +2701,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links_termse` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2679,7 +2716,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_links_termsf` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2700,7 +2737,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_taxonomy` (
   KEY `ordering` (`ordering`),
   KEY `access` (`access`),
   KEY `idx_parent_published` (`parent_id`,`state`,`access`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Дамп данных таблицы `o32yf_finder_taxonomy`
@@ -2721,7 +2758,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_taxonomy_map` (
   PRIMARY KEY (`link_id`,`node_id`),
   KEY `link_id` (`link_id`),
   KEY `node_id` (`node_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2743,7 +2780,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_terms` (
   KEY `idx_term_phrase` (`term`,`phrase`),
   KEY `idx_stem_phrase` (`stem`,`phrase`),
   KEY `idx_soundex_phrase` (`soundex`,`phrase`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -2756,7 +2793,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_terms_common` (
   `language` varchar(3) NOT NULL,
   KEY `idx_word_lang` (`term`,`language`),
   KEY `idx_lang` (`language`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `o32yf_finder_terms_common`
@@ -2929,7 +2966,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_finder_types` (
   `mime` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `title` (`title`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -2957,14 +2994,15 @@ CREATE TABLE IF NOT EXISTS `o32yf_languages` (
   UNIQUE KEY `idx_langcode` (`lang_code`),
   KEY `idx_access` (`access`),
   KEY `idx_ordering` (`ordering`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Дамп данных таблицы `o32yf_languages`
 --
 
 INSERT INTO `o32yf_languages` (`lang_id`, `lang_code`, `title`, `title_native`, `sef`, `image`, `description`, `metakey`, `metadesc`, `sitename`, `published`, `access`, `ordering`) VALUES
-(1, 'en-GB', 'English (UK)', 'English (UK)', 'en', 'en', '', '', '', '', 1, 0, 1);
+(1, 'en-GB', 'English (UK)', 'English (UK)', 'en', 'en', '', '', '', '', 1, 0, 1),
+(2, 'uk-UA', 'Ukrainian(UA)', 'Українська(Укр)', 'uk', 'uk', '', '', '', 'Малятко', 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -3006,14 +3044,14 @@ CREATE TABLE IF NOT EXISTS `o32yf_menu` (
   KEY `idx_alias` (`alias`),
   KEY `idx_path` (`path`(255)),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=235 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=237 ;
 
 --
 -- Дамп данных таблицы `o32yf_menu`
 --
 
 INSERT INTO `o32yf_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `link`, `type`, `published`, `parent_id`, `level`, `component_id`, `ordering`, `checked_out`, `checked_out_time`, `browserNav`, `access`, `img`, `template_style_id`, `params`, `lft`, `rgt`, `home`, `language`, `client_id`) VALUES
-(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, 0, '', 0, '', 0, 83, 0, '*', 0),
+(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, 0, '', 0, '', 0, 97, 0, '*', 0),
 (2, 'menu', 'com_banners', 'Banners', '', 'Banners', 'index.php?option=com_banners', 'component', 0, 1, 1, 4, 0, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners', 0, '', 1, 10, 0, '*', 1),
 (3, 'menu', 'com_banners', 'Banners', '', 'Banners/Banners', 'index.php?option=com_banners', 'component', 0, 2, 2, 4, 0, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners', 0, '', 2, 3, 0, '*', 1),
 (4, 'menu', 'com_banners_categories', 'Categories', '', 'Banners/Categories', 'index.php?option=com_categories&extension=com_banners', 'component', 0, 2, 2, 6, 0, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners-cat', 0, '', 4, 5, 0, '*', 1),
@@ -3035,20 +3073,27 @@ INSERT INTO `o32yf_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 (20, 'menu', 'com_weblinks_categories', 'Categories', '', 'Weblinks/Categories', 'index.php?option=com_categories&extension=com_weblinks', 'component', 0, 18, 2, 6, 0, 0, '0000-00-00 00:00:00', 0, 0, 'class:weblinks-cat', 0, '', 38, 39, 0, '*', 1),
 (21, 'menu', 'com_finder', 'Smart Search', '', 'Smart Search', 'index.php?option=com_finder', 'component', 0, 1, 1, 27, 0, 0, '0000-00-00 00:00:00', 0, 0, 'class:finder', 0, '', 31, 32, 0, '*', 1),
 (22, 'menu', 'com_joomlaupdate', 'Joomla! Update', '', 'Joomla! Update', 'index.php?option=com_joomlaupdate', 'component', 0, 1, 1, 28, 0, 0, '0000-00-00 00:00:00', 0, 0, 'class:joomlaupdate', 0, '', 41, 42, 0, '*', 1),
-(101, 'mainmenu', 'Головна', 'home', '', 'home', 'index.php?option=com_content&view=article&id=1', 'component', 1, 1, 1, 22, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"0","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"images\\/home_default.png","menu_text":0,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 29, 30, 1, '*', 0),
-(102, 'mainmenu', 'Про нас', 'about', '', 'about', 'index.php?option=com_content&view=article&id=2', 'component', 1, 1, 1, 22, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"about","menu_image":"images\\/menu\\/history.png","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 45, 46, 0, '*', 0),
-(103, 'mainmenu', 'Персонал', 'personnel', '', 'personnel', 'index.php?option=com_content&view=category&layout=blog&id=8', 'component', 1, 1, 1, 22, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"layout_type":"blog","show_category_title":"","show_description":"","show_description_image":"","maxLevel":"","show_empty_categories":"","show_no_articles":"","show_subcat_desc":"","show_cat_num_articles":"","page_subheading":"","num_leading_articles":"","num_intro_articles":"","num_columns":"","num_links":"","multi_column_order":"","show_subcategory_content":"","orderby_pri":"","orderby_sec":"date","order_date":"created","show_pagination":"","show_pagination_results":"","show_title":"1","link_titles":"1","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"0","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_readmore":"","show_readmore_title":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","show_feed_link":"1","feed_summary":"0","menu-anchor_title":"","menu-anchor_css":"personnel","menu_image":"images\\/menu\\/personnel.png","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 47, 48, 0, '*', 0),
-(104, 'mainmenu', 'Фотогалерея', 'photogallery', '', 'photogallery', 'index.php?option=com_admirorgallery&view=layout', 'component', 1, 1, 1, 880, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"galleryName":"PhotoGallery","thumbWidth":"165","thumbHeight":"165","thumbAutoSize":"none","template":"classic","popupEngine":"pirobox","arrange":"date","backgroundColor":"ffffff","foregroundColor":"777777","highliteColor":"#00B2B2","frame_width":"500","frame_height":"300","newImageTag":"1","newImageTag_days":"3","paginUse":"1","paginImagesPerGallery":"15","albumUse":"0","showSignature":"1","plainTextCaptions":"0","menu-anchor_title":"","menu-anchor_css":"","menu_image":"images\\/menu\\/photogallery.png","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 49, 50, 0, '*', 0),
-(105, 'mainmenu', 'Контакти', 'contacts', '', 'contacts', 'index.php?option=com_content&view=article&id=3', 'component', 1, 1, 1, 22, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"contacts","menu_image":"images\\/menu\\/contacts.png","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 51, 52, 0, '*', 0),
-(106, 'mainmenu', 'Благодійність', 'donate', '', 'donate', 'index.php?option=com_content&view=article&id=4', 'component', 1, 1, 1, 22, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"donate","menu_image":"images\\/menu\\/donate.png","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 53, 54, 0, '*', 0),
+(101, 'mainmenu', 'Головна', 'home', '', 'home', 'index.php?option=com_content&view=article&id=1', 'component', 1, 1, 1, 22, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"0","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"images\\/home_default.png","menu_text":0,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 29, 30, 1, 'uk-UA', 0),
+(102, 'mainmenu', 'Про нас', 'about', '', 'about', 'index.php?option=com_content&view=article&id=2', 'component', 1, 1, 1, 22, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"about","menu_image":"images\\/menu\\/history.png","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 45, 46, 0, 'uk-UA', 0),
+(103, 'mainmenu', 'Персонал', 'stuff', '', 'stuff', 'index.php?option=com_content&view=category&layout=blog&id=8', 'component', 1, 1, 1, 22, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"layout_type":"blog","show_category_title":"","show_description":"","show_description_image":"","maxLevel":"","show_empty_categories":"","show_no_articles":"","show_subcat_desc":"","show_cat_num_articles":"","page_subheading":"","num_leading_articles":"","num_intro_articles":"","num_columns":"","num_links":"","multi_column_order":"","show_subcategory_content":"","orderby_pri":"","orderby_sec":"date","order_date":"created","show_pagination":"","show_pagination_results":"","show_title":"1","link_titles":"1","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"0","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_readmore":"","show_readmore_title":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","show_feed_link":"1","feed_summary":"0","menu-anchor_title":"","menu-anchor_css":"personnel","menu_image":"images\\/menu\\/personnel.png","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 47, 48, 0, 'uk-UA', 0),
+(104, 'mainmenu', 'Фотогалерея', 'photogallery', '', 'photogallery', 'index.php?option=com_admirorgallery&view=layout', 'component', 1, 1, 1, 880, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"galleryName":"PhotoGallery","thumbWidth":"165","thumbHeight":"165","thumbAutoSize":"none","template":"classic","popupEngine":"pirobox","arrange":"date","backgroundColor":"ffffff","foregroundColor":"777777","highliteColor":"#00B2B2","frame_width":"500","frame_height":"300","newImageTag":"1","newImageTag_days":"3","paginUse":"1","paginImagesPerGallery":"15","albumUse":"0","showSignature":"1","plainTextCaptions":"0","menu-anchor_title":"","menu-anchor_css":"","menu_image":"images\\/menu\\/photogallery.png","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 49, 50, 0, 'uk-UA', 0),
+(105, 'mainmenu', 'Контакти', 'contacts', '', 'contacts', 'index.php?option=com_content&view=article&id=3', 'component', 1, 1, 1, 22, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"contacts","menu_image":"images\\/menu\\/contacts.png","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 51, 52, 0, 'uk-UA', 0),
+(106, 'mainmenu', 'Благодійність', 'charity', '', 'charity', 'index.php?option=com_content&view=article&id=4', 'component', 1, 1, 1, 22, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"donate","menu_image":"images\\/menu\\/donate.png","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 53, 54, 0, 'uk-UA', 0),
 (139, 'main', 'COM_DJIMAGESLIDER', 'com-djimageslider', '', 'com-djimageslider', 'index.php?option=com_djimageslider', 'component', 0, 1, 1, 809, 0, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_djimageslider/assets/icon-16-djimageslider.png', 0, '', 67, 72, 0, '', 1),
 (140, 'main', 'COM_DJIMAGESLIDER_SLIDES', 'com-djimageslider-slides', '', 'com-djimageslider/com-djimageslider-slides', 'index.php?option=com_djimageslider&view=items', 'component', 0, 139, 2, 809, 0, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_djimageslider/assets/icon-16-menu-slides.png', 0, '', 68, 69, 0, '', 1),
 (141, 'main', 'COM_DJIMAGESLIDER_CATEGORIES', 'com-djimageslider-categories', '', 'com-djimageslider/com-djimageslider-categories', 'index.php?option=com_categories&extension=com_djimageslider', 'component', 0, 139, 2, 809, 0, 0, '0000-00-00 00:00:00', 0, 1, 'class:category', 0, '', 70, 71, 0, '', 1),
-(230, 'main', 'COM_ADMIRORGALLERY', 'com-admirorgallery', '', 'com-admirorgallery', 'index.php?option=com_admirorgallery', 'component', 0, 1, 1, 880, 0, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_admirorgallery/templates/default/images/ag-icon.png', 0, '', 73, 82, 0, '', 1),
-(231, 'main', 'COM_ADMIRORGALLERY_CONTROL_PANEL', 'com-admirorgallery-control-panel', '', 'com-admirorgallery/com-admirorgallery-control-panel', 'index.php?option=com_admirorgallery&controller=admirorgallery', 'component', 0, 230, 2, 880, 0, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_admirorgallery/templates/default/images/icon-16-default.png', 0, '', 74, 75, 0, '', 1),
-(232, 'main', 'COM_ADMIRORGALLERY_TEMPLATES', 'com-admirorgallery-templates', '', 'com-admirorgallery/com-admirorgallery-templates', 'index.php?option=com_admirorgallery&view=resourcemanager&AG_resourceType=templates', 'component', 0, 230, 2, 880, 0, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_admirorgallery/templates/default/images/icon-16-templates.png', 0, '', 76, 77, 0, '', 1),
-(233, 'main', 'COM_ADMIRORGALLERY_POPUPS', 'com-admirorgallery-popups', '', 'com-admirorgallery/com-admirorgallery-popups', 'index.php?option=com_admirorgallery&view=resourcemanager&AG_resourceType=popups', 'component', 0, 230, 2, 880, 0, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_admirorgallery/templates/default/images/icon-16-popups.png', 0, '', 78, 79, 0, '', 1),
-(234, 'main', 'COM_ADMIRORGALLERY_IMAGE_MANAGER', 'com-admirorgallery-image-manager', '', 'com-admirorgallery/com-admirorgallery-image-manager', 'index.php?option=com_admirorgallery&view=imagemanager', 'component', 0, 230, 2, 880, 0, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_admirorgallery/templates/default/images/icon-16-imagemanager.png', 0, '', 80, 81, 0, '', 1);
+(225, 'main', 'COM_ADMIRORGALLERY', 'com-admirorgallery', '', 'com-admirorgallery', 'index.php?option=com_admirorgallery', 'component', 0, 1, 1, 880, 0, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_admirorgallery/templates/default/images/ag-icon.png', 0, '', 73, 82, 0, '', 1),
+(226, 'main', 'COM_ADMIRORGALLERY_CONTROL_PANEL', 'com-admirorgallery-control-panel', '', 'com-admirorgallery/com-admirorgallery-control-panel', 'index.php?option=com_admirorgallery&controller=admirorgallery', 'component', 0, 225, 2, 880, 0, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_admirorgallery/templates/default/images/icon-16-default.png', 0, '', 74, 75, 0, '', 1),
+(227, 'main', 'COM_ADMIRORGALLERY_TEMPLATES', 'com-admirorgallery-templates', '', 'com-admirorgallery/com-admirorgallery-templates', 'index.php?option=com_admirorgallery&view=resourcemanager&AG_resourceType=templates', 'component', 0, 225, 2, 880, 0, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_admirorgallery/templates/default/images/icon-16-templates.png', 0, '', 76, 77, 0, '', 1),
+(228, 'main', 'COM_ADMIRORGALLERY_POPUPS', 'com-admirorgallery-popups', '', 'com-admirorgallery/com-admirorgallery-popups', 'index.php?option=com_admirorgallery&view=resourcemanager&AG_resourceType=popups', 'component', 0, 225, 2, 880, 0, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_admirorgallery/templates/default/images/icon-16-popups.png', 0, '', 78, 79, 0, '', 1),
+(229, 'main', 'COM_ADMIRORGALLERY_IMAGE_MANAGER', 'com-admirorgallery-image-manager', '', 'com-admirorgallery/com-admirorgallery-image-manager', 'index.php?option=com_admirorgallery&view=imagemanager', 'component', 0, 225, 2, 880, 0, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_admirorgallery/templates/default/images/icon-16-imagemanager.png', 0, '', 80, 81, 0, '', 1),
+(231, 'main-en', 'About us', 'about', '', 'about', 'index.php?option=com_content&view=article&id=13', 'component', 1, 1, 1, 22, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"about","menu_image":"images\\/menu\\/history.png","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 85, 86, 0, 'en-GB', 0),
+(230, 'main-en', 'Home', 'home', '', 'home', 'index.php?option=com_content&view=article&id=14', 'component', 1, 1, 1, 22, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"images\\/home_default.png","menu_text":0,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 83, 84, 1, 'en-GB', 0),
+(232, 'main-en', 'Stuff', 'stuff', '', 'stuff', 'index.php?option=com_content&view=category&layout=blog&id=10', 'component', 1, 1, 1, 22, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"layout_type":"blog","show_category_title":"","show_description":"","show_description_image":"","maxLevel":"","show_empty_categories":"","show_no_articles":"","show_subcat_desc":"","show_cat_num_articles":"","page_subheading":"","num_leading_articles":"","num_intro_articles":"","num_columns":"","num_links":"","multi_column_order":"","show_subcategory_content":"","orderby_pri":"","orderby_sec":"date","order_date":"","show_pagination":"","show_pagination_results":"","show_title":"1","link_titles":"1","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_readmore":"","show_readmore_title":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","show_feed_link":"","feed_summary":"","menu-anchor_title":"","menu-anchor_css":"Stuff","menu_image":"images\\/menu\\/personnel.png","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 87, 88, 0, 'en-GB', 0),
+(233, 'main-en', 'Photogallery', 'photogallery', '', 'photogallery', 'index.php?option=com_admirorgallery&view=layout', 'component', 1, 1, 1, 880, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"galleryName":"PhotoGallery","thumbWidth":"165","thumbHeight":"165","thumbAutoSize":"none","template":"classic","popupEngine":"pirobox","arrange":"date","backgroundColor":"ffffff","foregroundColor":"777777","highliteColor":"#00B2B2","frame_width":"500","frame_height":"300","newImageTag":"1","newImageTag_days":"3","paginUse":"1","paginImagesPerGallery":"15","albumUse":"0","showSignature":"1","plainTextCaptions":"0","menu-anchor_title":"","menu-anchor_css":"","menu_image":"images\\/menu\\/photogallery.png","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 89, 90, 0, 'en-GB', 0),
+(234, 'main-en', 'Contact us', 'contacts', '', 'contacts', 'index.php?option=com_content&view=article&id=12', 'component', 1, 1, 1, 22, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"contacts","menu_image":"images\\/menu\\/contacts.png","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 91, 92, 0, 'en-GB', 0),
+(235, 'main-en', 'Charity', 'charity', '', 'charity', 'index.php?option=com_content&view=article&id=11', 'component', 1, 1, 1, 22, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"donate-eng","menu_image":"images\\/menu\\/donate.png","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 93, 94, 0, 'en-GB', 0),
+(236, 'default', 'Default', 'def', '', 'def', 'index.php?option=com_content&view=article&id=1', 'component', 1, 1, 1, 22, 0, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"images\\/home_default.png","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 95, 96, 1, '*', 0);
 
 -- --------------------------------------------------------
 
@@ -3063,14 +3108,16 @@ CREATE TABLE IF NOT EXISTS `o32yf_menu_types` (
   `description` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_menutype` (`menutype`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Дамп данных таблицы `o32yf_menu_types`
 --
 
 INSERT INTO `o32yf_menu_types` (`id`, `menutype`, `title`, `description`) VALUES
-(1, 'mainmenu', 'Main Menu', 'The main menu for the site');
+(1, 'mainmenu', 'Main Menu ua', 'The main ua menu for the site'),
+(2, 'default', 'Default controller', 'Default controller for multilanguage'),
+(3, 'main-en', 'Main menu en', 'Main menu for english version');
 
 -- --------------------------------------------------------
 
@@ -3090,7 +3137,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_messages` (
   `message` text NOT NULL,
   PRIMARY KEY (`message_id`),
   KEY `useridto_state` (`user_id_to`,`state`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -3103,7 +3150,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_messages_cfg` (
   `cfg_name` varchar(100) NOT NULL DEFAULT '',
   `cfg_value` varchar(255) NOT NULL DEFAULT '',
   UNIQUE KEY `idx_user_var_name` (`user_id`,`cfg_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -3133,14 +3180,14 @@ CREATE TABLE IF NOT EXISTS `o32yf_modules` (
   KEY `published` (`published`,`access`),
   KEY `newsfeeds` (`module`,`published`),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=121 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=129 ;
 
 --
 -- Дамп данных таблицы `o32yf_modules`
 --
 
 INSERT INTO `o32yf_modules` (`id`, `title`, `note`, `content`, `ordering`, `position`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `published`, `module`, `access`, `showtitle`, `params`, `client_id`, `language`) VALUES
-(1, 'Main Menu', '', '', 1, 'mainmenu', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 1, 0, '{"menutype":"mainmenu","startLevel":"1","endLevel":"0","showAllChildren":"0","tag_id":"","class_sfx":"nav","window_open":"","layout":"_:default","moduleclass_sfx":"_menu","cache":"1","cache_time":"900","cachemode":"itemid"}', 0, '*'),
+(1, 'Main Menu', '', '', 1, 'mainmenu', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 1, 0, '{"menutype":"mainmenu","startLevel":"1","endLevel":"0","showAllChildren":"0","tag_id":"","class_sfx":"nav","window_open":"","layout":"_:default","moduleclass_sfx":"_menu","cache":"1","cache_time":"900","cachemode":"itemid"}', 0, 'uk-UA'),
 (2, 'Login', '', '', 1, 'login', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_login', 1, 1, '', 1, '*'),
 (3, 'Popular Articles', '', '', 3, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_popular', 3, 1, '{"count":"5","catid":"","user_id":"0","layout":"_:default","moduleclass_sfx":"","cache":"0","automatic_title":"1"}', 1, '*'),
 (4, 'Recently Added Articles', '', '', 4, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_latest', 3, 1, '{"count":"5","ordering":"c_dsc","catid":"","user_id":"0","layout":"_:default","moduleclass_sfx":"","cache":"0","automatic_title":"1"}', 1, '*'),
@@ -3162,7 +3209,12 @@ INSERT INTO `o32yf_modules` (`id`, `title`, `note`, `content`, `ordering`, `posi
 (102, 'Благодійність', '', '', 1, 'php', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', -2, 'mod_php', 1, 1, '{"moduleclass_sfx":"","cache":"0","php":"%3C%3F%0A%2F*https%3A%2F%2Fapi.privatbank.ua%2F%0A*%20%20%D0%BA%D0%BB%D0%B0%D1%81%D1%81%20%D0%B4%D0%BB%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B%20%D1%81%20%D0%BF%D0%BB%D0%B0%D1%82%D1%91%D0%B6%D0%BD%D1%8B%D0%BC%20API%20%D0%9F%D1%80%D0%B8%D0%B2%D0%B0%D1%8224%0A*%2F%0A%0Aclass%20p24api%20%7B%0A%09private%20%24merid%3B%0A%09private%20%24pass%3B%0A%09private%20%24apiurl%3B%0A%09private%20%24errmess%3B%0A%09%0A%09function%20__construct(%24mid%2C%20%24password%2C%20%24url)%7B%20%2F%2F%20%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80%0A%09%09%24this-%3Emerid%20%3D%20%24mid%3B%20%0A%09%09%24this-%3Epass%20%3D%20%24password%3B%20%0A%09%09%24this-%3Eapiurl%20%3D%20%24url%3B%20%0A%09%7D%0A%0A%09function%20sendPrpRequest()%20%7B%20%2F%2F%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%B0%20prp%2C%20%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%89%D0%B0%D0%B5%D1%82%20xml-%D0%BE%D1%82%D0%B2%D0%B5%D1%82%0A%09%09%24data%20%3D%20''%3Coper%3Eprp%3C%2Foper%3E''%3B%0A%09%09return%20%24this-%3EsendRequest(%24data)%3B%0A%09%7D%20%0A%0A%09%2F*%0A%09*%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%B0%20%D0%BD%D0%B0%20%D0%BF%D0%BB%D0%B0%D1%82%D1%91%D0%B6%20%0A%09*%20%24payments%20-%20%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%20%D0%B0%D1%81%D1%81%D0%BE%D1%86%D0%B8%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D1%85%20%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%BE%D0%B2%20%D1%80%D0%B5%D0%BA%D0%B2%D0%B8%D0%B7%D0%B8%D1%82%D0%BE%D0%B2%20%D0%BF%D0%BB%D0%B0%D1%82%D0%B5%D0%B6%D0%B5%D0%B9%0A%09*%20%24wait%20-%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B7%D0%B0%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B8%20%D0%BF%D0%BB%D0%B0%D1%82%D0%B5%D0%B6%D0%B0%20%D0%B2%20%D1%81%D0%B5%D0%BA%D1%83%D0%BD%D0%B4%D0%B0%D1%85%0A%09*%20%24isTest%20-%20%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%BB%D0%B8%20%D0%BF%D0%BB%D0%B0%D1%82%D1%91%D0%B6%0A%09*%20%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%89%D0%B0%D0%B5%D1%82%20%D1%82%D0%B0%D0%BA%D0%BE%D0%B9%20%D0%B6%D0%B5%20%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%20%D1%82%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE%20%D1%81%20%D0%BF%D0%BE%D0%BB%D1%8F%D0%BC%D0%B8%20%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D0%B0%0A%09*%20%D0%B8%D0%BB%D0%B8%20xml%2C%20%D0%B5%D1%81%D0%BB%D0%B8%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%B1%D1%8B%D0%BB%20%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%BC%0A%09*%2F%0A%09function%20sendCmtRequest(%24payments%2C%20%24wait%2C%20%24isTest)%20%7B%0A%09%09%24data%20%3D%20''%3Coper%3Ecmt%3C%2Foper%3E''%3B%0A%09%09%24data%20.%3D%20''%3Cwait%3E''.%24wait.''%3C%2Fwait%3E''%3B%0A%09%09%24data%20.%3D%20''%3Ctest%3E''.((%24isTest)%20%3F%201%20%3A%200).''%3C%2Ftest%3E''%3B%0A%09%09foreach%20(%24payments%20as%20%24pay)%20%7B%0A%09%09%09%24data%20.%3D%20''%3Cpayment%20id%3D%22''.%24pay%5B''id''%5D.''%22%3E''%3B%0A%09%09%09foreach%20(%24pay%20as%20%24k%3D%3E%24v)%20%7B%0A%09%09%09%09if%20(%24k%3D%3D''id''%20%7C%7C%20%24k%3D%3D''debet''%20%7C%7C%20%24k%3D%3D''credit''%20%7C%7C%20empty(%24v))%20continue%3B%0A%09%09%09%09%24data%20.%3D%20''%3Cprop%20name%3D%22''.%24k.''%22%20value%3D%22''.rawurlencode(%24v).''%22%20%2F%3E''%3B%0A%09%09%09%7D%0A%09%09%09%24data%20.%3D%20''%3C%2Fpayment%3E''%3B%0A%09%09%7D%0A%09%09%24resp%20%3D%20%24this-%3EsendRequest(%24data)%3B%0A%09%09if%20(strpos(%24resp%2C%20%22%3Cinfo%3E%22)%3D%3D%3Dfalse)%20%7B%20%2F%2F%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%B1%D1%8B%D0%BB%20%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%BE%D0%BC%20%D0%BF%D0%BB%D0%B0%D1%82%D0%B5%D0%B6%D0%B5%D0%B9%0A%09%09%09%24dom%20%3D%20new%20DomDocument(''1.0''%2C''UTF-8'')%3B%0A%09%09%09%24dom-%3EloadXML(%24resp)%3B%0A%09%09%09%24xpath%20%3D%20new%20DOMXPath(%24dom)%3B%0A%09%09%09%24q_pays%20%3D%20''%2F%2Fresponse%2Fdata%2Fpayment''%3B%0A%09%09%09%24pays%20%3D%20%24xpath-%3Equery(%24q_pays)%3B%0A%09%09%09if%20(%24pays-%3Elength%20%3D%3D%200)%20%7B%0A%09%09%09%09%24q_err%20%3D%20''%2F%2Fresponse%2Fdata%2Ferror''%3B%0A%09%09%09%09%24err%20%3D%20%24xpath-%3Equery(%24q_err)%3B%0A%09%09%09%09if%20(%24err-%3Elength%20%3D%3D%200)%20%24this-%3Eerrmess%20%3D%20%22response%3A%20%22.%24resp%3B%0A%09%09%09%09else%20%7B%0A%09%09%09%09%09%24this-%3Eerrmess%20%3D%20%24err-%3Eitem(0)-%3EgetAttribute(''message'')%3B%0A%09%09%09%09%7D%0A%09%09%09%09return%20false%3B%0A%09%09%09%7D%0A%09%09%09%24rez%20%3D%20array()%3B%0A%09%09%09for%20(%24i%3D0%3B%24i%3C%24pays-%3Elength%3B%24i%2B%2B)%20%7B%0A%09%09%09%09%24pay%20%3D%20%24pays-%3Eitem(%24i)%3B%0A%09%09%09%09%24payrez%20%3D%20array()%3B%0A%09%09%09%09%24payrez%5B''id''%5D%20%3D%20%24pay-%3EgetAttribute(''id'')%3B%0A%09%09%09%09%24payrez%5B''state''%5D%20%3D%20%24pay-%3EgetAttribute(''state'')%3B%0A%09%09%09%09%24payrez%5B''message''%5D%20%3D%20%24pay-%3EgetAttribute(''message'')%3B%0A%09%09%09%09%24payrez%5B''ref''%5D%20%3D%20%24pay-%3EgetAttribute(''ref'')%3B%0A%09%09%09%09%24payrez%5B''amt''%5D%20%3D%20%24pay-%3EgetAttribute(''amt'')%3B%0A%09%09%09%09%24payrez%5B''ccy''%5D%20%3D%20%24pay-%3EgetAttribute(''ccy'')%3B%0A%09%09%09%09%24payrez%5B''comis''%5D%20%3D%20%24pay-%3EgetAttribute(''comis'')%3B%0A%09%09%09%09%24payrez%5B''code''%5D%20%3D%20%24pay-%3EgetAttribute(''code'')%3B%0A%09%09%09%09%24rez%5B%5D%20%3D%20%24payrez%3B%0A%09%09%09%7D%0A%09%09%09return%20%24rez%3B%0A%09%09%7D%0A%09%09else%20%7B%20%2F%2F%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%B1%D1%8B%D0%BB%20%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%BC%0A%09%09%09%24start%20%3D%20strpos(%24resp%2C%20''%3Cinfo%3E'')%2Bstrlen(''%3Cinfo%3E'')%3B%0A%09%09%09%24end%20%3D%20strpos(%24resp%2C%20''%3C%2Finfo%3E'')%3B%0A%09%09%09return%20substr(%24resp%2C%20%24start%2C%20(%24end-%24start))%3B%0A%09%09%7D%0A%09%7D%0A%09%0A%09function%20getErrMessage()%20%7B%0A%09%09return%20%24this-%3Eerrmess%3B%0A%09%7D%0A%09%0A%09function%20sendRequest(%24data)%20%7B%0A%09%09%24str%20%3D%20''%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Crequest%20version%3D%221.0%22%3E%3Cmerchant%3E''%3B%0A%09%09%24str%20.%3D%20''%3Cid%3E''.%24this-%3Emerid.''%3C%2Fid%3E''%3B%0A%09%09%24str%20.%3D%20''%3Csignature%3E''.%24this-%3EcalcSignature(%24data).''%3C%2Fsignature%3E''%3B%0A%09%09%24str%20.%3D%20''%3C%2Fmerchant%3E%3Cdata%3E''.%24data.''%3C%2Fdata%3E%3C%2Frequest%3E''%3B%0A%09%09return%20%24this-%3Emsoap(%24str)%3B%0A%09%7D%0A%09%0A%09function%20msoap(%24xml)%20%7B%20%2F%2F%20%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%BD%D0%B0%D1%8F%20%D1%84-%D1%86%D0%B8%D1%8F%0A%09%09%24header%20%3D%20array()%3B%0A%09%09%24header%5B%5D%20%3D%20%22Content-Type%3A%20text%2Fxml%22%3B%0A%09%09%24header%5B%5D%20%3D%20%22%5Cr%5Cn%22%3B%20%0A%09%09%0A%09%09%24ch%20%3D%20curl_init()%3B%0A%09%09curl_setopt(%24ch%2C%20CURLOPT_URL%2C%20%24this-%3Eapiurl)%3B%0A%09%09curl_setopt(%24ch%2C%20CURLOPT_RETURNTRANSFER%2C%201)%3B%0A%09%09curl_setopt(%24ch%2C%20CURLOPT_HEADER%2C%200)%3B%0A%09%09curl_setopt(%24ch%2C%20CURLOPT_TIMEOUT%2C%2010)%3B%0A%09%09curl_setopt(%24ch%2C%20CURLOPT_SSL_VERIFYPEER%2C%200)%3B%0A%09%09curl_setopt(%24ch%2C%20CURLOPT_SSL_VERIFYHOST%2C%200)%3B%09%09%0A%09%09curl_setopt(%24ch%2C%20CURLOPT_HTTPHEADER%2C%20%24header)%3B%0A%09%09curl_setopt(%24ch%2C%20CURLOPT_POSTFIELDS%2C%20%24xml)%3B%20%0A%09%09%24rez%20%3D%20curl_exec(%24ch)%3B%20%0A%09%09curl_close(%24ch)%3B%0A%09%09return%20%24rez%3B%0A%09%7D%0A%09%0A%09function%20calcSignature(%24data)%20%7B%20%2F%2F%20%D1%80%D0%B0%D1%81%D1%87%D1%91%D1%82%20%D1%81%D0%B8%D0%B3%D0%BD%D0%B0%D1%82%D1%83%D1%80%D1%8B%0A%09%09return%20sha1(md5(%24data.%24this-%3Epass))%3B%0A%09%7D%0A%09%0A%7D%0A%3F%3E","eval_php":"1","discovery":"1"}', 0, '*'),
 (112, 'Easy Joomla PayPal Payment / Donations Module', '', '', 1, 'user1', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 'mod_paypal', 1, 1, '{"payment_type":"1","logo_on":"2","logo":"http:\\/\\/www.paypal.com\\/en_US\\/i\\/btn\\/x-click-but04.gif","moduleclass_sfx":"","paypal_email":"bakym@ukr.net","paypal_org":"Donation","paypalcur_on":"0","paypalval_on":"0","paypalcur_val":"USD","paypalval_button":"Donate","paypalval_enteramount":"Enter Amount","paypalval_val":"0.01","paypalvalleast_val":"0.01","paypalreturn":"http:\\/\\/www.yoursite.com","paypalcancel":"http:\\/\\/www.yoursite.com","paymentlocation":"","link":"1"}', 0, '*'),
 (115, 'privat24', '', '', 1, 'user1', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', -2, 'mod_php', 1, 1, '{"moduleclass_sfx":"","cache":"0","php":"%3C%3F%0A%2F*https%3A%2F%2Fapi.privatbank.ua%2F%0A*%20%20%D0%BA%D0%BB%D0%B0%D1%81%D1%81%20%D0%B4%D0%BB%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B%20%D1%81%20%D0%BF%D0%BB%D0%B0%D1%82%D1%91%D0%B6%D0%BD%D1%8B%D0%BC%20API%20%D0%9F%D1%80%D0%B8%D0%B2%D0%B0%D1%8224%0A*%2F%0A%0Aclass%20p24api%20%7B%0A%09private%20%24merid%3B%0A%09private%20%24pass%3B%0A%09private%20%24apiurl%3B%0A%09private%20%24errmess%3B%0A%09%0A%09function%20__construct(%24mid%2C%20%24password%2C%20%24url)%7B%20%2F%2F%20%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80%0A%09%09%24this-%3Emerid%20%3D%20%24mid%3B%20%0A%09%09%24this-%3Epass%20%3D%20%24password%3B%20%0A%09%09%24this-%3Eapiurl%20%3D%20%24url%3B%20%0A%09%7D%0A%0A%09function%20sendPrpRequest()%20%7B%20%2F%2F%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%B0%20prp%2C%20%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%89%D0%B0%D0%B5%D1%82%20xml-%D0%BE%D1%82%D0%B2%D0%B5%D1%82%0A%09%09%24data%20%3D%20''%3Coper%3Eprp%3C%2Foper%3E''%3B%0A%09%09return%20%24this-%3EsendRequest(%24data)%3B%0A%09%7D%20%0A%0A%09%2F*%0A%09*%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%B0%20%D0%BD%D0%B0%20%D0%BF%D0%BB%D0%B0%D1%82%D1%91%D0%B6%20%0A%09*%20%24payments%20-%20%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%20%D0%B0%D1%81%D1%81%D0%BE%D1%86%D0%B8%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D1%85%20%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%BE%D0%B2%20%D1%80%D0%B5%D0%BA%D0%B2%D0%B8%D0%B7%D0%B8%D1%82%D0%BE%D0%B2%20%D0%BF%D0%BB%D0%B0%D1%82%D0%B5%D0%B6%D0%B5%D0%B9%0A%09*%20%24wait%20-%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B7%D0%B0%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B8%20%D0%BF%D0%BB%D0%B0%D1%82%D0%B5%D0%B6%D0%B0%20%D0%B2%20%D1%81%D0%B5%D0%BA%D1%83%D0%BD%D0%B4%D0%B0%D1%85%0A%09*%20%24isTest%20-%20%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%BB%D0%B8%20%D0%BF%D0%BB%D0%B0%D1%82%D1%91%D0%B6%0A%09*%20%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%89%D0%B0%D0%B5%D1%82%20%D1%82%D0%B0%D0%BA%D0%BE%D0%B9%20%D0%B6%D0%B5%20%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%20%D1%82%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE%20%D1%81%20%D0%BF%D0%BE%D0%BB%D1%8F%D0%BC%D0%B8%20%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D0%B0%0A%09*%20%D0%B8%D0%BB%D0%B8%20xml%2C%20%D0%B5%D1%81%D0%BB%D0%B8%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%B1%D1%8B%D0%BB%20%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%BC%0A%09*%2F%0A%09function%20sendCmtRequest(%24payments%2C%20%24wait%2C%20%24isTest)%20%7B%0A%09%09%24data%20%3D%20''%3Coper%3Ecmt%3C%2Foper%3E''%3B%0A%09%09%24data%20.%3D%20''%3Cwait%3E''.%24wait.''%3C%2Fwait%3E''%3B%0A%09%09%24data%20.%3D%20''%3Ctest%3E''.((%24isTest)%20%3F%201%20%3A%200).''%3C%2Ftest%3E''%3B%0A%09%09foreach%20(%24payments%20as%20%24pay)%20%7B%0A%09%09%09%24data%20.%3D%20''%3Cpayment%20id%3D%22''.%24pay%5B''id''%5D.''%22%3E''%3B%0A%09%09%09foreach%20(%24pay%20as%20%24k%3D%3E%24v)%20%7B%0A%09%09%09%09if%20(%24k%3D%3D''id''%20%7C%7C%20%24k%3D%3D''debet''%20%7C%7C%20%24k%3D%3D''credit''%20%7C%7C%20empty(%24v))%20continue%3B%0A%09%09%09%09%24data%20.%3D%20''%3Cprop%20name%3D%22''.%24k.''%22%20value%3D%22''.rawurlencode(%24v).''%22%20%2F%3E''%3B%0A%09%09%09%7D%0A%09%09%09%24data%20.%3D%20''%3C%2Fpayment%3E''%3B%0A%09%09%7D%0A%09%09%24resp%20%3D%20%24this-%3EsendRequest(%24data)%3B%0A%09%09if%20(strpos(%24resp%2C%20%22%3Cinfo%3E%22)%3D%3D%3Dfalse)%20%7B%20%2F%2F%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%B1%D1%8B%D0%BB%20%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%BE%D0%BC%20%D0%BF%D0%BB%D0%B0%D1%82%D0%B5%D0%B6%D0%B5%D0%B9%0A%09%09%09%24dom%20%3D%20new%20DomDocument(''1.0''%2C''UTF-8'')%3B%0A%09%09%09%24dom-%3EloadXML(%24resp)%3B%0A%09%09%09%24xpath%20%3D%20new%20DOMXPath(%24dom)%3B%0A%09%09%09%24q_pays%20%3D%20''%2F%2Fresponse%2Fdata%2Fpayment''%3B%0A%09%09%09%24pays%20%3D%20%24xpath-%3Equery(%24q_pays)%3B%0A%09%09%09if%20(%24pays-%3Elength%20%3D%3D%200)%20%7B%0A%09%09%09%09%24q_err%20%3D%20''%2F%2Fresponse%2Fdata%2Ferror''%3B%0A%09%09%09%09%24err%20%3D%20%24xpath-%3Equery(%24q_err)%3B%0A%09%09%09%09if%20(%24err-%3Elength%20%3D%3D%200)%20%24this-%3Eerrmess%20%3D%20%22response%3A%20%22.%24resp%3B%0A%09%09%09%09else%20%7B%0A%09%09%09%09%09%24this-%3Eerrmess%20%3D%20%24err-%3Eitem(0)-%3EgetAttribute(''message'')%3B%0A%09%09%09%09%7D%0A%09%09%09%09return%20false%3B%0A%09%09%09%7D%0A%09%09%09%24rez%20%3D%20array()%3B%0A%09%09%09for%20(%24i%3D0%3B%24i%3C%24pays-%3Elength%3B%24i%2B%2B)%20%7B%0A%09%09%09%09%24pay%20%3D%20%24pays-%3Eitem(%24i)%3B%0A%09%09%09%09%24payrez%20%3D%20array()%3B%0A%09%09%09%09%24payrez%5B''id''%5D%20%3D%20%24pay-%3EgetAttribute(''id'')%3B%0A%09%09%09%09%24payrez%5B''state''%5D%20%3D%20%24pay-%3EgetAttribute(''state'')%3B%0A%09%09%09%09%24payrez%5B''message''%5D%20%3D%20%24pay-%3EgetAttribute(''message'')%3B%0A%09%09%09%09%24payrez%5B''ref''%5D%20%3D%20%24pay-%3EgetAttribute(''ref'')%3B%0A%09%09%09%09%24payrez%5B''amt''%5D%20%3D%20%24pay-%3EgetAttribute(''amt'')%3B%0A%09%09%09%09%24payrez%5B''ccy''%5D%20%3D%20%24pay-%3EgetAttribute(''ccy'')%3B%0A%09%09%09%09%24payrez%5B''comis''%5D%20%3D%20%24pay-%3EgetAttribute(''comis'')%3B%0A%09%09%09%09%24payrez%5B''code''%5D%20%3D%20%24pay-%3EgetAttribute(''code'')%3B%0A%09%09%09%09%24rez%5B%5D%20%3D%20%24payrez%3B%0A%09%09%09%7D%0A%09%09%09return%20%24rez%3B%0A%09%09%7D%0A%09%09else%20%7B%20%2F%2F%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%B1%D1%8B%D0%BB%20%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%BC%0A%09%09%09%24start%20%3D%20strpos(%24resp%2C%20''%3Cinfo%3E'')%2Bstrlen(''%3Cinfo%3E'')%3B%0A%09%09%09%24end%20%3D%20strpos(%24resp%2C%20''%3C%2Finfo%3E'')%3B%0A%09%09%09return%20substr(%24resp%2C%20%24start%2C%20(%24end-%24start))%3B%0A%09%09%7D%0A%09%7D%0A%09%0A%09function%20getErrMessage()%20%7B%0A%09%09return%20%24this-%3Eerrmess%3B%0A%09%7D%0A%09%0A%09function%20sendRequest(%24data)%20%7B%0A%09%09%24str%20%3D%20''%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Crequest%20version%3D%221.0%22%3E%3Cmerchant%3E''%3B%0A%09%09%24str%20.%3D%20''%3Cid%3E''.%24this-%3Emerid.''%3C%2Fid%3E''%3B%0A%09%09%24str%20.%3D%20''%3Csignature%3E''.%24this-%3EcalcSignature(%24data).''%3C%2Fsignature%3E''%3B%0A%09%09%24str%20.%3D%20''%3C%2Fmerchant%3E%3Cdata%3E''.%24data.''%3C%2Fdata%3E%3C%2Frequest%3E''%3B%0A%09%09return%20%24this-%3Emsoap(%24str)%3B%0A%09%7D%0A%09%0A%09function%20msoap(%24xml)%20%7B%20%2F%2F%20%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%BD%D0%B0%D1%8F%20%D1%84-%D1%86%D0%B8%D1%8F%0A%09%09%24header%20%3D%20array()%3B%0A%09%09%24header%5B%5D%20%3D%20%22Content-Type%3A%20text%2Fxml%22%3B%0A%09%09%24header%5B%5D%20%3D%20%22%5Cr%5Cn%22%3B%20%0A%09%09%0A%09%09%24ch%20%3D%20curl_init()%3B%0A%09%09curl_setopt(%24ch%2C%20CURLOPT_URL%2C%20%24this-%3Eapiurl)%3B%0A%09%09curl_setopt(%24ch%2C%20CURLOPT_RETURNTRANSFER%2C%201)%3B%0A%09%09curl_setopt(%24ch%2C%20CURLOPT_HEADER%2C%200)%3B%0A%09%09curl_setopt(%24ch%2C%20CURLOPT_TIMEOUT%2C%2010)%3B%0A%09%09curl_setopt(%24ch%2C%20CURLOPT_SSL_VERIFYPEER%2C%200)%3B%0A%09%09curl_setopt(%24ch%2C%20CURLOPT_SSL_VERIFYHOST%2C%200)%3B%09%09%0A%09%09curl_setopt(%24ch%2C%20CURLOPT_HTTPHEADER%2C%20%24header)%3B%0A%09%09curl_setopt(%24ch%2C%20CURLOPT_POSTFIELDS%2C%20%24xml)%3B%20%0A%09%09%24rez%20%3D%20curl_exec(%24ch)%3B%20%0A%09%09curl_close(%24ch)%3B%0A%09%09return%20%24rez%3B%0A%09%7D%0A%09%0A%09function%20calcSignature(%24data)%20%7B%20%2F%2F%20%D1%80%D0%B0%D1%81%D1%87%D1%91%D1%82%20%D1%81%D0%B8%D0%B3%D0%BD%D0%B0%D1%82%D1%83%D1%80%D1%8B%0A%09%09return%20sha1(md5(%24data.%24this-%3Epass))%3B%0A%09%7D%0A%09%0A%7D%0A%3F%3E","eval_php":"1","discovery":"1"}', 0, '*'),
-(120, 'SimpleP24', '', '', 1, 'user1', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_simplep24', 1, 0, '{"merchant":"71487","url":"malyatko.ck.ua","submit":"\\u041f\\u0435\\u0440\\u0435\\u0440\\u0430\\u0445\\u0443\\u0432\\u0430\\u0442\\u0438 \\u043a\\u043e\\u0448\\u0442\\u0438"}', 0, '*');
+(124, 'SimpleP24', '', '', 1, 'user1', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_simplep24', 1, 0, '{"merchant":"71487","url":"malyatko.ck.ua","submit":"\\u041f\\u0435\\u0440\\u0435\\u0440\\u0430\\u0445\\u0443\\u0432\\u0430\\u0442\\u0438 \\u043a\\u043e\\u0448\\u0442\\u0438"}', 0, '*'),
+(122, 'Main Menu eng', '', '', 1, 'mainmenu', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 1, 0, '{"menutype":"main-en","startLevel":"1","endLevel":"0","showAllChildren":"0","tag_id":"","class_sfx":"nav","window_open":"","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"itemid"}', 0, 'en-GB'),
+(123, 'Language switcher', '', '', 1, 'Languagemenu', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_languages', 1, 0, '{"header_text":"","footer_text":"","dropdown":"0","image":"1","inline":"1","show_active":"1","full_name":"1","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"itemid"}', 0, '*'),
+(125, 'social', '', '', 1, 'user2', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', -2, 'mod_php', 1, 0, '{"moduleclass_sfx":"","cache":"1","php":"%3Cdiv%20class%3D%22share42init%22%20data-url%3D%22http%3A%2F%2Fmalyatko.ua%2Fuk%2Fphotogallery%22%20data-title%3D''%D0%9A%D0%BE%D0%BC%D1%83%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9%20%D0%B7%D0%B0%D0%BA%D0%BB%D0%B0%D0%B4%20%22%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D1%8C%D0%BA%D0%B8%D0%B9%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D0%BD%D0%B8%D0%B9%20%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%96%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9%20%D0%91%D1%83%D0%B4%D0%B8%D0%BD%D0%BE%D0%BA%20%D0%B4%D0%B8%D1%82%D0%B8%D0%BD%D0%B8%22%20%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D1%8C%D0%BA%D0%BE%D1%97%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D0%BD%D0%BE%D1%97%20%D1%80%D0%B0%D0%B4%D0%B8''%3E%3C%2Fdiv%3E%0A%3Cscript%20type%3D%22text%2Fjavascript%22%20src%3D%22%2Fjs%2Fsocial%2Fshare42.js%22%3E%3C%2Fscript%3E","eval_php":"1","discovery":"1"}', 0, '*'),
+(127, 'CoalaWeb Social Links', '', '', 1, 'user2', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_coalawebsociallinks', 1, 0, '{"themes_icon":"wpzoom-fadein","icon_size":"24","icon_align":"cw-social-mod-icon-ac","title_align":"cw-social-mod-title-ac","title_format":"3","display_bm_sec":"1","display_f_sec":"0","display_borders":"0","border_width":"1","module_width":"100","display_title_bm":"0","title_bm":"","title_color_bm":"444444","border_color_bm":"C4C4C4","display_delicious_bm":"0","display_digg_bm":"0","display_facebook_bm":"1","display_google_bm":"0","display_linkedin_bm":"0","display_stumbleupon_bm":"0","display_technorati_bm":"0","display_twitter_bm":"1","display_orkut_bm":"1","display_reddit_bm":"0","display_newsvine_bm":"0","display_email_bm":"0","display_title_f":"1","title_f":"","title_color_f":"444444","border_color_f":"C4C4C4","display_facebook_f":"1","link_facebook":"www.facebook.com","display_google_f":"1","link_google":"www.google.com","display_linkedin_f":"1","link_linkedin":"www.linkedin.com","display_twitter_f":"1","link_twitter":"www.twitter.com","display_rss_f":"1","link_rss":"www.example.com\\/rss","display_myspace_f":"1","link_myspace":"www.myspace.com","display_vimeo_f":"1","link_vimeo":"www.vimeo.com","display_youtube_f":"1","link_youtube":"www.youtube.com","display_dribbble_f":"1","link_dribbble":"www.dribbble.com","display_deviantart_f":"1","link_deviantart":"www.deviantart.com","display_contact_f":"1","link_contact":"www.example.com\\/contact-us","display_ebay_f":"1","link_ebay":"www.ebay.es","display_tuenti_f":"1","link_tuenti":"www.tuenti.com","display_behance_f":"1","link_behance":"www.behance.com","display_designmoo_f":"1","link_designmoo":"www.designmoo.com","display_flickr_f":"1","link_flickr":"www.flickr.com","display_lastfm_f":"1","link_lastfm":"www.last.fm","display_pinterest_f":"1","link_pinterest":"www.pinterest.com","display_tumblr_f":"0","link_tumblr":"www.tumblr.com","display_instagram_f":"0","link_instagram":"www.instagram.com","module_unique_id":"cwsociallinks1","moduleclass_sfx":"","owncache":"1","cache_time":"900","load_layout_css":"1","powered":"","copy":"1"}', 0, '*'),
+(128, 'Content - MVSocialButtons', '', '', 1, 'user2', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_mvsocialbuttons', 1, 0, '{"style":"small","showTitle":"0","title":"\\u041a\\u043e\\u043c\\u0443\\u043d\\u0430\\u043b\\u044c\\u043d\\u0438\\u0439 \\u0437\\u0430\\u043a\\u043b\\u0430\\u0434 \\"\\u0427\\u0435\\u0440\\u043a\\u0430\\u0441\\u044c\\u043a\\u0438\\u0439 \\u043e\\u0431\\u043b\\u0430\\u0441\\u043d\\u0438\\u0439 \\u0441\\u043f\\u0435\\u0446\\u0456\\u0430\\u043b\\u0456\\u0437\\u043e\\u0432\\u0430\\u043d\\u0438\\u0439 \\u0411\\u0443\\u0434\\u0438\\u043d\\u043e\\u043a \\u0434\\u0438\\u0442\\u0438\\u043d\\u0438\\" \\u0427\\u0435\\u0440\\u043a\\u0430\\u0441\\u044c\\u043a\\u043e\\u0457 \\u043e\\u0431\\u043b\\u0430\\u0441\\u043d\\u043e\\u0457 \\u0440\\u0430\\u0434\\u0438","displayLines":"mv-sbb-nl","displayIcons":"mv-sb-center","displayDelicious":"0","displayDigg":"0","displayFacebook":"1","displayGoogle":"0","displayLinkedIn":"0","displayTechnorati":"0","displayTwitter":"1","displayVkruButton":"1","displayLivejButton":"0","displayMoymirButton":"0","displayYaruButton":"0","displayOdnoklassnikiButton":"0","displayBobrdobrButton":"0","displayLiveinternetButton":"0","moduleclass_sfx":"","owncache":"1","cache_time":"900","ebuttons1":"","ebuttons2":"","ebuttons3":"","ebuttons4":"","ebuttons5":""}', 0, '*');
 
 -- --------------------------------------------------------
 
@@ -3174,7 +3226,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_modules_menu` (
   `moduleid` int(11) NOT NULL DEFAULT '0',
   `menuid` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`moduleid`,`menuid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `o32yf_modules_menu`
@@ -3199,6 +3251,7 @@ INSERT INTO `o32yf_modules_menu` (`moduleid`, `menuid`) VALUES
 (79, 0),
 (86, 0),
 (87, 101),
+(87, 230),
 (88, 106),
 (89, 105),
 (90, 105),
@@ -3206,7 +3259,21 @@ INSERT INTO `o32yf_modules_menu` (`moduleid`, `menuid`) VALUES
 (102, 106),
 (112, 106),
 (115, 106),
-(120, 106);
+(122, 0),
+(123, 0),
+(124, 106),
+(124, 235),
+(125, 104),
+(125, 233),
+(125, 236),
+(127, 231),
+(127, 232),
+(127, 233),
+(127, 235),
+(128, 102),
+(128, 103),
+(128, 104),
+(128, 106);
 
 -- --------------------------------------------------------
 
@@ -3250,7 +3317,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_newsfeeds` (
   KEY `idx_createdby` (`created_by`),
   KEY `idx_language` (`language`),
   KEY `idx_xreference` (`xreference`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -3264,7 +3331,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_overrider` (
   `string` text NOT NULL,
   `file` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -3285,7 +3352,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_redirect_links` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_link_old` (`old_url`),
   KEY `idx_link_modifed` (`modified_date`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- Дамп данных таблицы `o32yf_redirect_links`
@@ -3301,7 +3368,12 @@ INSERT INTO `o32yf_redirect_links` (`id`, `old_url`, `new_url`, `referer`, `comm
 (7, 'http://malyatko.ua/index.php/photogallery?AG_MK=0&AG_form_paginInitPages_1=1&AG_form_albumInitFolders_1=PhotoGallery&AG_form_scrollTop=0&AG_form_scrollLeft=0&AG_MK=0', '', 'http://malyatko.ua/index.php/photogallery?AG_MK=0&AG_form_paginInitPages_1=3&AG_form_albumInitFolders_1=PhotoGallery&AG_form_scrollTop=199&AG_form_scr', '', 1, 0, '2013-03-05 16:28:14', '0000-00-00 00:00:00'),
 (8, 'http://malyatko.ua/index.php/photogallery', '', '', '', 1, 0, '2013-03-05 16:28:22', '0000-00-00 00:00:00'),
 (9, 'http://malyatko.ua/index.php/personnel/doctors', '', '', '', 1, 0, '2013-03-06 20:54:48', '0000-00-00 00:00:00'),
-(10, 'http://malyatko.ua/index.php/images/history.png/', '', 'http://malyatko.ua/index.php/about', '', 2, 0, '2013-03-21 06:11:04', '0000-00-00 00:00:00');
+(10, 'http://malyatko.ck.ua/index.php/ie-css3.htc', '', '', '', 79, 0, '2013-03-21 08:04:46', '0000-00-00 00:00:00'),
+(11, 'http://malyatko.ck.ua/index.php/personnel/ie-css3.htc', '', '', '', 2, 0, '2013-03-21 08:06:05', '0000-00-00 00:00:00'),
+(12, 'http://www.malyatko.ck.ua/index.php/ie-css3.htc', '', '', '', 17, 0, '2013-03-24 11:01:05', '0000-00-00 00:00:00'),
+(13, 'http://malyatko.ck.ua/en/donate', '', '', '', 4, 0, '2013-04-05 07:41:41', '0000-00-00 00:00:00'),
+(14, 'http://malyatko.ck.ua/en/about-us', '', 'http://malyatko.ck.ua/en/', '', 1, 0, '2013-04-05 10:43:32', '0000-00-00 00:00:00'),
+(15, 'http://malyatko.ck.ua/uk/contact', '', '', '', 1, 0, '2013-04-05 10:45:02', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -3313,7 +3385,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_schemas` (
   `extension_id` int(11) NOT NULL,
   `version_id` varchar(20) NOT NULL,
   PRIMARY KEY (`extension_id`,`version_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `o32yf_schemas`
@@ -3342,16 +3414,14 @@ CREATE TABLE IF NOT EXISTS `o32yf_session` (
   KEY `whosonline` (`guest`,`usertype`),
   KEY `userid` (`userid`),
   KEY `time` (`time`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `o32yf_session`
 --
 
 INSERT INTO `o32yf_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`, `usertype`) VALUES
-('53d40d6d25ff42f542fc4b543c2d6916', 1, 0, '1364137776', '__default|a:8:{s:22:"session.client.browser";s:135:"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.22 (KHTML, like Gecko) Ubuntu Chromium/25.0.1364.160 Chrome/25.0.1364.160 Safari/537.22";s:15:"session.counter";i:33;s:8:"registry";O:9:"JRegistry":1:{s:7:"\0*\0data";O:8:"stdClass":2:{s:11:"application";O:8:"stdClass":1:{s:4:"lang";s:0:"";}s:11:"com_content";O:8:"stdClass":1:{s:4:"edit";O:8:"stdClass":1:{s:7:"article";O:8:"stdClass":2:{s:2:"id";a:0:{}s:4:"data";N;}}}}}s:4:"user";O:5:"JUser":25:{s:9:"\0*\0isRoot";b:1;s:2:"id";s:3:"153";s:4:"name";s:10:"Super User";s:8:"username";s:5:"admin";s:5:"email";s:13:"chobd@mail.ru";s:8:"password";s:65:"6946d5c13c1f465ebbb3fbdc45995b48:UvTPYue9m6D6vJNqmNQ1jr4TPzA24Xx4";s:14:"password_clear";s:0:"";s:8:"usertype";s:10:"deprecated";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:12:"registerDate";s:19:"2013-01-13 07:29:10";s:13:"lastvisitDate";s:19:"2013-03-24 13:47:40";s:10:"activation";s:1:"0";s:6:"params";s:92:"{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":""}";s:6:"groups";a:1:{i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:10:"\0*\0_params";O:9:"JRegistry":1:{s:7:"\0*\0data";O:8:"stdClass":6:{s:11:"admin_style";s:0:"";s:14:"admin_language";s:0:"";s:8:"language";s:0:"";s:6:"editor";s:0:"";s:8:"helpsite";s:0:"";s:8:"timezone";s:0:"";}}s:14:"\0*\0_authGroups";a:2:{i:0;i:1;i:1;i:8;}s:14:"\0*\0_authLevels";a:4:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;}s:15:"\0*\0_authActions";N;s:12:"\0*\0_errorMsg";N;s:10:"\0*\0_errors";a:0:{}s:3:"aid";i:0;}s:13:"session.token";s:32:"be027eff4b0e0a249eb2ef2e34052b7f";s:19:"session.timer.start";i:1364135154;s:18:"session.timer.last";i:1364137759;s:17:"session.timer.now";i:1364137770;}', 153, 'admin', ''),
-('56dbb3c0e1aa7bde6b33d66f3cb142ab', 0, 1, '1364138896', '__default|a:7:{s:15:"session.counter";i:10;s:19:"session.timer.start";i:1364137805;s:18:"session.timer.last";i:1364138522;s:17:"session.timer.now";i:1364138894;s:22:"session.client.browser";s:135:"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.22 (KHTML, like Gecko) Ubuntu Chromium/25.0.1364.160 Chrome/25.0.1364.160 Safari/537.22";s:8:"registry";O:9:"JRegistry":1:{s:7:"\0*\0data";O:8:"stdClass":0:{}}s:4:"user";O:5:"JUser":25:{s:9:"\0*\0isRoot";b:0;s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:8:"usertype";N;s:5:"block";N;s:9:"sendEmail";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:6:"groups";a:0:{}s:5:"guest";i:1;s:13:"lastResetTime";N;s:10:"resetCount";N;s:10:"\0*\0_params";O:9:"JRegistry":1:{s:7:"\0*\0data";O:8:"stdClass":0:{}}s:14:"\0*\0_authGroups";a:1:{i:0;i:1;}s:14:"\0*\0_authLevels";a:2:{i:0;i:1;i:1;i:1;}s:15:"\0*\0_authActions";N;s:12:"\0*\0_errorMsg";N;s:10:"\0*\0_errors";a:0:{}s:3:"aid";i:0;}}', 0, '', ''),
-('e7sr29scgp0kgoipsdikmuj2b6', 0, 1, '1364138581', '__default|a:7:{s:15:"session.counter";i:43;s:19:"session.timer.start";i:1364134793;s:18:"session.timer.last";i:1364138081;s:17:"session.timer.now";i:1364138581;s:22:"session.client.browser";s:76:"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0";s:8:"registry";O:9:"JRegistry":1:{s:7:"\0*\0data";O:8:"stdClass":0:{}}s:4:"user";O:5:"JUser":25:{s:9:"\0*\0isRoot";b:0;s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:8:"usertype";N;s:5:"block";N;s:9:"sendEmail";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:6:"groups";a:0:{}s:5:"guest";i:1;s:13:"lastResetTime";N;s:10:"resetCount";N;s:10:"\0*\0_params";O:9:"JRegistry":1:{s:7:"\0*\0data";O:8:"stdClass":0:{}}s:14:"\0*\0_authGroups";a:1:{i:0;i:1;}s:14:"\0*\0_authLevels";a:2:{i:0;i:1;i:1;i:1;}s:15:"\0*\0_authActions";N;s:12:"\0*\0_errorMsg";N;s:10:"\0*\0_errors";a:0:{}s:3:"aid";i:0;}}', 0, '', '');
+('189456b83c418feebb725d5d47c47bc8', 0, 1, '1365527717', '__default|a:7:{s:22:"session.client.browser";s:135:"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.22 (KHTML, like Gecko) Ubuntu Chromium/25.0.1364.160 Chrome/25.0.1364.160 Safari/537.22";s:15:"session.counter";i:5;s:8:"registry";O:9:"JRegistry":1:{s:7:"\0*\0data";O:8:"stdClass":0:{}}s:4:"user";O:5:"JUser":25:{s:9:"\0*\0isRoot";b:0;s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:8:"usertype";N;s:5:"block";N;s:9:"sendEmail";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:6:"groups";a:0:{}s:5:"guest";i:1;s:13:"lastResetTime";N;s:10:"resetCount";N;s:10:"\0*\0_params";O:9:"JRegistry":1:{s:7:"\0*\0data";O:8:"stdClass":0:{}}s:14:"\0*\0_authGroups";a:1:{i:0;i:1;}s:14:"\0*\0_authLevels";a:2:{i:0;i:1;i:1;i:1;}s:15:"\0*\0_authActions";N;s:12:"\0*\0_errorMsg";N;s:10:"\0*\0_errors";a:0:{}s:3:"aid";i:0;}s:19:"session.timer.start";i:1365527703;s:18:"session.timer.last";i:1365527712;s:17:"session.timer.now";i:1365527716;}', 0, '', '');
 
 -- --------------------------------------------------------
 
@@ -3369,7 +3439,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_template_styles` (
   PRIMARY KEY (`id`),
   KEY `idx_template` (`template`),
   KEY `idx_home` (`home`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Дамп данных таблицы `o32yf_template_styles`
@@ -3405,7 +3475,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_updates` (
   `detailsurl` text NOT NULL,
   `infourl` text NOT NULL,
   PRIMARY KEY (`update_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Available Updates' AUTO_INCREMENT=743 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Available Updates' AUTO_INCREMENT=1623 ;
 
 --
 -- Дамп данных таблицы `o32yf_updates`
@@ -4027,28 +4097,28 @@ INSERT INTO `o32yf_updates` (`update_id`, `update_site_id`, `extension_id`, `cat
 (614, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
 (615, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
 (616, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
-(617, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
-(618, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
-(619, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
-(620, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
-(621, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
-(622, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
-(623, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
-(624, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
-(625, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
-(626, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
-(627, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
-(628, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
-(629, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
-(630, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
-(631, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
-(632, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
-(633, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
-(634, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
-(635, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
-(636, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
-(637, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
-(638, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(617, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(618, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(619, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(620, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(621, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(622, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(623, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(624, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(625, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(626, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(627, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(628, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(629, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(630, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(631, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(632, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(633, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(634, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(635, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(636, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(637, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(638, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
 (639, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
 (640, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
 (641, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
@@ -4077,24 +4147,24 @@ INSERT INTO `o32yf_updates` (`update_id`, `update_site_id`, `extension_id`, `cat
 (664, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
 (665, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
 (666, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
-(667, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
-(668, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
-(669, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
-(670, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
-(671, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
-(672, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
-(673, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
-(674, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
-(675, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
-(676, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
-(677, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
-(678, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
-(679, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
-(680, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
-(681, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
-(682, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
-(683, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
-(684, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(667, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(668, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(669, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(670, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(671, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(672, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(673, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(674, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(675, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(676, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(677, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(678, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(679, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(680, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(681, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(682, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(683, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(684, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
 (685, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
 (686, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
 (687, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
@@ -4109,50 +4179,933 @@ INSERT INTO `o32yf_updates` (`update_id`, `update_site_id`, `extension_id`, `cat
 (696, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
 (697, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
 (698, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
-(699, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
-(700, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
-(701, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
-(702, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
-(703, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
-(704, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
-(705, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
-(706, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
-(707, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
-(708, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
-(709, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
-(710, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
-(711, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
-(712, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
-(713, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
-(714, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
-(715, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
-(716, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
-(717, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
-(718, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
-(719, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
-(720, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
-(721, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
-(722, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
-(723, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
-(724, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
-(725, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
-(726, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
-(727, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
-(728, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
-(729, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
-(730, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
-(731, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
-(732, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
-(733, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
-(734, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
-(735, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
-(736, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
-(737, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
-(738, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
-(739, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
-(740, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
-(741, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
-(742, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', '');
+(699, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(700, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(701, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(702, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(703, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(704, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(705, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(706, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(707, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(708, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(709, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(710, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(711, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(712, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(713, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(714, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(715, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(716, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(717, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(718, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(719, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(720, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(721, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(722, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(723, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(724, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(725, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(726, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(727, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(728, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(729, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(730, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(731, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(732, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(733, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(734, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(735, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(736, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(737, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(738, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(739, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(740, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(741, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(742, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(743, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(744, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(745, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(746, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(747, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(748, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(749, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(750, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(751, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(752, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(753, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(754, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(755, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(756, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(757, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(758, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(759, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(760, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(761, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(762, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(763, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(764, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(765, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(766, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(767, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(768, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(769, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(770, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(771, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(772, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(773, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(774, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(775, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(776, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(777, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(778, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(779, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(780, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(781, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(782, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(783, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(784, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(785, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(786, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(787, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(788, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(789, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(790, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(791, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(792, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(793, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(794, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(795, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(796, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(797, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(798, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(799, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(800, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(801, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(802, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(803, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(804, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(805, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(806, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(807, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(808, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(809, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(810, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', '');
+INSERT INTO `o32yf_updates` (`update_id`, `update_site_id`, `extension_id`, `categoryid`, `name`, `description`, `element`, `type`, `folder`, `client_id`, `version`, `data`, `detailsurl`, `infourl`) VALUES
+(811, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(812, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(813, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(814, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(815, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(816, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(817, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(818, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(819, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(820, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(821, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(822, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(823, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(824, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(825, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(826, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(827, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(828, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(829, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(830, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(831, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(832, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(833, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(834, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(835, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(836, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(837, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(838, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(839, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(840, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(841, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(842, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(843, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(844, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(845, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(846, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(847, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(848, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(849, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(850, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(851, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(852, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(853, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(854, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(855, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(856, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(857, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(858, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(859, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(860, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(861, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(862, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(863, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(864, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(865, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(866, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(867, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(868, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(869, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(870, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(871, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(872, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(873, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(874, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(875, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(876, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(877, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(878, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(879, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(880, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(881, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(882, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(883, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(884, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(885, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(886, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(887, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(888, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(889, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(890, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(891, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(892, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(893, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(894, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(895, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(896, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(897, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(898, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(899, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(900, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(901, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(902, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(903, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(904, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(905, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(906, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(907, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(908, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(909, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(910, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(911, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(912, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(913, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(914, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(915, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(916, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(917, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(918, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(919, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(920, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(921, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(922, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(923, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(924, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(925, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(926, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.10.6 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.10.6', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.10.6.xml', ''),
+(927, 4, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(928, 4, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(929, 4, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(930, 4, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(931, 4, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(932, 4, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(933, 4, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(934, 4, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(935, 4, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(936, 4, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(937, 4, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(938, 4, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(939, 4, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(940, 4, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(941, 4, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(942, 4, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(943, 4, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(944, 4, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(945, 4, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(946, 4, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(947, 4, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(948, 4, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(949, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(950, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(951, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(952, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(953, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(954, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(955, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(956, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(957, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(958, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(959, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(960, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(961, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(962, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(963, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(964, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(965, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(966, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(967, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(968, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(969, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(970, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(971, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(972, 4, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(973, 4, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(974, 4, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(975, 4, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(976, 4, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(977, 4, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(978, 4, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(979, 4, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(980, 4, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(981, 4, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(982, 4, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(983, 4, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(984, 4, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(985, 4, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(986, 4, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(987, 4, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(988, 4, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(989, 4, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(990, 4, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(991, 4, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(992, 4, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(993, 4, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(994, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(995, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(996, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(997, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(998, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(999, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1000, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1001, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1002, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1003, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1004, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1005, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1006, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1007, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1008, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1009, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1010, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1011, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1012, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1013, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1014, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1015, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1016, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(1017, 4, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1018, 4, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1019, 4, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1020, 4, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1021, 4, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1022, 4, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1023, 4, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1024, 4, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1025, 4, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1026, 4, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1027, 4, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1028, 4, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1029, 4, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1030, 4, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1031, 4, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1032, 4, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1033, 4, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1034, 4, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1035, 4, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1036, 4, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1037, 4, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1038, 4, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1039, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1040, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1041, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1042, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1043, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1044, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1045, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1046, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1047, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1048, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1049, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1050, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1051, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1052, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1053, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1054, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1055, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1056, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1057, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1058, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1059, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1060, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1061, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(1062, 4, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1063, 4, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1064, 4, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1065, 4, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1066, 4, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1067, 4, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1068, 4, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1069, 4, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1070, 4, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1071, 4, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1072, 4, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1073, 4, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1074, 4, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1075, 4, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1076, 4, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1077, 4, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1078, 4, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1079, 4, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1080, 4, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1081, 4, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1082, 4, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1083, 4, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1084, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1085, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1086, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1087, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1088, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1089, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1090, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1091, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1092, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1093, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1094, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1095, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1096, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1097, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1098, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1099, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1100, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', '');
+INSERT INTO `o32yf_updates` (`update_id`, `update_site_id`, `extension_id`, `categoryid`, `name`, `description`, `element`, `type`, `folder`, `client_id`, `version`, `data`, `detailsurl`, `infourl`) VALUES
+(1101, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1102, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1103, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1104, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1105, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1106, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(1107, 4, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1108, 4, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1109, 4, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1110, 4, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1111, 4, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1112, 4, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1113, 4, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1114, 4, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1115, 4, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1116, 4, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1117, 4, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1118, 4, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1119, 4, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1120, 4, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1121, 4, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1122, 4, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1123, 4, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1124, 4, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1125, 4, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1126, 4, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1127, 4, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1128, 4, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1129, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1130, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1131, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1132, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1133, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1134, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1135, 3, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1136, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1137, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1138, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1139, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1140, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1141, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1142, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1143, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1144, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1145, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1146, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1147, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1148, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1149, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1150, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1151, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1152, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(1153, 4, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1154, 4, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1155, 4, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1156, 4, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1157, 4, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1158, 4, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1159, 4, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1160, 4, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1161, 4, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1162, 4, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1163, 4, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1164, 4, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1165, 4, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1166, 4, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1167, 4, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1168, 4, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1169, 4, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1170, 4, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1171, 4, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1172, 4, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1173, 4, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1174, 4, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1175, 4, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1176, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(1177, 4, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1178, 4, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1179, 4, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1180, 4, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1181, 4, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1182, 4, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1183, 4, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1184, 4, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1185, 4, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1186, 4, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1187, 4, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1188, 4, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1189, 4, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1190, 4, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1191, 4, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1192, 4, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1193, 4, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1194, 4, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1195, 4, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1196, 4, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1197, 4, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1198, 4, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1199, 4, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1200, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1201, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1202, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1203, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1204, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1205, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1206, 3, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1207, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1208, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1209, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1210, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1211, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1212, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1213, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1214, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1215, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1216, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1217, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1218, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1219, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1220, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1221, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1222, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1223, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(1224, 4, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1225, 4, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1226, 4, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1227, 4, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1228, 4, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1229, 4, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1230, 4, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1231, 4, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1232, 4, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1233, 4, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1234, 4, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1235, 4, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1236, 4, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1237, 4, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1238, 4, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1239, 4, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1240, 4, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1241, 4, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1242, 4, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1243, 4, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1244, 4, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1245, 4, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1246, 4, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1247, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1248, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1249, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1250, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1251, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1252, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1253, 3, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1254, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1255, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1256, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1257, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1258, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1259, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1260, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1261, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1262, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1263, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1264, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1265, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1266, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1267, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1268, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1269, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1270, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(1271, 4, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1272, 4, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1273, 4, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1274, 4, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1275, 4, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1276, 4, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1277, 4, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1278, 4, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1279, 4, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1280, 4, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1281, 4, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1282, 4, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1283, 4, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1284, 4, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1285, 4, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1286, 4, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1287, 4, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1288, 4, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1289, 4, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1290, 4, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1291, 4, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1292, 4, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1293, 4, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1294, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1295, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1296, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1297, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1298, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1299, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1300, 3, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1301, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1302, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1303, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1304, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1305, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1306, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1307, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1308, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1309, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1310, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1311, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1312, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1313, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1314, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1315, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1316, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1317, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(1318, 4, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1319, 4, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1320, 4, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1321, 4, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1322, 4, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1323, 4, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1324, 4, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1325, 4, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1326, 4, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1327, 4, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1328, 4, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1329, 4, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1330, 4, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1331, 4, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1332, 4, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1333, 4, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1334, 4, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1335, 4, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1336, 4, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1337, 4, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1338, 4, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1339, 4, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1340, 4, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1341, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1342, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1343, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1344, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1345, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1346, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1347, 3, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1348, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1349, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1350, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1351, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1352, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1353, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1354, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1355, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1356, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1357, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1358, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1359, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1360, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1361, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1362, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1363, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1364, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(1365, 4, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1366, 4, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1367, 4, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1368, 4, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1369, 4, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1370, 4, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1371, 4, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1372, 4, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1373, 4, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1374, 4, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1375, 4, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1376, 4, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1377, 4, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1378, 4, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1379, 4, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1380, 4, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1381, 4, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1382, 4, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1383, 4, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1384, 4, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1385, 4, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1386, 4, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1387, 4, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1388, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1389, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1390, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1391, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1392, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1393, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1394, 3, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1395, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1396, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1397, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1398, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1399, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1400, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1401, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', '');
+INSERT INTO `o32yf_updates` (`update_id`, `update_site_id`, `extension_id`, `categoryid`, `name`, `description`, `element`, `type`, `folder`, `client_id`, `version`, `data`, `detailsurl`, `infourl`) VALUES
+(1402, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1403, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1404, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1405, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1406, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1407, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1408, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1409, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1410, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1411, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(1412, 4, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1413, 4, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1414, 4, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1415, 4, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1416, 4, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1417, 4, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1418, 4, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1419, 4, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1420, 4, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1421, 4, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1422, 4, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1423, 4, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1424, 4, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1425, 4, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1426, 4, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1427, 4, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1428, 4, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1429, 4, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1430, 4, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1431, 4, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1432, 4, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1433, 4, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1434, 4, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1435, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1436, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1437, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1438, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1439, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1440, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1441, 3, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1442, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1443, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1444, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1445, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1446, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1447, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1448, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1449, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1450, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1451, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1452, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1453, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1454, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1455, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1456, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1457, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1458, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(1459, 4, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1460, 4, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1461, 4, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1462, 4, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1463, 4, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1464, 4, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1465, 4, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1466, 4, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1467, 4, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1468, 4, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1469, 4, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1470, 4, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1471, 4, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1472, 4, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1473, 4, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1474, 4, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1475, 4, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1476, 4, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1477, 4, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1478, 4, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1479, 4, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1480, 4, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1481, 4, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1482, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1483, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1484, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1485, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1486, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1487, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1488, 3, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1489, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1490, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1491, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1492, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1493, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1494, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1495, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1496, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1497, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1498, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1499, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1500, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1501, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1502, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1503, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1504, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1505, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(1506, 4, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1507, 4, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1508, 4, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1509, 4, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1510, 4, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1511, 4, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1512, 4, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1513, 4, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1514, 4, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1515, 4, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1516, 4, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1517, 4, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1518, 4, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1519, 4, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1520, 4, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1521, 4, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1522, 4, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1523, 4, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1524, 4, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1525, 4, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1526, 4, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1527, 4, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1528, 4, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1529, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1530, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1531, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1532, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1533, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1534, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1535, 3, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1536, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1537, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1538, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1539, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1540, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1541, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1542, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1543, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1544, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1545, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1546, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1547, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1548, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1549, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1550, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1551, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1552, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(1553, 4, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1554, 4, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1555, 4, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1556, 4, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1557, 4, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1558, 4, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1559, 4, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1560, 4, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1561, 4, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1562, 4, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1563, 4, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1564, 4, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1565, 4, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1566, 4, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1567, 4, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1568, 4, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1569, 4, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1570, 4, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1571, 4, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1572, 4, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1573, 4, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1574, 4, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1575, 4, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1576, 3, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1577, 3, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1578, 3, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1579, 3, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1580, 3, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1581, 3, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1582, 3, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1583, 3, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1584, 3, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1585, 3, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1586, 3, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1587, 3, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1588, 3, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1589, 3, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1590, 3, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1591, 3, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1592, 3, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1593, 3, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1594, 3, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1595, 3, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1596, 3, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1597, 3, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1598, 3, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', ''),
+(1599, 4, 0, 0, 'Українська локалізація Joomla!', '<div style=""><img src="http://joomla-ua.org/update/lang/uk-ua.png" align="right" border="0" style="float: right; padding-left: 5px;" width="140" /><h2 style="padding: 0 0 8px 0; margin: 0; font-weight: normal;">Український пакет локалізації Joomla!</h2><strong style="color: green;">Оновлення до версії 2.5.9.5.1 від 04.02.2013 готове для встановлення!</strong><div style="background: #fff; width: 57%; border: 1px solid #ccc; padding: 9px; margin: 6px 0;">Зробіть пожертвування для розвитку української локалізації:<br /><br /><strong>WebMoney:</strong> Z162084860012 або R371967759323</div><span style="font-size: 85%;">2009-2013 &copy; Joomla! Україна. Всі права захищено!</span></div>', 'pkg_uk-UA', 'package', '', 0, '2.5.9.5.1', '', 'http://joomla-ua.org/update/lang/joomla/update-2.5.9.5.1.xml', ''),
+(1600, 4, 0, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/da-DK_details.xml', ''),
+(1601, 4, 0, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sv-SE_details.xml', ''),
+(1602, 4, 0, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fr-FR_details.xml', ''),
+(1603, 4, 0, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/it-IT_details.xml', ''),
+(1604, 4, 0, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/es-ES_details.xml', ''),
+(1605, 4, 0, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-NL_details.xml', ''),
+(1606, 4, 0, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '2.5.10.1', '', 'http://update.joomla.org/language/details/tr-TR_details.xml', ''),
+(1607, 4, 0, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/nl-BE_details.xml', ''),
+(1608, 4, 0, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ja-JP_details.xml', ''),
+(1609, 4, 0, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ar-AA_details.xml', ''),
+(1610, 4, 0, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/de-DE_details.xml', ''),
+(1611, 4, 0, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '2.5.9.2', '', 'http://update.joomla.org/language/details/nb-NO_details.xml', ''),
+(1612, 4, 0, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-AU_details.xml', ''),
+(1613, 4, 0, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/en-US_details.xml', ''),
+(1614, 4, 0, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fa-IR_details.xml', ''),
+(1615, 4, 0, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pl-PL_details.xml', ''),
+(1616, 4, 0, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/af-ZA_details.xml', ''),
+(1617, 4, 0, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/fi-FI_details.xml', ''),
+(1618, 4, 0, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/pt-BR_details.xml', ''),
+(1619, 4, 0, 0, 'Kurdish Sorani', '', 'pkg_ckb-IQ', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ckb-IQ_details.xml', ''),
+(1620, 4, 0, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/hr-HR_details.xml', ''),
+(1621, 4, 0, 0, 'Tamil India', '', 'pkg_ta-IN', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/ta-IN_details.xml', ''),
+(1622, 4, 0, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '2.5.9.1', '', 'http://update.joomla.org/language/details/sw-KE_details.xml', '');
 
 -- --------------------------------------------------------
 
@@ -4167,7 +5120,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_update_categories` (
   `parent` int(11) DEFAULT '0',
   `updatesite` int(11) DEFAULT '0',
   PRIMARY KEY (`categoryid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Update Categories' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Update Categories' AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -4183,18 +5136,19 @@ CREATE TABLE IF NOT EXISTS `o32yf_update_sites` (
   `enabled` int(11) DEFAULT '0',
   `last_check_timestamp` bigint(20) DEFAULT '0',
   PRIMARY KEY (`update_site_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Update Sites' AUTO_INCREMENT=6 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Update Sites' AUTO_INCREMENT=8 ;
 
 --
 -- Дамп данных таблицы `o32yf_update_sites`
 --
 
 INSERT INTO `o32yf_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`) VALUES
-(1, 'Joomla Core', 'collection', 'http://update.joomla.org/core/list.xml', 0, 1363675385),
-(2, 'Joomla Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 0, 1363675385),
-(3, 'Accredited Joomla! Translations', 'collection', 'http://update.joomla.org/language/translationlist.xml', 0, 1363675385),
-(4, 'Ukrainian language (uk-UA)', 'collection', 'http://joomla-ua.org/update/lang/joomla25.xml', 0, 1363675385),
-(5, 'Plugin Googlemap Update Site', 'extension', 'http://tech.reumer.net/update/plugin_googlemap2/extension.xml', 0, 1363675385);
+(1, 'Joomla Core', 'collection', 'http://update.joomla.org/core/list.xml', 1, 1365335679),
+(2, 'Joomla Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 1, 1365335679),
+(3, 'Accredited Joomla! Translations', 'collection', 'http://update.joomla.org/language/translationlist.xml', 1, 1365335679),
+(4, 'Ukrainian language (uk-UA)', 'collection', 'http://joomla-ua.org/update/lang/joomla25.xml', 1, 1365335679),
+(5, 'Plugin Googlemap Update Site', 'extension', 'http://tech.reumer.net/update/plugin_googlemap2/extension.xml', 1, 1365335681),
+(7, 'CoalaWeb Social Links Module Update', 'extension', 'http://coalaweb.com/?option=com_ars&view=update&task=stream&format=xml&id=4&dummy=/extension.xml', 1, 1365335681);
 
 -- --------------------------------------------------------
 
@@ -4206,7 +5160,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_update_sites_extensions` (
   `update_site_id` int(11) NOT NULL DEFAULT '0',
   `extension_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`update_site_id`,`extension_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Links extensions to update sites';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Links extensions to update sites';
 
 --
 -- Дамп данных таблицы `o32yf_update_sites_extensions`
@@ -4219,7 +5173,8 @@ INSERT INTO `o32yf_update_sites_extensions` (`update_site_id`, `extension_id`) V
 (3, 804),
 (3, 808),
 (4, 808),
-(5, 815);
+(5, 815),
+(7, 884);
 
 -- --------------------------------------------------------
 
@@ -4238,7 +5193,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_usergroups` (
   KEY `idx_usergroup_title_lookup` (`title`),
   KEY `idx_usergroup_adjacency_lookup` (`parent_id`),
   KEY `idx_usergroup_nested_set_lookup` (`lft`,`rgt`) USING BTREE
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Дамп данных таблицы `o32yf_usergroups`
@@ -4281,14 +5236,14 @@ CREATE TABLE IF NOT EXISTS `o32yf_users` (
   KEY `idx_block` (`block`),
   KEY `username` (`username`),
   KEY `email` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=154 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=154 ;
 
 --
 -- Дамп данных таблицы `o32yf_users`
 --
 
 INSERT INTO `o32yf_users` (`id`, `name`, `username`, `email`, `password`, `usertype`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`) VALUES
-(153, 'Super User', 'admin', 'chobd@mail.ru', '6946d5c13c1f465ebbb3fbdc45995b48:UvTPYue9m6D6vJNqmNQ1jr4TPzA24Xx4', 'deprecated', 0, 1, '2013-01-13 07:29:10', '2013-03-24 14:25:55', '0', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":""}', '0000-00-00 00:00:00', 0);
+(153, 'Super User', 'admin', 'chobd@mail.ru', '6946d5c13c1f465ebbb3fbdc45995b48:UvTPYue9m6D6vJNqmNQ1jr4TPzA24Xx4', 'deprecated', 0, 1, '2013-01-13 07:29:10', '2013-04-07 12:20:30', '0', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":""}', '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -4315,7 +5270,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_user_notes` (
   PRIMARY KEY (`id`),
   KEY `idx_user_id` (`user_id`),
   KEY `idx_category_id` (`catid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -4329,7 +5284,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_user_profiles` (
   `profile_value` varchar(255) NOT NULL,
   `ordering` int(11) NOT NULL DEFAULT '0',
   UNIQUE KEY `idx_user_id_profile_key` (`user_id`,`profile_key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Simple user profile storage table';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Simple user profile storage table';
 
 -- --------------------------------------------------------
 
@@ -4341,7 +5296,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_user_usergroup_map` (
   `user_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Foreign Key to #__users.id',
   `group_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Foreign Key to #__usergroups.id',
   PRIMARY KEY (`user_id`,`group_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `o32yf_user_usergroup_map`
@@ -4363,7 +5318,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_viewlevels` (
   `rules` varchar(5120) NOT NULL COMMENT 'JSON encoded access control.',
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_assetgroup_title_lookup` (`title`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Дамп данных таблицы `o32yf_viewlevels`
@@ -7146,7 +8101,7 @@ CREATE TABLE IF NOT EXISTS `o32yf_weblinks` (
   KEY `idx_featured_catid` (`featured`,`catid`),
   KEY `idx_language` (`language`),
   KEY `idx_xreference` (`xreference`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

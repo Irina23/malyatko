@@ -9,7 +9,9 @@
 # Technical Support:  Forum - http://www.vasiljevski.com/forum/index.php
 # Version: 4.5.0
 -------------------------------------------------------------------------*/
- 
+$document = & JFactory::getDocument();
+$curlang = $document->language;
+
 define('PLUGIN_BASE_PATH', '/plugins/content/admirorgallery/admirorgallery/');
 
 require_once (dirname(__FILE__) . DS . 'agHelper.php');
@@ -114,7 +116,7 @@ class agGallery extends agHelper {
      */
     function writeImage($imageName, $cssClass='') {
         return '<img src="' . $this->imagesFolderPath . $imageName . '"
-                alt="' . strip_tags($this->descArray[$imageName]) . '"
+             alt="' . strip_tags($this->descArray[$imageName]) . '"
                 class="' . $cssClass . '">';
     }
 
@@ -231,20 +233,22 @@ class agGallery extends agHelper {
                     $html.= '<div class="AG_pagin_wrap">';
                     $paginPrev = ($this->paginInitPages[$this->index] - 1);
                     if ($paginPrev >= 1) {
-                        $html.= '<a href="" onClick="AG_form_submit_' . $this->articleID . '(' . $this->index . ',' . $paginPrev . ',\'' . $this->imagesFolderName . '\'); return false;" class="AG_pagin_prev">' . JText::_("Попередня сторінка") . '</a>';
+                        $html.= '<a href="" onClick="AG_form_submit_' . $this->articleID . '(' . $this->index . ',' . $paginPrev . ',\'' . $this->imagesFolderName . '\'); return false;" class="AG_pagin_prev">'.JText::_('AG_PREVIOUS_IMAGE') . '</a>';
                     }
-                    //$html.= '<div class=pagination>';
                     for ($i = 1; $i <= ceil($this->paginImgTotal / $this->params['paginImagesPerGallery']); $i++) {
-                       if ($i == $this->paginInitPages[$this->index]) {
+                        if ($i == $this->paginInitPages[$this->index]) {
                             $html.= '<span class="AG_pagin_current">' . $i . '</span>';
                         } else {
                             $html.= '<a href="" onClick="AG_form_submit_' . $this->articleID . '(' . $this->index . ',' . $i . ',\'' . $this->imagesFolderName . '\',this);return false;" class="AG_pagin_link">' . $i . '</a>';
                         }
-                    }//$html.= '</div>';
+                    }
                     $paginNext = ($this->paginInitPages[$this->index] + 1);
                     if ($paginNext <= ceil($this->paginImgTotal / $this->params['paginImagesPerGallery'])) {
-                        $html.= '<a href="" onClick="AG_form_submit_' . $this->articleID . '(' . $this->index . ',' . $paginNext . ',\'' . $this->imagesFolderName . '\'); return false;" class="AG_pagin_next">' . JText::_("Наступна сторінка") . '</a>';
+                         $html.= '<a href="" onClick="AG_form_submit_' . $this->articleID . '(' . $this->index . ',' . $paginNext . ',\'' . $this->imagesFolderName . '\'); return false;" class="AG_pagin_next">'
+                        .JText::_('AG_NEXT_IMAGE').'</a>';
+
                     }
+
                     $html.= '<br style="clear:both"></div>';
                 }
             }

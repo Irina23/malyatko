@@ -1,0 +1,80 @@
+<?php defined('_JEXEC') or die('Restricted access');
+
+/**
+ * @package             Joomla
+ * @subpackage          CoalaWeb Social Links Module
+ * @author              Steven Palmer
+ * @author url          http://coalaweb.com
+ * @author email        support@coalaweb.com
+ * @license             GNU/GPL, see /assets/en-GB.license.txt
+ * @copyright           Copyright (c) 2013 Steven Palmer All rights reserved.
+ *
+ * CoalaWeb Social Links is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+?>
+
+Version 0.0.8 March 2013
++ -> Added Instagram to follow us options.
+^ -> Updated language strings replacing " with "_QQ_".
+
+Version 0.0.7 February 2013
++ -> Added Tumblr to follow us options.
+
+Version 0.0.6 January 2013
++ -> Added title format option.
+# -> Fixed email language string bug.
+
+Version 0.0.5 December 2012
++ -> Added Pinterest to follow us options.
+# -> Fixed follow us title bug.
+# -> Fixed CSS bugs.
+# -> Made some W3C validation tweaks 
+
+Version 0.0.4 December 2012
++ -> Added vote for us link.
+# -> Fixed CSS bugs.
++ -> Added Last.fm to follow us options.
+^ -> Updated Language strings.
+
+Version 0.0.3 December 2012
+^ -> Changed CSS naming convention.
+# -> Fixed wrongly referenced CSS file.
+# -> Fixed border displaying when module CSS turned off.
+^ -> Updated Language strings
+
+
+Version 0.0.2 November 2012
+^ -> Changed colour selector.
+^ -> Streamlined default layout.
+^ -> Updated helper file reference.
++ -> Added module width by % option.
++ -> Added Unique Module ID option to stop multiple module conflicts
+
+Version 0.0.1 October 2012
+! Initial release
+
+** Languages **
+en-GB Original language
+
+**Acknowledgements**
+! Icons thanks to David Ferreira @ www.wpzoom.com
+
+* -> Security Fix
+# -> Bug Fix
+$ -> Language fix or change
++ -> Addition
+^ -> Change
+- -> Removed
+! -> Note

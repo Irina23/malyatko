@@ -134,8 +134,12 @@ class plgContentAdmirorGallery extends JPlugin {
             ' . "\n";
 
             /* ========================= SIGNATURE ====================== */
-
-        }//if (preg_match_all("#{AdmirorGallery}(.*?){/AdmirorGallery}#s", $row->text, $matches, PREG_PATTERN_ORDER)>0)
+            if ($AG->params['showSignature']) {
+                $row->text .= '<div style="display:block; font-size:10px;">';
+            } else {
+                $row->text .= '<div style="display:block; font-size:10px; overflow:hidden; height:1px; padding-top:1px;">';
+            }
+         }//if (preg_match_all("#{AdmirorGallery}(.*?){/AdmirorGallery}#s", $row->text, $matches, PREG_PATTERN_ORDER)>0)
     }
 
 //onPrepareContent(&$row, &$params, $limitstart)

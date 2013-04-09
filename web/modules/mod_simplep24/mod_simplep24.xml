@@ -36,14 +36,6 @@
                         label="Адреса сайту"
                         description="Адреса, куди буде перенаправлено клієнт після оплати">
                 </field>
-                <field
-                        name="submit"
-                        type="text"
-                        default="Перерахувати кошти"
-                        label="Ім'я кнопки"
-                        description="Ім'я кнопки">
-                </field>
-
 
             </fieldset>
         </fields>
