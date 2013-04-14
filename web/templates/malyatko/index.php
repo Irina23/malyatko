@@ -25,7 +25,8 @@ $catid = JRequest::getInt('catid');
     if((JSite::getMenu()->getActive()->id ==106) or (JSite::getMenu()->getActive()->id ==235)){echo 'donate';}?>">
     <div id="wrap">
         <div id="header" >
-<jdoc:include type="modules" name="Languagemenu" />
+            <jdoc:include type="modules" name="Languagemenu" />
+            <jdoc:include type="modules" name="user3" />
             <jdoc:include type="modules" name="mainmenu" />
             <h2><?php $document = & JFactory::getDocument();
             $curlang = $document->language;
@@ -52,15 +53,7 @@ $catid = JRequest::getInt('catid');
 
     </div>
     <div id="footer">
-        <p><?php $document = & JFactory::getDocument();
-            $curlang = $document->language;
-            if ($curlang == 'en-gb') {
-                echo 'Name ';
-            }
-            if ($curlang == 'uk-ua') {
-                echo 'Комунальний заклад "Черкаський обласний спеціалізований Будинок дитини" Черкаської обласної ради';
-            }?>
-        </p>
+        <p><a href="http://geekhub.ck.ua/">geekhub</a> Powered by geekhub</p>
     </div>
 </body>
 </html>

@@ -105,8 +105,18 @@ body#donate{
 /*-------------------------------------NAV------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 #header .mod-languages{
- float:left;
-margin-left: 30px;
+    float:left;
+    margin-left: 30px;
+    position: relative;
+    top: 17px;
+}
+#share42 {float: right;
+    margin-right: 30px;
+    display: inline-block;
+    padding: 6px 0 0 6px;
+}
+#contacts #header .mod-languages {
+    top: 0;
 }
 #header .nav {
     float: right;
@@ -203,6 +213,7 @@ margin-left:-40px;
 }
 
 
+
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------CONTENT--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -240,14 +251,6 @@ margin-left:-40px;
 #content ul.menu li {
     float:left;
     padding: 0 50px 50px 0;}
-
-
-
-#share42 {display: inline-block; padding: 6px 0 0 6px; background: #FFF; border: 1px solid #E9E9E9; border-radius: 4px;}
-#share42:hover {background: #F6F6F6; border: 1px solid #D4D4D4; box-shadow: 0 0 5px #DDD;}
-#share42 a {opacity: 0.5}
-#share42:hover a {opacity: 0.7}
-#share42 a:hover {opacity: 1}
 
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------HOME-----------------------------------------*/
@@ -454,6 +457,44 @@ div#content.contacts img{
     color: #00B2B2;
 }
 .contacts a:hover{text-decoration: underline;}
+
+.contacts > img {
+    float:left;
+    margin: 0 0 0 40px;
+}
+
+.contacts dl dd {
+    padding-top:20px;
+}
+.contacts dl ul {
+    overflow:hidden;
+    padding:0 0 0 150px;
+}
+.contacts dl ul li {
+    float:left;
+    padding:0 17px 0 0;
+}
+.contacts dl ul li a {
+    width:49px;
+    height:49px;
+    display:block;
+    text-indent:-200em;
+    overflow:hidden;
+    background:url('../images/contact_links.png') no-repeat;
+}
+
+.contacts dl ul li.fb a {
+    background-position: 0 0;
+}
+.contacts dl ul li.fb a:hover {
+    background-position: 0 -56px;
+}
+.contacts dl ul li.vk a {
+    background-position: -65px 0;
+}
+.contacts dl ul li.vk a:hover {
+    background-position: -65px -56px;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------donate---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -504,7 +545,27 @@ input.submit{
     text-align: center;
     clear: both;
     padding-top: 30px;
+
+
+
 }
 
+#footer a{
+    display:inline-block;
+    text-indent:-200em;
+    background:url("../images/geekhub_logo1.png") no-repeat;
+    height: 40px;
+    width: 60px;
+    margin:0 auto;
+    vertical-align: middle;
+    padding-right: 10px;
+}
 
+#footer a:hover{
+    background-position:0 -40px;
+    
+}
+#footer p{
+
+}
 
