@@ -108,16 +108,13 @@ body#donate{
     float:left;
     margin-left: 30px;
 }
-#share42 {/*float: right;
-    margin-right: 30px;
-    display: inline-block;
-    padding: 6px 0 0 6px;*/
+#share42 {
     position: relative;
     left: 30px;
+    top:250px!important;
+
 }
 
-#share42 {padding: 6px 6px 0; background: #FFF; border: 1px solid #E9E9E9; border-radius: 4px;}
-#share42:hover {background: #F6F6F6; border: 1px solid #D4D4D4; box-shadow: 0 0 5px #DDD;}
 #share42 a {opacity: 0.5}
 #share42:hover a {opacity: 0.7}
 #share42 a:hover {opacity: 1}
@@ -175,20 +172,26 @@ body#donate{
     padding-right: 0;
 }
 
-#home #header .nav li img,#header .nav li:hover img, #header .nav li.active img{ left:auto;top:auto;
+#header .nav li img,#header .nav li:hover img, #header .nav li.active img{
+    left:auto;
+    top:auto;
     z-index: 10;
 }
 #header .nav li a img{/*margin:4px auto 0;*/
+    opacity: 0.5;
     position:absolute;
-    left:-999em; /* скрывает выпадающий пункт */
+    /*left:-999em; /* скрывает выпадающий пункт */
     text-align:left;
     padding:10px 0 0 0;/*5px 10px 5px;*/
     border-top:none;
 }
+#header .nav li a img:hover, #header .nav li.active a img{
+    opacity: 1;
+}
 #header .nav li a.about img{
     margin-left:-30px;
 }
-#header .nav li a.Stuff img{
+#header .nav li a.Staff img{
 margin-left:-35px;
 }
 #header .nav li a.donate-eng img{
@@ -499,6 +502,14 @@ div#content.contacts img{
 .contacts dl ul li.vk a:hover {
     background-position: -65px -56px;
 }
+
+.text{
+   margin: 0 auto;
+    position: absolute;
+   top:10px;
+}
+
+
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------donate---------------------------------------*/
 /*----------------------------------------------------------------------------------*/

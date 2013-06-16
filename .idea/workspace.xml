@@ -28,7 +28,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/templates/malyatko/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="66" selection-start="2899" selection-end="2899" vertical-scroll-proportion="0.0">
+            <state line="18" column="0" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -37,36 +37,7 @@
       <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/templates/malyatko/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="29" selection-start="5014" selection-end="5014" vertical-scroll-proportion="0.8177083">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ru-RU.com_admirorgallery.ini" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/language/ru-RU/ru-RU.com_admirorgallery.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="3" selection-start="6847" selection-end="6868" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pirobox.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/popups/pirobox/js/pirobox.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1365161685758" expanded="false" signature="2598:2610" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="agGallery.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/classes/agGallery.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="400" column="31" selection-start="18184" selection-end="18184" vertical-scroll-proportion="0.0">
+            <state line="94" column="6" selection-start="4012" selection-end="4012" vertical-scroll-proportion="0.20833333">
               <folding />
             </state>
           </provider>
@@ -82,20 +53,20 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/popups/pirobox/css/style.css" />
-        <option value="$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/templates/classic/index.php" />
-        <option value="$PROJECT_DIR$/web/plugins/system/pinteresting/assets/pinteresting.css" />
-        <option value="$PROJECT_DIR$/web/modules/mod_coalawebsociallinks/tmpl/default.php" />
-        <option value="$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/popups/pirobox/js/pirobox.js" />
         <option value="$PROJECT_DIR$/web/templates/malyatko/html/mod_coalawebsociallinks/tmpl/default.php" />
         <option value="$PROJECT_DIR$/web/modules/mod_simplep24/mod_simplep24.xml" />
         <option value="$PROJECT_DIR$/web/templates/malyatko/html/mod_simplep24/default.php" />
         <option value="$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/classes/agGallery.php" />
         <option value="$PROJECT_DIR$/web/language/uk-UA/uk-UA.com_admirorgallery.ini" />
-        <option value="$PROJECT_DIR$/web/language/en-GB/en-GB.com_admirorgallery.ini" />
         <option value="$PROJECT_DIR$/web/modules/mod_mvsocialbuttons/mod_mvsocialbuttons.php" />
         <option value="$PROJECT_DIR$/web/js/social/share42.js" />
         <option value="$PROJECT_DIR$/web/templates/malyatko/templateDetails.xml" />
+        <option value="$PROJECT_DIR$/web/language/en-GB/en-GB.com_admirorgallery.ini" />
+        <option value="$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/templates/classic/index.php" />
+        <option value="$PROJECT_DIR$/web/media/plugin_googlemap2/site/googlemaps/googlemapsv3.js" />
+        <option value="$PROJECT_DIR$/web/media/plugin_googlemap2/site/moodalbox/css/moodalbox.css" />
+        <option value="$PROJECT_DIR$/web/media/plugin_googlemap2/site/directions/directions.css" />
+        <option value="$PROJECT_DIR$/web/plugins/system/plugin_googlemap2/plugin_googlemap2.php" />
         <option value="$PROJECT_DIR$/web/templates/malyatko/index.php" />
         <option value="$PROJECT_DIR$/web/templates/malyatko/css/style.css" />
       </list>
@@ -103,10 +74,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1301" />
-    <option name="height" value="744" />
+    <option name="x" value="64" />
+    <option name="y" value="-4" />
+    <option name="width" value="1303" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -180,6 +151,138 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugin_googlemap2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="media" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -229,6 +332,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="malyatko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="media" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugin_googlemap2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="googlemaps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -297,14 +430,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2997602" sideWeight="0.671521" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3541167" sideWeight="0.9983051" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -380,92 +513,88 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/classes/agHelper.php">
+    <entry file="file://$PROJECT_DIR$/web/templates/malyatko/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.053435113" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/classes/jquery.scroll.js.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/popups/pirobox/js/piroboxInit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/popups/pirobox/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/administrator/components/com_admirorgallery/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.056" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/administrator/components/com_admirorgallery/admirorgallery.scriptfile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.056" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/administrator/components/com_admirorgallery/admin.admirorgallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.053435113" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/administrator/components/com_admirorgallery/views/imagemanager/scripts/imgManager-render-folder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.056" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/administrator/components/com_admirorgallery/views/imagemanager/scripts/imgManager-render-file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.056" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/administrator/components/com_admirorgallery/views/imagemanager/tmpl/default.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.056" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/administrator/components/com_admirorgallery/views/imagemanager/view.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.059160307" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/language/ru-RU/ru-RU.com_admirorgallery.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="3" selection-start="6847" selection-end="6868" vertical-scroll-proportion="0.0">
+        <state line="179" column="4" selection-start="6371" selection-end="6371" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/classes/agPopup.php">
+    <entry file="file://$PROJECT_DIR$/web/media/plugin_googlemap2/site/directions/directions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/popups/pirobox/js/pirobox.js">
+    <entry file="file://$PROJECT_DIR$/web/media/plugin_googlemap2/site/googlemaps/googlemapsv3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding>
-            <marker date="1365161685758" expanded="false" signature="2598:2610" placeholder="..." />
-          </folding>
-        </state>
+        <state line="10" column="18554" selection-start="18908" selection-end="18908" vertical-scroll-proportion="0.26041666" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/plugins/content/admirorgallery/admirorgallery/classes/agGallery.php">
+    <entry file="file://$PROJECT_DIR$/web/media/plugin_googlemap2/site/elabel/elabel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="400" column="31" selection-start="18184" selection-end="18184" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/media/plugin_googlemap2/site/moodalbox/img/closelabel.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/media/plugin_googlemap2/site/moodalbox/img/loading.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/media/plugin_googlemap2/site/moodalbox/css/moodalbox.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="13" selection-start="375" selection-end="375" vertical-scroll-proportion="-0.426146" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/system/plugin_googlemap2/gpl.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.910017" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/system/plugin_googlemap2/plugin_googlemap2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="468" column="94" selection-start="30307" selection-end="30333" vertical-scroll-proportion="-6.535714" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/media/plugin_googlemap2/site/directions/directions.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="10" selection-start="590" selection-end="590" vertical-scroll-proportion="0.06960951" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/malyatko/html/mod_menu/default_component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/malyatko/html/mod_menu/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2300885" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/media/plugin_googlemap2/site/googlemaps/googlemaps.css.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="18" selection-start="2541" selection-end="2541" vertical-scroll-proportion="0.5380435" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugins/system/plugin_googlemap2/plugin_googlemap2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="294" column="8" selection-start="8360" selection-end="8360" vertical-scroll-proportion="-2.034351" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/malyatko/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/templates/malyatko/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="29" selection-start="5014" selection-end="5014" vertical-scroll-proportion="0.8177083">
+        <state line="94" column="6" selection-start="4012" selection-end="4012" vertical-scroll-proportion="0.20833333">
           <folding />
         </state>
       </provider>

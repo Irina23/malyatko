@@ -16,6 +16,8 @@ $catid = JRequest::getInt('catid');
     <jdoc:include type="head" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/style.css" type="text/css" />
 
+
+
 </head>
     <body id="<?php if((JSite::getMenu()->getActive()->id ==101) or (JSite::getMenu()->getActive()->id ==230)){echo 'home';}
     if((JSite::getMenu()->getActive()->id ==102) or (JSite::getMenu()->getActive()->id ==231)){echo 'about';}

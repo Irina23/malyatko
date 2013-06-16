@@ -255,11 +255,11 @@ class plgSystemPlugin_googlemap2 extends JPlugin
 		$this->_getdoc();
 
 		// Get the rendered body text
-		$text = JResponse::getBody();
+        $text = JResponse::getBody();
 		
 		// check whether plugin has been unpublished
 		if ( !$this->publ ) {
-			$text = preg_replace( $this->regex, '', $text );
+            echo '<div id="infowindow">'.$text = preg_replace( $this->regex, '', $text ).'</div>';
 			// Clean up variables
 			unset($app, $text);
 			return true;
@@ -292,7 +292,7 @@ class plgSystemPlugin_googlemap2 extends JPlugin
 	
 	function _replace(&$text) {
 		$matches = array();
-		$text=preg_replace("/&#0{0,2}39;/",'\'',$text);
+        $text=preg_replace("/&#0{0,2}39;/",'\'',$text);
 		preg_match_all($this->regex,$text,$matches,PREG_OFFSET_CAPTURE | PREG_PATTERN_ORDER);
 //		print_r($matches);
 		// Remove plugincode that are in head of the page
